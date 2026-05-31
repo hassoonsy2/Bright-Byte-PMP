@@ -91,22 +91,51 @@ Explicitly excluded. Documented to prevent scope creep.
 
 ## Traceability
 
-To be populated during roadmap creation — each v1 requirement maps to exactly one phase.
+Each v1 requirement maps to exactly one phase (see `.planning/ROADMAP.md`).
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| BRAND-01…11 | TBD (roadmap) | Pending |
-| AI-01…03 | TBD (roadmap) | Pending |
-| BILL-01…06 | TBD (roadmap) | Pending |
-| RENAME-01…03 | TBD (roadmap) | Pending |
-| DEPLOY-01…07 | TBD (roadmap) | Pending |
-| SEC-01…04 | TBD (roadmap) | Pending |
+| BRAND-01 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-02 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-03 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-04 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-05 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-06 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-07 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-08 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-09 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-10 | Phase 1 — User-Facing Rebrand | Pending |
+| BRAND-11 | Phase 1 — User-Facing Rebrand | Pending |
+| AI-01 | Phase 1 — User-Facing Rebrand | Pending |
+| AI-02 | Phase 1 — User-Facing Rebrand | Pending |
+| AI-03 | Phase 2 — Atomic Package-Scope Rename | Pending |
+| RENAME-01 | Phase 2 — Atomic Package-Scope Rename | Pending |
+| RENAME-02 | Phase 2 — Atomic Package-Scope Rename | Pending |
+| RENAME-03 | Phase 2 — Atomic Package-Scope Rename | Pending |
+| BILL-01 | Phase 3 — De-monetization + EE Ungating | Pending |
+| BILL-02 | Phase 3 — De-monetization + EE Ungating | Pending |
+| BILL-03 | Phase 3 — De-monetization + EE Ungating | Pending |
+| BILL-04 | Phase 3 — De-monetization + EE Ungating | Pending |
+| BILL-05 | Phase 3 — De-monetization + EE Ungating | Pending |
+| BILL-06 | Phase 3 — De-monetization + EE Ungating | Pending |
+| DEPLOY-01 | Phase 4 — Render Topology + Infra | Pending |
+| DEPLOY-02 | Phase 4 — Render Topology + Infra | Pending |
+| DEPLOY-03 | Phase 4 — Render Topology + Infra | Pending |
+| DEPLOY-04 | Phase 4 — Render Topology + Infra | Pending |
+| DEPLOY-05 | Phase 4 — Render Topology + Infra | Pending |
+| DEPLOY-06 | Phase 4 — Render Topology + Infra | Pending |
+| DEPLOY-07 | Phase 4 — Render Topology + Infra | Pending |
+| SEC-01 | Phase 5 — Security Hardening + AGPL Gate | Pending |
+| SEC-02 | Phase 5 — Security Hardening + AGPL Gate | Pending |
+| SEC-03 | Phase 5 — Security Hardening + AGPL Gate | Pending |
+| SEC-04 | Phase 5 — Security Hardening + AGPL Gate | Pending |
 
 **Coverage:**
 - v1 requirements: 34 total (BRAND 11 · AI 3 · BILL 6 · RENAME 3 · DEPLOY 7 · SEC 4)
-- Mapped to phases: 0 (roadmap pending)
-- Unmapped: 34 ⚠️ (resolved by roadmapper)
+- Mapped to phases: 34 ✓ (Phase 1: 13 · Phase 2: 4 · Phase 3: 6 · Phase 4: 7 · Phase 5: 4)
+- Unmapped: 0 ✓
+- Duplicates: 0 (each requirement in exactly one phase)
 
 ---
 *Requirements defined: 2026-05-31*
-*Last updated: 2026-05-31 after initial definition*
+*Last updated: 2026-06-01 after roadmap creation (traceability populated — 34/34 mapped)*
