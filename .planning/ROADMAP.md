@@ -30,7 +30,14 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. UI strings (English + all 18 other locales) and every email (invite, magic-link, password-reset, notification, `EMAIL_FROM`) read Bright-Byte, not Plane
   4. The AI assistant presents as "Byte" — labels, generating-response text, and the assistant icon — everywhere a user sees it
   5. A case-insensitive `plane` sweep across manifests, i18n, `EMAIL_FROM`, generated PDFs, and telemetry/user-agent strings comes back clean (excluding verbatim AGPL headers)
-**Plans**: TBD
+**Plans**: 6 plans
+Plans:
+- [ ] 01-01-PLAN.md — App metadata + brand constants (web/admin/space titles, OG/meta, @plane/constants); env-driven URL/email (BRAND-01/02/06/07)
+- [ ] 01-02-PLAN.md — PWA manifests + logo/favicon/icon wiring & client-asset drop-in (BRAND-03/04/05)
+- [ ] 01-03-PLAN.md — Email templates + EMAIL_FROM rebrand, remote-logo replacement (BRAND-10)
+- [ ] 01-04-PLAN.md — AI assistant → "Byte" labels/icon + English i18n incl. pi_chat (AI-01/02, BRAND-08)
+- [ ] 01-05-PLAN.md — All 18 non-English locales brand-mark rebrand + pi_chat=Byte (BRAND-09, AI-01)
+- [ ] 01-06-PLAN.md — Brand-leak sweep + AGPL-integrity verification gate (BRAND-11)
 **UI hint**: yes
 
 ### Phase 2: Atomic Package-Scope Rename
