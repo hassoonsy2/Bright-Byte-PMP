@@ -35,8 +35,8 @@ Our clients get a fully branded, fully unlocked project-management tool with no 
 - [ ] Replace logos / favicons / app icons with client-provided Bright-Byte PMP brand assets
 - [ ] Deep rename of internal package scope `@plane/*` → `@bright-byte/*` across all packages, imports, build config, and tsconfig path aliases
 - [ ] Rename the AI assistant to **Byte** everywhere it surfaces (labels, prompts, tooltips, component naming)
-- [ ] Remove all billing / license-upsell UI (`apps/web/core/components/license/*`, `workspace/billing/*`, plan/checkout/talk-to-sales components, `constants/plans.tsx`)
-- [ ] Unlock all Pro/EE-gated features so clients get the full feature set with no payment
+- [ ] Remove all billing / license-upsell UI (`apps/web/core/components/license/*`, `apps/web/ce/components/license/*`, `workspace/billing/*`, edition badge, in-component upgrade banners, `constants/plans.tsx`, `packages/constants/src/payment.ts` + `subscription.ts`)
+- [ ] Expose all CE-present features by removing upsell chrome — after an inventory/classification of each upsell stub. **Note (research correction):** CE has *no runtime license enforcement*; gated EE features are *absent code*, not flag-disabled. "Unlock" = remove upsell surfaces so CE's already-working features stand free; do NOT attempt to port EE code (out of scope)
 - [ ] Deploy as a single shared instance on Render via a `render.yaml` blueprint (web, api, live, admin, worker/beat)
 - [ ] Use Render managed Postgres + Render Key Value (Redis) as the data services
 - [ ] Provision required external infra: S3-compatible object storage (attachments) and an SMTP provider (invites/notifications)
@@ -56,15 +56,15 @@ Our clients get a fully branded, fully unlocked project-management tool with no 
 ## Context
 
 - **Brownfield.** Built on the Plane monorepo (pnpm + Turborepo): 6 apps (`admin`, `api`, `live`, `proxy`, `space`, `web`) and 15 `@plane/*` packages. Full analysis in `.planning/codebase/` (STACK, ARCHITECTURE, STRUCTURE, CONVENTIONS, TESTING, INTEGRATIONS, CONCERNS).
-- **Brand split matters.** User-facing "Plane" lives in `apps/web/manifest.json`, titles, logos, and emails. The internal `@plane/*` package scope appears in 19 `package.json` files and ~1,274 source files — the deep rename is the largest and riskiest workstream and touches build tooling and `tsconfig` path aliases (`@/plane-web/*` → `./ce/*`).
-- **Community Edition has no real payment processor.** "Payment" surfaces are upsell/license UI pointing at Plane's commercial tiers. Removing them + ungating EE features is a code/feature-flag change, not a billing-integration removal.
-- **Deployment gotchas** (flagged for research): Render has no managed object storage, so attachments need an external S3-compatible bucket; SMTP must be provisioned for invites/notifications; the `apps/live` real-time server and Celery worker/beat need their own Render services.
+- **Brand split matters.** User-facing "Plane" lives in `apps/web/manifest.json`, titles, logos, i18n strings, and emails. The internal `@plane/*` package scope is a *separate* workstream: research measured **~1,805 files / ~5,003 import sites across 19 `package.json`** (larger than the initial ~1,274 estimate). It must be **one atomic, build-gated phase** (a half-renamed `workspace:*` monorepo won't install/build, and there is no CI test net). The `@/plane-web/*` and `@/plane-live/*` edition **aliases must NOT be renamed** (they are `@/`-prefixed, not `@plane/`); the Python `plane` package has 0 `@plane/` refs and is left alone.
+- **Community Edition has no real payment processor and no runtime license enforcement.** "Payment" surfaces are pure upsell/license UI. De-monetization is a UI-removal + inventory job, not a billing-integration or feature-flag change.
+- **Deployment gotchas** (from research): Render has no managed object storage → attachments need an external S3-compatible bucket (**Cloudflare R2** recommended); **Celery broker is AMQP-only in code and Render has no managed RabbitMQ** → a blocking decision (CloudAMQP vs self-run RabbitMQ vs a ~3-line Redis-broker change reusing Render Key Value); SMTP must be provisioned; `space` is SSR (Docker web service) while `web`/`admin` are static sites; `VITE_*` URLs are **baked at build time** (domain changes need a rebuild); Celery worker/beat run as Background Workers (exactly one beat).
 - **Migration debt to be aware of** (from `.planning/codebase/CONCERNS.md`): an in-progress Next.js → React Router migration with compat shims, CE/EE boundary leakage, oversized issue modules, and insecure-by-default API settings (`ALLOWED_HOSTS="*"`, CORS allow-all fallback, ephemeral `SECRET_KEY`) that must be hardened for a real Render deployment.
 
 ## Constraints
 
 - **Tech stack**: Inherit Plane's stack — Django REST (Python) backend, React Router + Vite frontends, Hocuspocus live server, pnpm/Turborepo monorepo. No framework changes.
-- **License**: Plane is AGPL-3.0; every source file carries the AGPL header (enforced by `copyright-check.yml`). Rebranding must respect AGPL terms; copyright headers stay.
+- **License**: Plane is AGPL-3.0. Every source file carries an AGPL header reading "Plane Software, Inc." enforced by `copyright-check.yml` via `addlicense` against `COPYRIGHT.txt`. These headers and `LICENSE.txt` **stay verbatim** — editing them is both an AGPL violation and a guaranteed CI failure. Attribution changes go in a top-level `NOTICE`/`CHANGES` file, and an **AGPL §13 network source-availability offer must be live in the deployed app before serving clients**.
 - **Hosting**: Render only (managed Postgres + Render Key Value/Redis). Existing Docker assets adapted to a `render.yaml` blueprint.
 - **Compatibility**: Deep package rename must not break the build — imports, workspace catalog (`pnpm-workspace.yaml`), `turbo.json`, and `tsconfig` path aliases all updated atomically.
 - **Security**: Insecure-by-default settings must be locked down before serving real client data.
@@ -74,7 +74,7 @@ Our clients get a fully branded, fully unlocked project-management tool with no 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
 | Deep rename `@plane/*` → `@bright-byte/*` (not just user-facing brand) | User wants a complete rebrand including internal package scope | — Pending |
-| Remove billing UI **and** unlock all Pro/EE features | Free internal use for clients; no monetization | — Pending |
+| Remove billing UI; "unlock" = strip upsell chrome (no EE code porting) | CE has no license enforcement — EE features are absent code, not flag-gated (research) | — Pending |
 | Single shared instance, clients = workspaces | Lower ops/infra overhead than per-client instances | — Pending |
 | Host on Render with managed Postgres + Redis | Single-vendor simplicity | — Pending |
 | Rename AI assistant to "Byte" | Ties to "Bright-Byte" brand | — Pending |
@@ -98,4 +98,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-05-31 after initialization*
+*Last updated: 2026-05-31 after research (corrected EE-ungating framing, rename scope, broker + AGPL constraints)*
