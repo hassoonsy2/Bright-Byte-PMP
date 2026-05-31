@@ -124,7 +124,7 @@ export function GptAssistantPopover(props: Props) {
     setToast({
       type: TOAST_TYPE.ERROR,
       title: "Error!",
-      message: "Please enter some task to get AI assistance.",
+      message: "Please enter some task to get Byte assistance.",
     });
   };
 
@@ -268,7 +268,9 @@ export function GptAssistantPopover(props: Props) {
                 onChange={onChange}
                 ref={ref}
                 placeholder={`${
-                  prompt && prompt !== "" ? "Tell AI what action to perform on this content..." : "Ask AI anything..."
+                  prompt && prompt !== ""
+                    ? "Tell Byte what action to perform on this content..."
+                    : "Ask Byte anything..."
                 }`}
                 className="w-full"
                 autoFocus
