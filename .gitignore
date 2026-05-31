@@ -2,6 +2,10 @@ node_modules
 .next
 .yarn
 
+# GSD knowledge-graph artifacts (large generated blobs — keep local, do not track)
+/graphify-out/
+/.planning/graphs/
+
 ### NextJS ###
 # Dependencies
 /node_modules
