@@ -34,7 +34,7 @@ Skip only for trivial English-only typo fixes that don't change meaning or lengt
 
 ## The Two Iron Rules
 
-1. **Trademarks, brand marks, plan tier names, third-party product names, acronyms, and code tokens are never translated.** Plane's brand marks (Plane, Plane AI, Power K, PQL, Active Cycles, Sticky/Stickies, Intake), plan tiers (Pro, Business, Enterprise), third-party products (GitHub, Slack, Notion, etc.), and acronyms (API, OAuth, etc.) stay Latin in every locale.
+1. **Trademarks, brand marks, plan tier names, third-party product names, acronyms, and code tokens are never translated.** Bright-Byte PMP's brand marks (Bright-Byte PMP, Byte, Power K, PQL, Active Cycles, Sticky/Stickies, Intake), plan tiers (Pro, Business, Enterprise), third-party products (GitHub, Slack, Notion, etc.), and acronyms (API, OAuth, etc.) stay Latin in every locale.
 2. **CLDR plural categories are mandatory.** Every target locale must include **every** plural keyword the language requires. Missing a form renders the wrong word at runtime and passes `sync-check` silently.
 
 Common feature nouns — Cycle, Module, Epic, Page — **are translated** into the target language using the canonical glossary further down. They are not brand marks; they are everyday words that belong in the user's language.
@@ -45,20 +45,20 @@ The rest of this skill explains how to execute on those rules.
 
 For each term: the source, the required rendering per script group, and **forbidden renderings** that have appeared historically and must be reverted when seen.
 
-### Plane brand & features
+### Bright-Byte PMP brand & features
 
-| Source term                        | Latin locales (fr, es, it, de, pt-BR, pl, cs, sk, ro, tr-TR, vi-VN, id) | ja (katakana-default) | ko (Hangul-default) | zh-CN / zh-TW                                 | ru                | ua                | **Forbidden** (never produce)                                                     |
-| ---------------------------------- | ----------------------------------------------------------------------- | --------------------- | ------------------- | --------------------------------------------- | ----------------- | ----------------- | --------------------------------------------------------------------------------- |
-| **Plane**                          | Plane                                                                   | Plane                 | Plane               | Plane                                         | Plane             | Plane             | 飛行機, 飞机, 비행기, Самолёт, Літак, Avion, Avião, Aereo, Flugzeug               |
-| **Plane AI** (formerly PI Chat)    | Plane AI                                                                | Plane AI              | Plane AI            | Plane AI                                      | Plane AI          | Plane AI          | Чат ИИ, AI 聊天, AIチャット, AI 채팅, Chat IA, AI Çet, PI Chat (legacy)           |
-| **Power K**                        | Power K                                                                 | Power K               | Power K             | Power K                                       | Power K           | Power K           | Command K, Command Palette, コマンドパレット, 命令面板, Палитра команд            |
-| **PQL**                            | PQL                                                                     | PQL                   | PQL                 | PQL                                           | PQL               | PQL               | any expansion of the acronym into the target language                             |
-| **Intake** (feature name)          | Intake                                                                  | Intake                | Intake              | Intake                                        | Intake            | Intake            | Inbox, 受信箱, 收件箱, Входящие, Triage, Boîte de réception                       |
-| **Active Cycles** (workspace view) | Active Cycles                                                           | Active Cycles         | Active Cycles       | Active Cycles                                 | Active Cycles     | Active Cycles     | Translate as a unit; never split into generic "active" + localized "cycles"       |
-| **Sticky** / **Stickies**          | Sticky / Stickies                                                       | Sticky / Stickies     | Sticky / Stickies   | Sticky / Stickies (Latin inside Chinese text) | Sticky / Stickies | Sticky / Stickies | 便签, 便利貼, メモ, 付箋, スティッキー, 메모, 스티키, заметка, Стикер, Note, Nota |
-| **Pro** (plan tier)                | Pro                                                                     | Pro                   | Pro                 | Pro                                           | Pro               | Pro               | Профессиональный, プロフェッショナル, 专业版, 專業版, Profesional                 |
-| **Business** (plan tier)           | Business                                                                | Business              | Business            | Business                                      | Business          | Business          | Бизнес, ビジネス, 商业版, 商務版, Negocios, Negócios                              |
-| **Enterprise** (plan tier)         | Enterprise                                                              | Enterprise            | Enterprise          | Enterprise                                    | Enterprise        | Enterprise        | Корпоративный, エンタープライズ, 企业版, 企業版, Empresarial                      |
+| Source term                                          | Latin locales (fr, es, it, de, pt-BR, pl, cs, sk, ro, tr-TR, vi-VN, id) | ja (katakana-default) | ko (Hangul-default) | zh-CN / zh-TW                                 | ru                | ua                | **Forbidden** (never produce)                                                                                    |
+| ---------------------------------------------------- | ----------------------------------------------------------------------- | --------------------- | ------------------- | --------------------------------------------- | ----------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **Bright-Byte PMP**                                  | Bright-Byte PMP                                                         | Bright-Byte PMP       | Bright-Byte PMP     | Bright-Byte PMP                               | Bright-Byte PMP   | Bright-Byte PMP   | 飛行機, 飞机, 비행기, Самолёт, Літак, Avion, Avião, Aereo, Flugzeug, any translation of "Plane"                  |
+| **Byte** (AI assistant, formerly Plane AI / PI Chat) | Byte                                                                    | Byte                  | Byte                | Byte                                          | Byte              | Byte              | Чат ИИ, AI 聊天, AIチャット, AI 채팅, Chat IA, AI Çet, PI Chat (legacy), Plane AI (legacy), バイト, 字节, 바이트 |
+| **Power K**                                          | Power K                                                                 | Power K               | Power K             | Power K                                       | Power K           | Power K           | Command K, Command Palette, コマンドパレット, 命令面板, Палитра команд                                           |
+| **PQL**                                              | PQL                                                                     | PQL                   | PQL                 | PQL                                           | PQL               | PQL               | any expansion of the acronym into the target language                                                            |
+| **Intake** (feature name)                            | Intake                                                                  | Intake                | Intake              | Intake                                        | Intake            | Intake            | Inbox, 受信箱, 收件箱, Входящие, Triage, Boîte de réception                                                      |
+| **Active Cycles** (workspace view)                   | Active Cycles                                                           | Active Cycles         | Active Cycles       | Active Cycles                                 | Active Cycles     | Active Cycles     | Translate as a unit; never split into generic "active" + localized "cycles"                                      |
+| **Sticky** / **Stickies**                            | Sticky / Stickies                                                       | Sticky / Stickies     | Sticky / Stickies   | Sticky / Stickies (Latin inside Chinese text) | Sticky / Stickies | Sticky / Stickies | 便签, 便利貼, メモ, 付箋, スティッキー, 메모, 스티키, заметка, Стикер, Note, Nota                                |
+| **Pro** (plan tier)                                  | Pro                                                                     | Pro                   | Pro                 | Pro                                           | Pro               | Pro               | Профессиональный, プロフェッショナル, 专业版, 專業版, Profesional                                                |
+| **Business** (plan tier)                             | Business                                                                | Business              | Business            | Business                                      | Business          | Business          | Бизнес, ビジネス, 商业版, 商務版, Negocios, Negócios                                                             |
+| **Enterprise** (plan tier)                           | Enterprise                                                              | Enterprise            | Enterprise          | Enterprise                                    | Enterprise        | Enterprise        | Корпоративный, エンタープライズ, 企业版, 企業版, Empresarial                                                     |
 
 ### Plane feature noun translation glossary (translate, do not preserve)
 
@@ -140,7 +140,7 @@ Apply by target-language script, not by locale list. Adding a new Latin-script l
 
 Currently includes fr, es, it, de, pt-BR, pl, cs, sk, ro, tr-TR, vi-VN, id — and any future locale that uses the Latin alphabet (hu, nl, sv, da, nb, fi, hr, bg-using-Latin variants, etc.).
 
-**Translate Plane feature nouns** (Cycle, Cycles, Module, Modules, Epic, Epics, Page, Pages) using the per-locale form from the glossary above. **Keep Latin** for Plane brand marks (Plane, Plane AI, Power K, PQL, Active Cycles, Sticky, Stickies, Intake), plan tier names (Pro, Business, Enterprise), and third-party brands (GitHub, Slack, etc.).
+**Translate Bright-Byte PMP feature nouns** (Cycle, Cycles, Module, Modules, Epic, Epics, Page, Pages) using the per-locale form from the glossary above. **Keep Latin** for Bright-Byte PMP brand marks (Bright-Byte PMP, Byte, Power K, PQL, Active Cycles, Sticky, Stickies, Intake), plan tier names (Pro, Business, Enterprise), and third-party brands (GitHub, Slack, etc.).
 
 ```
 ✅ "Créer un Cycle"                         (fr — natural cognate from glossary, identical to English)
@@ -149,7 +149,7 @@ Currently includes fr, es, it, de, pt-BR, pl, cs, sk, ro, tr-TR, vi-VN, id — a
 ✅ "Nueva Epic"                             (es — Epic has no clean cognate; stays Latin per glossary)
 ✅ "Archivieren Sie diesen Zyklus"          (de — natural German form from glossary)
 ✅ "Buat Siklus baru"                       (id — natural Indonesian form from glossary)
-✅ "Buat Sticky baru"                       (id — Sticky is a Plane brand mark, stays Latin)
+✅ "Buat Sticky baru"                       (id — Sticky is a Bright-Byte PMP brand mark, stays Latin)
 ✅ "Wechseln Sie zum Pro-Plan"              (de — Pro is a plan tier name, stays Latin)
 ❌ "Créer un Cycle"                         WRONG when the locale should be `Zyklus` (de). Always use the glossary form.
 ❌ "Archivieren Sie diesen Cycle"           (de — feature noun was left in Latin; use Zyklus per glossary)
@@ -162,7 +162,7 @@ Generic uses translate normally and do not follow the glossary: a paginator's `n
 
 ### Japanese (ja) — natural Japanese rendering
 
-**Plane feature nouns** (Cycle, Module, Epic, Page) use the natural Japanese form per the glossary above (サイクル, モジュール, エピック, ページ — katakana for foreign-origin nouns; native Japanese where one applies, like 付箋 for an Apple/Microsoft-style "sticky note"). **Brand marks** stay in Latin: Plane, Plane AI, Power K, PQL, Active Cycles, Sticky, Stickies, Intake, GitHub, Slack, Pro/Business/Enterprise.
+**Bright-Byte PMP feature nouns** (Cycle, Module, Epic, Page) use the natural Japanese form per the glossary above (サイクル, モジュール, エピック, ページ — katakana for foreign-origin nouns; native Japanese where one applies, like 付箋 for an Apple/Microsoft-style "sticky note"). **Brand marks** stay in Latin: Bright-Byte PMP, Byte, Power K, PQL, Active Cycles, Sticky, Stickies, Intake, GitHub, Slack, Pro/Business/Enterprise.
 
 For new katakana coinages and existing translations, the long-vowel mark `ー` is added for words ending in `-er`, `-or`, `-ar`, `-y` in English. This is the Microsoft Japanese style-guide convention and the current industry default:
 
@@ -177,7 +177,7 @@ Quotation marks: 「」 for primary quotes, 『』 for nested or for titles of w
 
 ### Korean (ko) — Hangul rendering
 
-**Plane feature nouns** (Cycle, Module, Epic, Page) use the natural Korean form per the glossary above (사이클, 모듈, 에픽, 페이지 — Hangul transliteration where the term is product-coined; native Korean word where one applies). **Brand marks** stay in Latin: Plane, Plane AI, Power K, PQL, Active Cycles, Sticky, Stickies, Intake, GitHub, Slack, Pro/Business/Enterprise.
+**Bright-Byte PMP feature nouns** (Cycle, Module, Epic, Page) use the natural Korean form per the glossary above (사이클, 모듈, 에픽, 페이지 — Hangul transliteration where the term is product-coined; native Korean word where one applies). **Brand marks** stay in Latin: Bright-Byte PMP, Byte, Power K, PQL, Active Cycles, Sticky, Stickies, Intake, GitHub, Slack, Pro/Business/Enterprise.
 
 For new terms not on the glossary: prefer the native Korean word where one exists (`설정` for Settings); use Hangul phonetic transliteration for product-coined nouns with no native equivalent. Do not coerce a phonetic loanword when a natural Korean word exists — `버킷` for "Bucket" reads as a foreign trademark, `장바구니` reads as a Korean noun.
 
@@ -195,7 +195,7 @@ Punctuation: Western punctuation (`. , ? !`); straight quotes `"…"` and `'…'
 
 **Plane feature nouns** (Cycle, Module, Epic, Page) translate to natural Chinese per the glossary above (zh-CN: 周期, 模块, 史诗, 页面 — zh-TW: 週期, 模組, 史詩, 頁面). This is what Microsoft's zh-CN style guide and every mainstream zh-localized SaaS product (Notion, Slack, Atlassian) does for common feature nouns.
 
-**Brand marks stay Latin**: Plane, Plane AI, Power K, PQL, Active Cycles, Sticky, Stickies, Intake, GitHub, Slack, Pro/Business/Enterprise — these are trademark-style terms.
+**Brand marks stay Latin**: Bright-Byte PMP, Byte, Power K, PQL, Active Cycles, Sticky, Stickies, Intake, GitHub, Slack, Pro/Business/Enterprise — these are trademark-style terms.
 
 **Insert a half-width space on each side of embedded Latin tokens** — this is Microsoft's zh-CN guideline and required for legibility. **Exception**: no space between a Latin token and adjacent full-width punctuation (`。，；：？！`); the punctuation already supplies visual breathing room.
 
@@ -227,7 +227,7 @@ Register: 您 (formal polite) in Plane UI — the product is B2B/SaaS. Reserve �
 
 Currently includes ru, ua — and any future Cyrillic locale (bg-BG, sr-Cyrl, mk, be, kk-Cyrl, etc.).
 
-**Plane feature nouns** (Cycle, Module, Epic, Page) use the natural Cyrillic form per the glossary above (Цикл/Циклы, Модуль/Модули, Эпик/Эпики, Страница/Страницы in ru — Цикл/Цикли, Модуль/Модулі, Епік/Епіки, Сторінка/Сторінки in ua). **Brand marks** stay in Latin: Plane, Plane AI, Power K, PQL, Active Cycles, Sticky, Stickies, Intake, GitHub, Slack, Pro/Business/Enterprise.
+**Bright-Byte PMP feature nouns** (Cycle, Module, Epic, Page) use the natural Cyrillic form per the glossary above (Цикл/Циклы, Модуль/Модули, Эпик/Эпики, Страница/Страницы in ru — Цикл/Цикли, Модуль/Модулі, Епік/Епіки, Сторінка/Сторінки in ua). **Brand marks** stay in Latin: Bright-Byte PMP, Byte, Power K, PQL, Active Cycles, Sticky, Stickies, Intake, GitHub, Slack, Pro/Business/Enterprise.
 
 For new terms not on the glossary: prefer the native Cyrillic word where one exists; use phonetic transliteration only when no native word applies (`Бакет` is wrong for "Bucket" — use `Корзина`/`Кошик`).
 
@@ -500,29 +500,29 @@ pnpm --filter @plane/i18n run check:sync
 
 ## Quick Reference
 
-| Question                                            | Answer                                                                                                                                                                 |
-| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Translate "Plane" / "Plane AI" / "Power K" / "PQL"? | Never. Latin, every locale.                                                                                                                                            |
-| Translate "Sticky" / "Stickies" / "Intake"?         | Never. Plane brand marks. Latin, every locale.                                                                                                                         |
-| Translate "Active Cycles"?                          | Never as a unit (it's a feature page name). Lowercase generic "active cycles" in prose translates normally per the glossary.                                           |
-| Translate "Pro" / "Business" / "Enterprise"?        | Never. Plan tier names. Latin, every locale.                                                                                                                           |
-| Translate "Cycle" / "Module" / "Epic" / "Page"?     | **Yes** — use the per-locale form from the translation glossary (zh-CN 周期/模块/史诗/页面, ja サイクル/モジュール/エピック/ページ, de Zyklus/Modul/Epic/Seite, etc.). |
-| Translate "GitHub" / "Slack" / third-party brands?  | Never. Latin, every locale.                                                                                                                                            |
-| Translate a variable name `{name}`?                 | Never. Preserve exactly.                                                                                                                                               |
-| Translate `<0>…</0>`?                               | Translate only the inside text. Never renumber.                                                                                                                        |
-| Russian plural forms?                               | `one / few / many / other` — four forms mandatory; case-correct per CLDR.                                                                                              |
-| German plural forms?                                | `one / other` — never `few`.                                                                                                                                           |
-| French plural forms?                                | `one / many / other` — `many` covers 1M+.                                                                                                                              |
-| CJK plural forms?                                   | `one / other` (single-form) — still emit both.                                                                                                                         |
-| Informal "you" in de/fr/ru/ja?                      | Never in product UI.                                                                                                                                                   |
-| Chinese + embedded "GitHub"?                        | `使用 GitHub 登录` — half-width space around Latin **brand** tokens. Feature nouns translate (`创建周期`, no space because no Latin).                                  |
-| Japanese "user"?                                    | ユーザー with long-vowel ー, not ユーザ.                                                                                                                               |
-| Hard-code date formats?                             | Never. Use ICU `{d, date, medium}`.                                                                                                                                    |
-| Copy English into non-English locale?               | Never. Worse than leaving the key missing.                                                                                                                             |
+| Question                                                  | Answer                                                                                                                                                                 |
+| --------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Translate "Bright-Byte PMP" / "Byte" / "Power K" / "PQL"? | Never. Latin, every locale.                                                                                                                                            |
+| Translate "Sticky" / "Stickies" / "Intake"?               | Never. Bright-Byte PMP brand marks. Latin, every locale.                                                                                                               |
+| Translate "Active Cycles"?                                | Never as a unit (it's a feature page name). Lowercase generic "active cycles" in prose translates normally per the glossary.                                           |
+| Translate "Pro" / "Business" / "Enterprise"?              | Never. Plan tier names. Latin, every locale.                                                                                                                           |
+| Translate "Cycle" / "Module" / "Epic" / "Page"?           | **Yes** — use the per-locale form from the translation glossary (zh-CN 周期/模块/史诗/页面, ja サイクル/モジュール/エピック/ページ, de Zyklus/Modul/Epic/Seite, etc.). |
+| Translate "GitHub" / "Slack" / third-party brands?        | Never. Latin, every locale.                                                                                                                                            |
+| Translate a variable name `{name}`?                       | Never. Preserve exactly.                                                                                                                                               |
+| Translate `<0>…</0>`?                                     | Translate only the inside text. Never renumber.                                                                                                                        |
+| Russian plural forms?                                     | `one / few / many / other` — four forms mandatory; case-correct per CLDR.                                                                                              |
+| German plural forms?                                      | `one / other` — never `few`.                                                                                                                                           |
+| French plural forms?                                      | `one / many / other` — `many` covers 1M+.                                                                                                                              |
+| CJK plural forms?                                         | `one / other` (single-form) — still emit both.                                                                                                                         |
+| Informal "you" in de/fr/ru/ja?                            | Never in product UI.                                                                                                                                                   |
+| Chinese + embedded "GitHub"?                              | `使用 GitHub 登录` — half-width space around Latin **brand** tokens. Feature nouns translate (`创建周期`, no space because no Latin).                                  |
+| Japanese "user"?                                          | ユーザー with long-vowel ー, not ユーザ.                                                                                                                               |
+| Hard-code date formats?                                   | Never. Use ICU `{d, date, medium}`.                                                                                                                                    |
+| Copy English into non-English locale?                     | Never. Worse than leaving the key missing.                                                                                                                             |
 
 ## Common Mistakes (revert on sight)
 
-- **Translating Plane brand marks** — `Plane → 飞机`, `Plane AI → AI 聊天`, `Power K → 命令面板`, `Sticky → 便签` (Sticky is a brand, even though "sticky note" generally translates), `Intake → 收件箱`. Brand marks stay Latin.
+- **Translating Bright-Byte PMP brand marks** — `Bright-Byte PMP → 飞机`, `Byte → AI 聊天` / `Byte → 字节`, `Power K → 命令面板`, `Sticky → 便签` (Sticky is a brand, even though "sticky note" generally translates), `Intake → 收件箱`. Brand marks stay Latin.
 - **Leaving feature nouns in Latin in non-Latin locales** — `创建 Cycle` (zh-CN), `Создать Cycle` (ru), `エピックを作成` is fine but `Epicを作成` is not. Use the per-locale form from the glossary.
 - **Coining new feature-noun translations** — `Cycle → Cercle` (fr — invented; the natural cognate is the same `Cycle`), `Cycle → 循环` (zh-CN — non-glossary; use `周期`), `Epic → Saga` (es — non-glossary; use `Epic`). The glossary is the source of truth.
 - **Missing `few` / `many` in Slavic languages** — Russian/Polish/Czech/Slovak/Ukrainian strings with only `one / other` are grammatically wrong for counts 2–4 and 5+. Fix in the same PR.
@@ -547,7 +547,7 @@ pnpm --filter @plane/i18n run check:sync
 
 You see yourself about to do any of the following → stop, delete, restart this string:
 
-- Replacing `Plane`, `Plane AI`, `Power K`, `PQL`, `Active Cycles`, `Sticky`, `Stickies`, `Intake`, `Pro`, `Business`, `Enterprise`, or any third-party brand (`GitHub`, `Slack`, etc.) with a translated form.
+- Replacing `Bright-Byte PMP`, `Byte`, `Power K`, `PQL`, `Active Cycles`, `Sticky`, `Stickies`, `Intake`, `Pro`, `Business`, `Enterprise`, or any third-party brand (`GitHub`, `Slack`, etc.) with a translated form.
 - Leaving `Cycle` / `Module` / `Epic` / `Page` in Latin in a non-Latin locale (zh-CN, zh-TW, ja, ko, ru, ua) — these are common nouns and must be translated per the glossary.
 - Coining a feature-noun translation that's not in the glossary (`Cycle → 循环`, `Cycle → Cercle`, `Epic → Saga`).
 - Using a vowel-form Korean particle (을/은/이/과 vs. 를/는/가/와) that doesn't agree with the noun's final character.
@@ -562,21 +562,21 @@ You see yourself about to do any of the following → stop, delete, restart this
 
 ## Rationalizations — Use Reality Column Instead
 
-| Excuse                                                                          | Reality                                                                                                                                                                        |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| "Keeping `Cycle` Latin in zh-CN keeps it consistent with English docs."         | That's a minority position; Microsoft, Apple, Mozilla, Notion, Atlassian, Slack all translate. Monolingual zh users can't read Latin words; the glossary form is the standard. |
-| "史诗 is the established Chinese word for Epic, but Latin reads more brand-y."  | Brand-y is the wrong goal for a feature noun. The glossary form (`史诗` for zh-CN, `Эпик` for ru) is what users in those locales expect from a SaaS product.                   |
-| "Our Russian users understand `Cycle` Latin."                                   | They understand it; they don't expect to encounter it. The glossary form (`Цикл`) is what every other Russian SaaS product uses for the same concept.                          |
-| "I'll just transliterate the Plane brand name into Cyrillic for accessibility." | Brand marks stay Latin in every locale. `Плейн` is wrong; `Plane` is right.                                                                                                    |
-| "Plan tier names should be translated since they're plain words."               | Industry standard (Notion, Slack, Linear, Asana, GitHub) is to keep `Pro`, `Business`, `Enterprise` Latin for marketing consistency. Don't translate.                          |
-| "This string is internal / rarely seen, good-enough is fine."                   | Every string is someone's main screen. Rules are cheap to follow; consistency compounds.                                                                                       |
-| "`sync-check` passed, I'm done."                                                | `sync-check` only compares presence, not value quality. Green does not mean translated.                                                                                        |
-| "I'll fix the missing plural forms later."                                      | Missing `few` in Russian renders the wrong word for counts 2–4 right now in production. Same PR.                                                                               |
-| "The old file already used Latin Cycle everywhere — stay consistent."           | Consistency with a bug is still a bug. Migrate occurrences you touch; open a sweep PR for the rest.                                                                            |
-| "AI said this was the right Japanese word for Cycle."                           | AI does not know our glossary unless you inject it. Check against the glossary table above; the glossary wins.                                                                 |
-| "The German translation is a bit long but still fits on my screen."             | It won't fit on every user's screen. Design for +35% expansion; test in a narrow viewport.                                                                                     |
-| "I renamed `{userName}` to `{nomeUtente}` so the Italian reads naturally."      | Variables are code. The runtime has no `{nomeUtente}` in scope — it renders as literal text. Revert.                                                                           |
-| "Capitalizing `Anda` / `您` / `Sie` looks over-formal."                         | It's Plane's register in those languages. Deviating breaks brand voice across the product.                                                                                     |
+| Excuse                                                                                    | Reality                                                                                                                                                                        |
+| ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| "Keeping `Cycle` Latin in zh-CN keeps it consistent with English docs."                   | That's a minority position; Microsoft, Apple, Mozilla, Notion, Atlassian, Slack all translate. Monolingual zh users can't read Latin words; the glossary form is the standard. |
+| "史诗 is the established Chinese word for Epic, but Latin reads more brand-y."            | Brand-y is the wrong goal for a feature noun. The glossary form (`史诗` for zh-CN, `Эпик` for ru) is what users in those locales expect from a SaaS product.                   |
+| "Our Russian users understand `Cycle` Latin."                                             | They understand it; they don't expect to encounter it. The glossary form (`Цикл`) is what every other Russian SaaS product uses for the same concept.                          |
+| "I'll just transliterate the Bright-Byte PMP brand name into Cyrillic for accessibility." | Brand marks stay Latin in every locale. `Брайт-Байт` is wrong; `Bright-Byte PMP` is right.                                                                                     |
+| "Plan tier names should be translated since they're plain words."                         | Industry standard (Notion, Slack, Linear, Asana, GitHub) is to keep `Pro`, `Business`, `Enterprise` Latin for marketing consistency. Don't translate.                          |
+| "This string is internal / rarely seen, good-enough is fine."                             | Every string is someone's main screen. Rules are cheap to follow; consistency compounds.                                                                                       |
+| "`sync-check` passed, I'm done."                                                          | `sync-check` only compares presence, not value quality. Green does not mean translated.                                                                                        |
+| "I'll fix the missing plural forms later."                                                | Missing `few` in Russian renders the wrong word for counts 2–4 right now in production. Same PR.                                                                               |
+| "The old file already used Latin Cycle everywhere — stay consistent."                     | Consistency with a bug is still a bug. Migrate occurrences you touch; open a sweep PR for the rest.                                                                            |
+| "AI said this was the right Japanese word for Cycle."                                     | AI does not know our glossary unless you inject it. Check against the glossary table above; the glossary wins.                                                                 |
+| "The German translation is a bit long but still fits on my screen."                       | It won't fit on every user's screen. Design for +35% expansion; test in a narrow viewport.                                                                                     |
+| "I renamed `{userName}` to `{nomeUtente}` so the Italian reads naturally."                | Variables are code. The runtime has no `{nomeUtente}` in scope — it renders as literal text. Revert.                                                                           |
+| "Capitalizing `Anda` / `您` / `Sie` looks over-formal."                                   | It's Plane's register in those languages. Deviating breaks brand voice across the product.                                                                                     |
 
 ## Adding a locale not documented here
 
