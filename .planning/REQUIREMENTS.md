@@ -29,12 +29,12 @@
 
 ### De-monetization (Billing)
 
-- [ ] **BILL-01**: Billing/Plans settings page and route removed — `apps/web/app/(all)/[workspaceSlug]/(settings)/.../billing/*`, route registration in `apps/web/app/routes/core.ts`, and the settings-sidebar nav entry (route removed before components, per dependency order)
-- [ ] **BILL-02**: License/upsell modal cluster removed — `apps/web/core/components/license/**` and `apps/web/ce/components/license/**` (PaidPlanUpgradeModal, plan cards, checkout, talk-to-sales)
-- [ ] **BILL-03**: "Community" edition badge → upgrade trigger neutralized to a version-only badge — `apps/web/ce/components/workspace/edition-badge.tsx` (badge neutralized before its imported modal is deleted)
-- [ ] **BILL-04**: In-component upsell banners/CTAs removed — e.g. `apps/web/core/components/issues/bulk-operations/upgrade-banner.tsx` and all references to `MARKETING_*`/`SUBSCRIPTION_*` upgrade triggers
-- [ ] **BILL-05**: Plan/pricing data removed — `apps/web/core/constants/plans.tsx`, `packages/constants/src/payment.ts`, billing constants in `packages/constants/src/subscription.ts`
-- [ ] **BILL-06**: Each upsell stub inventoried and classified before removal; CE-present features left exposed and working, EE-only dangling entry points cleanly removed (no blank/broken surfaces, no calls to `plane.so`/`app.plane.so`)
+- [x] **BILL-01**: Billing/Plans settings page and route removed — `apps/web/app/(all)/[workspaceSlug]/(settings)/.../billing/*`, route registration in `apps/web/app/routes/core.ts`, and the settings-sidebar nav entry (route removed before components, per dependency order)
+- [x] **BILL-02**: License/upsell modal cluster removed — `apps/web/core/components/license/**` and `apps/web/ce/components/license/**` (PaidPlanUpgradeModal, plan cards, checkout, talk-to-sales)
+- [x] **BILL-03**: "Community" edition badge → upgrade trigger neutralized to a version-only badge — `apps/web/ce/components/workspace/edition-badge.tsx` (badge neutralized before its imported modal is deleted)
+- [x] **BILL-04**: In-component upsell banners/CTAs removed — e.g. `apps/web/core/components/issues/bulk-operations/upgrade-banner.tsx` and all references to `MARKETING_*`/`SUBSCRIPTION_*` upgrade triggers
+- [x] **BILL-05**: Plan/pricing data removed — `apps/web/core/constants/plans.tsx`, `packages/constants/src/payment.ts`, billing constants in `packages/constants/src/subscription.ts`
+- [x] **BILL-06**: Each upsell stub inventoried and classified before removal; CE-present features left exposed and working, EE-only dangling entry points cleanly removed (no blank/broken surfaces, no calls to `plane.so`/`app.plane.so`)
 
 ### Package-Scope Rename (atomic)
 
@@ -112,12 +112,12 @@ Each v1 requirement maps to exactly one phase (see `.planning/ROADMAP.md`).
 | RENAME-01   | Phase 2 — Atomic Package-Scope Rename    | Complete |
 | RENAME-02   | Phase 2 — Atomic Package-Scope Rename    | Complete |
 | RENAME-03   | Phase 2 — Atomic Package-Scope Rename    | Complete |
-| BILL-01     | Phase 3 — De-monetization + EE Ungating  | Pending  |
-| BILL-02     | Phase 3 — De-monetization + EE Ungating  | Pending  |
-| BILL-03     | Phase 3 — De-monetization + EE Ungating  | Pending  |
-| BILL-04     | Phase 3 — De-monetization + EE Ungating  | Pending  |
-| BILL-05     | Phase 3 — De-monetization + EE Ungating  | Pending  |
-| BILL-06     | Phase 3 — De-monetization + EE Ungating  | Pending  |
+| BILL-01     | Phase 3 — De-monetization + EE Ungating  | Complete |
+| BILL-02     | Phase 3 — De-monetization + EE Ungating  | Complete |
+| BILL-03     | Phase 3 — De-monetization + EE Ungating  | Complete |
+| BILL-04     | Phase 3 — De-monetization + EE Ungating  | Complete |
+| BILL-05     | Phase 3 — De-monetization + EE Ungating  | Complete |
+| BILL-06     | Phase 3 — De-monetization + EE Ungating  | Complete |
 | DEPLOY-01   | Phase 4 — Render Topology + Infra        | Pending  |
 | DEPLOY-02   | Phase 4 — Render Topology + Infra        | Pending  |
 | DEPLOY-03   | Phase 4 — Render Topology + Infra        | Pending  |

@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: User-Facing Rebrand** - Every "Plane" surface (metadata, manifests, logos, i18n, emails) reads "Bright-Byte PMP" and the AI assistant shows as "Byte"
 - [x] **Phase 2: Atomic Package-Scope Rename** - `@plane/*` → `@bright-byte/*` across the whole monorepo in one build-green commit (Pi→Byte internal identifiers folded in) (completed 2026-06-01)
-- [ ] **Phase 3: De-monetization + EE Ungating** - All billing/upsell chrome removed inventory-first; every CE feature stands free with no blank or broken surfaces
+- [x] **Phase 3: De-monetization + EE Ungating** - All billing/upsell chrome removed inventory-first; every CE feature stands free with no blank or broken surfaces (completed 2026-06-01)
 - [ ] **Phase 4: Render Topology + Infra** - `render.yaml` blueprint + external R2/SMTP/broker provisioned; a client can be onboarded end-to-end on a live shared instance
 - [ ] **Phase 5: Security Hardening + AGPL Gate** - Insecure defaults locked down and the AGPL §13 source-availability offer live before any client data is served
 
@@ -82,7 +82,7 @@ Plans:
 **Plans**: 1 plan
 Plans:
 
-- [ ] 03-01-de-monetization-ee-ungating-PLAN.md - Inventory-first billing/license removal, version-only edition badge, absent EE-stub entry point cleanup, plan/pricing data deletion, and residual source/build verification (BILL-01/02/03/04/05/06)
+- [x] 03-01-de-monetization-ee-ungating-PLAN.md - Inventory-first billing/license removal, version-only edition badge, absent EE-stub entry point cleanup, plan/pricing data deletion, and residual source/build verification (BILL-01/02/03/04/05/06)
 
 **UI hint**: yes
 
@@ -125,6 +125,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | --------------------------------- | -------------- | ----------- | ---------- |
 | 1. User-Facing Rebrand            | 2/6            | In Progress |            |
 | 2. Atomic Package-Scope Rename    | 1/1            | Complete    | 2026-06-01 |
-| 3. De-monetization + EE Ungating  | 0/TBD          | Not started | -          |
+| 3. De-monetization + EE Ungating  | 1/1            | Complete    | 2026-06-01 |
 | 4. Render Topology + Infra        | 0/TBD          | Not started | -          |
 | 5. Security Hardening + AGPL Gate | 0/TBD          | Not started | -          |
