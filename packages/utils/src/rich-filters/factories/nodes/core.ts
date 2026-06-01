@@ -13,8 +13,8 @@ import type {
   TFilterExpression,
   TFilterProperty,
   TFilterValue,
-} from "@plane/types";
-import { FILTER_NODE_TYPE, LOGICAL_OPERATOR } from "@plane/types";
+} from "@bright-byte/types";
+import { FILTER_NODE_TYPE, LOGICAL_OPERATOR } from "@bright-byte/types";
 
 /**
  * Creates a condition node with a unique ID.

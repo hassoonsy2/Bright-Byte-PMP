@@ -6,8 +6,8 @@
 
 import type { Request, Response } from "express";
 import { Effect, Schema, Cause } from "effect";
-import { Controller, Post } from "@plane/decorators";
-import { logger } from "@plane/logger";
+import { Controller, Post } from "@bright-byte/decorators";
+import { logger } from "@bright-byte/logger";
 import { AppError } from "@/lib/errors";
 import { PdfExportRequestBody, PdfValidationError, PdfAuthenticationError } from "@/schema/pdf-export";
 import { PdfExportService, exportToPdf } from "@/services/pdf-export";

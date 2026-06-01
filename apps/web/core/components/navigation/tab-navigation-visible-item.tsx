@@ -7,10 +7,10 @@
 import { Link } from "react-router";
 import { PinOff } from "lucide-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import { ContextMenu } from "@plane/propel/context-menu";
-import { SetAsDefaultIcon } from "@plane/propel/icons";
-import { TabNavigationItem } from "@plane/propel/tab-navigation";
+import { useTranslation } from "@bright-byte/i18n";
+import { ContextMenu } from "@bright-byte/propel/context-menu";
+import { SetAsDefaultIcon } from "@bright-byte/propel/icons";
+import { TabNavigationItem } from "@bright-byte/propel/tab-navigation";
 // local imports
 import type { TNavigationItem } from "./tab-navigation-root";
 import type { TTabPreferences } from "./tab-navigation-utils";

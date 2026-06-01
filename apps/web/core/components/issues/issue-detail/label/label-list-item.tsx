@@ -5,8 +5,8 @@
  */
 
 import { observer } from "mobx-react";
-import { Button } from "@plane/propel/button";
-import { CloseIcon, LabelFilledIcon } from "@plane/propel/icons";
+import { Button } from "@bright-byte/propel/button";
+import { CloseIcon, LabelFilledIcon } from "@bright-byte/propel/icons";
 // types
 import { useLabel } from "@/hooks/store/use-label";
 import type { TLabelOperations } from "./root";

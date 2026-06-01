@@ -9,19 +9,19 @@ import { useCallback, useEffect, useState } from "react";
 import { observer } from "mobx-react";
 import { usePathname } from "next/navigation";
 // plane imports
-import type { EditorRefApi } from "@plane/editor";
-import { useHashScroll } from "@plane/hooks";
-import { GlobeIcon, LockIcon } from "@plane/propel/icons";
-import { EIssueCommentAccessSpecifier } from "@plane/types";
-import type { TCommentsOperations, TIssueComment } from "@plane/types";
-import { calculateTimeAgo, cn, getFileURL, renderFormattedDate, renderFormattedTime } from "@plane/utils";
+import type { EditorRefApi } from "@bright-byte/editor";
+import { useHashScroll } from "@bright-byte/hooks";
+import { GlobeIcon, LockIcon } from "@bright-byte/propel/icons";
+import { EIssueCommentAccessSpecifier } from "@bright-byte/types";
+import type { TCommentsOperations, TIssueComment } from "@bright-byte/types";
+import { calculateTimeAgo, cn, getFileURL, renderFormattedDate, renderFormattedTime } from "@bright-byte/utils";
 // components
 import { LiteTextEditor } from "@/components/editor/lite-text";
 // local imports
 import { CommentReactions } from "../comment-reaction";
 import { CommentCardEditForm } from "./edit-form";
-import { EmojiReactionButton, EmojiReactionPicker } from "@plane/propel/emoji-reaction";
-import { Avatar, Tooltip } from "@plane/ui";
+import { EmojiReactionButton, EmojiReactionPicker } from "@bright-byte/propel/emoji-reaction";
+import { Avatar, Tooltip } from "@bright-byte/ui";
 import { useMember } from "@/hooks/store/use-member";
 
 export type TCommentCardDisplayProps = {

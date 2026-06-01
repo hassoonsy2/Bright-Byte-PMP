@@ -4,7 +4,7 @@
  * See the LICENSE file for details.
  */
 
-import type { IWorkspace } from "@plane/types";
+import type { IWorkspace } from "@bright-byte/types";
 
 type TProps = {
   workspace?: IWorkspace;

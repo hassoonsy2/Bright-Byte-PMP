@@ -6,7 +6,7 @@
 
 import React from "react";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 
 type RadioInputProps = {
   name?: string;

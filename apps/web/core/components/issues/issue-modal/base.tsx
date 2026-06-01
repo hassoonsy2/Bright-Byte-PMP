@@ -9,11 +9,11 @@ import { isEqual, xor } from "lodash-es";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 // Plane imports
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TBaseIssue, TIssue } from "@plane/types";
-import { EIssuesStoreType } from "@plane/types";
-import { EModalPosition, EModalWidth, ModalCore } from "@plane/ui";
+import { useTranslation } from "@bright-byte/i18n";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TBaseIssue, TIssue } from "@bright-byte/types";
+import { EIssuesStoreType } from "@bright-byte/types";
+import { EModalPosition, EModalWidth, ModalCore } from "@bright-byte/ui";
 // hooks
 import { useIssueModal } from "@/hooks/context/use-issue-modal";
 import { useCycle } from "@/hooks/store/use-cycle";

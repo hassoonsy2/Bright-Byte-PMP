@@ -6,11 +6,11 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import { PlaneLockup, ChevronLeftIcon } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TOnboardingStep } from "@plane/types";
-import { EOnboardingSteps } from "@plane/types";
-import { cn } from "@plane/utils";
+import { PlaneLockup, ChevronLeftIcon } from "@bright-byte/propel/icons";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import type { TOnboardingStep } from "@bright-byte/types";
+import { EOnboardingSteps } from "@bright-byte/types";
+import { cn } from "@bright-byte/utils";
 // hooks
 import { useInstance } from "@/hooks/store/use-instance";
 import { useUser } from "@/hooks/store/user";

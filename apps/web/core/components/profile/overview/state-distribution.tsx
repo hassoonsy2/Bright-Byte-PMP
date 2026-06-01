@@ -5,13 +5,13 @@
  */
 
 // plane imports
-import { STATE_GROUPS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { PieChart } from "@plane/propel/charts/pie-chart";
-import { EmptyStateCompact } from "@plane/propel/empty-state";
-import type { IUserProfileData, IUserStateDistribution } from "@plane/types";
-import { Card } from "@plane/ui";
-import { capitalizeFirstLetter } from "@plane/utils";
+import { STATE_GROUPS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { PieChart } from "@bright-byte/propel/charts/pie-chart";
+import { EmptyStateCompact } from "@bright-byte/propel/empty-state";
+import type { IUserProfileData, IUserStateDistribution } from "@bright-byte/types";
+import { Card } from "@bright-byte/ui";
+import { capitalizeFirstLetter } from "@bright-byte/utils";
 
 type Props = {
   stateDistribution: IUserStateDistribution[];

@@ -8,14 +8,14 @@ import { useState } from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { CircleDashed } from "lucide-react";
-import { PlusIcon } from "@plane/propel/icons";
+import { PlusIcon } from "@bright-byte/propel/icons";
 // types
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TIssue, ISearchIssueResponse, TIssueGroupByOptions } from "@plane/types";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TIssue, ISearchIssueResponse, TIssueGroupByOptions } from "@bright-byte/types";
 // ui
-import { CustomMenu } from "@plane/ui";
+import { CustomMenu } from "@bright-byte/ui";
 // components
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 import { ExistingIssuesListModal } from "@/components/core/modals/existing-issues-list-modal";
 import { MultipleSelectGroupAction } from "@/components/core/multiple-select";
 import { CreateUpdateIssueModal } from "@/components/issues/issue-modal/modal";

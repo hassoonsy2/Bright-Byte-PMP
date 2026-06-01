@@ -6,13 +6,13 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { observer } from "mobx-react";
-import { useTranslation } from "@plane/i18n";
-import { EmptyStateDetailed } from "@plane/propel/empty-state";
-import type { TInboxIssueCurrentTab } from "@plane/types";
-import { EInboxIssueCurrentTab } from "@plane/types";
+import { useTranslation } from "@bright-byte/i18n";
+import { EmptyStateDetailed } from "@bright-byte/propel/empty-state";
+import type { TInboxIssueCurrentTab } from "@bright-byte/types";
+import { EInboxIssueCurrentTab } from "@bright-byte/types";
 // plane imports
-import { Header, Loader, EHeaderVariant } from "@plane/ui";
-import { cn } from "@plane/utils";
+import { Header, Loader, EHeaderVariant } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 // components
 import { InboxSidebarLoader } from "@/components/ui/loader/layouts/project-inbox/inbox-sidebar-loader";
 // hooks
@@ -162,13 +162,13 @@ export const InboxSidebar = observer(function InboxSidebar(props: IInboxSidebarP
                   />
                 ) : (
                   // TODO: Add translation
-                  <EmptyStateDetailed
+                  (<EmptyStateDetailed
                     assetKey="inbox"
                     title="No request closed yet"
                     description="All the work items whether accepted or declined can be found here."
                     assetClassName="size-20"
                     className="px-10"
-                  />
+                  />)
                 )}
               </div>
             )}

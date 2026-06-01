@@ -10,17 +10,17 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { ArchiveRestoreIcon, Settings, UserPlus } from "lucide-react";
 // plane imports
-import { EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@plane/constants";
-import { useLocalStorage } from "@plane/hooks";
-import { Button } from "@plane/propel/button";
-import { Logo } from "@plane/propel/emoji-icon-picker";
-import { LinkIcon, LockIcon, NewTabIcon, TrashIcon, CheckIcon } from "@plane/propel/icons";
-import { setPromiseToast, setToast, TOAST_TYPE } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IProject } from "@plane/types";
-import type { TContextMenuItem } from "@plane/ui";
-import { Avatar, AvatarGroup, ContextMenu, FavoriteStar } from "@plane/ui";
-import { copyUrlToClipboard, cn, getFileURL, renderFormattedDate } from "@plane/utils";
+import { EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@bright-byte/constants";
+import { useLocalStorage } from "@bright-byte/hooks";
+import { Button } from "@bright-byte/propel/button";
+import { Logo } from "@bright-byte/propel/emoji-icon-picker";
+import { LinkIcon, LockIcon, NewTabIcon, TrashIcon, CheckIcon } from "@bright-byte/propel/icons";
+import { setPromiseToast, setToast, TOAST_TYPE } from "@bright-byte/propel/toast";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import type { IProject } from "@bright-byte/types";
+import type { TContextMenuItem } from "@bright-byte/ui";
+import { Avatar, AvatarGroup, ContextMenu, FavoriteStar } from "@bright-byte/ui";
+import { copyUrlToClipboard, cn, getFileURL, renderFormattedDate } from "@bright-byte/utils";
 // components
 // hooks
 import { useMember } from "@/hooks/store/use-member";

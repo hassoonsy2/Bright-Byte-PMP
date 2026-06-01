@@ -6,10 +6,10 @@
 
 import { Command } from "cmdk";
 import { observer } from "mobx-react";
-import { EIconSize } from "@plane/constants";
+import { EIconSize } from "@bright-byte/constants";
 // plane imports
-import { CheckIcon, StateGroupIcon } from "@plane/propel/icons";
-import { Spinner } from "@plane/ui";
+import { CheckIcon, StateGroupIcon } from "@bright-byte/propel/icons";
+import { Spinner } from "@bright-byte/ui";
 // store hooks
 import { useProjectState } from "@/hooks/store/use-project-state";
 

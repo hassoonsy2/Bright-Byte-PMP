@@ -5,8 +5,8 @@
  */
 
 // plane imports
-import { ScrollArea } from "@plane/propel/scrollarea";
-import { cn } from "@plane/utils";
+import { ScrollArea } from "@bright-byte/propel/scrollarea";
+import { cn } from "@bright-byte/utils";
 // components
 import { AppHeader } from "@/components/core/app-header";
 

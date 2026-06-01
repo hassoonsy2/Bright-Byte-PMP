@@ -10,15 +10,15 @@ import { useParams } from "next/navigation";
 import { Controller, useForm } from "react-hook-form";
 
 // types
-import { SPACE_BASE_PATH, SPACE_BASE_URL } from "@plane/constants";
-import { Button } from "@plane/propel/button";
-import { GlobeIcon, NewTabIcon, CheckIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TProjectPublishLayouts, TProjectPublishSettings } from "@plane/types";
+import { SPACE_BASE_PATH, SPACE_BASE_URL } from "@bright-byte/constants";
+import { Button } from "@bright-byte/propel/button";
+import { GlobeIcon, NewTabIcon, CheckIcon } from "@bright-byte/propel/icons";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TProjectPublishLayouts, TProjectPublishSettings } from "@bright-byte/types";
 // ui
-import { Loader, ToggleSwitch, CustomSelect, ModalCore, EModalWidth } from "@plane/ui";
+import { Loader, ToggleSwitch, CustomSelect, ModalCore, EModalWidth } from "@bright-byte/ui";
 // helpers
-import { copyTextToClipboard } from "@plane/utils";
+import { copyTextToClipboard } from "@bright-byte/utils";
 // hooks
 import { useProjectPublish } from "@/hooks/store/use-project-publish";
 

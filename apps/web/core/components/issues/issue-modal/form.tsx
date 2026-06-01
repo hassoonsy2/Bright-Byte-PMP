@@ -9,15 +9,15 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { FormProvider, useForm } from "react-hook-form";
 // editor
-import { ETabIndices, DEFAULT_WORK_ITEM_FORM_VALUES } from "@plane/constants";
-import type { EditorRefApi } from "@plane/editor";
+import { ETabIndices, DEFAULT_WORK_ITEM_FORM_VALUES } from "@bright-byte/constants";
+import type { EditorRefApi } from "@bright-byte/editor";
 // i18n
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TIssue, TWorkspaceDraftIssue } from "@plane/types";
+import { useTranslation } from "@bright-byte/i18n";
+import { Button } from "@bright-byte/propel/button";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TIssue, TWorkspaceDraftIssue } from "@bright-byte/types";
 // hooks
-import { ToggleSwitch } from "@plane/ui";
+import { ToggleSwitch } from "@bright-byte/ui";
 import {
   convertWorkItemDataToSearchResponse,
   getUpdateFormDataForReset,
@@ -25,7 +25,7 @@ import {
   getTextContent,
   getChangedIssuefields,
   getTabIndex,
-} from "@plane/utils";
+} from "@bright-byte/utils";
 // components
 import {
   IssueDefaultProperties,
@@ -103,7 +103,7 @@ export const IssueFormRoot = observer(function IssueFormRoot(props: IssueFormPro
   } = props;
 
   // states
-  const [gptAssistantModal, setGptAssistantModal] = useState(false);
+  const [byteAssistantPopover, setByteAssistantPopover] = useState(false);
   const [isMoving, setIsMoving] = useState<boolean>(false);
 
   // refs
@@ -253,7 +253,7 @@ export const IssueFormRoot = observer(function IssueFormRoot(props: IssueFormPro
 
     await onSubmit(submitData, is_draft_issue)
       .then(() => {
-        setGptAssistantModal(false);
+        setByteAssistantPopover(false);
         if (isCreateMoreToggleEnabled && workItemTemplateId) {
           handleTemplateChange({
             workspaceSlug: workspaceSlug?.toString(),
@@ -466,15 +466,15 @@ export const IssueFormRoot = observer(function IssueFormRoot(props: IssueFormPro
                   descriptionHtmlData={data?.description_html}
                   editorRef={editorRef}
                   submitBtnRef={submitBtnRef}
-                  gptAssistantModal={gptAssistantModal}
+                  byteAssistantPopover={byteAssistantPopover}
                   workspaceSlug={workspaceSlug?.toString()}
                   projectId={projectId}
                   handleFormChange={handleFormChange}
                   handleDescriptionHTMLDataChange={(description_html) =>
                     setValue<"description_html">("description_html", description_html)
                   }
-                  setGptAssistantModal={setGptAssistantModal}
-                  handleGptAssistantClose={() => reset(getValues())}
+                  setByteAssistantPopover={setByteAssistantPopover}
+                  handleByteAssistantClose={() => reset(getValues())}
                   onAssetUpload={onAssetUpload}
                   onClose={onClose}
                 />

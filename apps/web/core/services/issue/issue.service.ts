@@ -5,8 +5,8 @@
  */
 
 // plane imports
-import { API_BASE_URL } from "@plane/constants";
-import { EIssueServiceType } from "@plane/types";
+import { API_BASE_URL } from "@bright-byte/constants";
+import { EIssueServiceType } from "@bright-byte/types";
 import type {
   TIssueParams,
   IIssueDisplayProperties,
@@ -17,7 +17,7 @@ import type {
   TIssueServiceType,
   TIssuesResponse,
   TIssueSubIssues,
-} from "@plane/types";
+} from "@bright-byte/types";
 // services
 import { APIService } from "@/services/api.service";
 

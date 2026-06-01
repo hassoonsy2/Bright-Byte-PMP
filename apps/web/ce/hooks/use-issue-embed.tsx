@@ -5,9 +5,9 @@
  */
 
 // editor
-import type { TEmbedConfig } from "@plane/editor";
+import type { TEmbedConfig } from "@bright-byte/editor";
 // plane types
-import type { TSearchEntityRequestPayload, TSearchResponse } from "@plane/types";
+import type { TSearchEntityRequestPayload, TSearchResponse } from "@bright-byte/types";
 // plane web components
 import { IssueEmbedUpgradeCard } from "@/plane-web/components/pages";
 

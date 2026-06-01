@@ -7,12 +7,12 @@
 import { observer } from "mobx-react";
 import { usePathname } from "next/navigation";
 // i18n
-import { EUserPermissions, EUserPermissionsLevel, PROJECT_TRACKER_ELEMENTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
+import { EUserPermissions, EUserPermissionsLevel, PROJECT_TRACKER_ELEMENTS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
 // ui
-import { Button } from "@plane/propel/button";
-import { ProjectIcon } from "@plane/propel/icons";
-import { Breadcrumbs, Header } from "@plane/ui";
+import { Button } from "@bright-byte/propel/button";
+import { ProjectIcon } from "@bright-byte/propel/icons";
+import { Breadcrumbs, Header } from "@bright-byte/ui";
 // components
 import { BreadcrumbLink } from "@/components/common/breadcrumb-link";
 // hooks

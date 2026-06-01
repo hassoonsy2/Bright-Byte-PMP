@@ -6,11 +6,11 @@
 
 import { observer } from "mobx-react";
 
-import type { ENotificationFilterType } from "@plane/constants";
-import { CheckIcon } from "@plane/propel/icons";
+import type { ENotificationFilterType } from "@bright-byte/constants";
+import { CheckIcon } from "@bright-byte/propel/icons";
 // plane imports
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 // hooks
 import { useWorkspaceNotifications } from "@/hooks/store/notifications";
 

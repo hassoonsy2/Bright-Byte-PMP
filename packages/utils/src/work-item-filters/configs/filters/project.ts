@@ -5,8 +5,8 @@
  */
 
 // plane imports
-import type { TFilterProperty } from "@plane/types";
-import { EQUALITY_OPERATOR, COLLECTION_OPERATOR } from "@plane/types";
+import type { TFilterProperty } from "@bright-byte/types";
+import { EQUALITY_OPERATOR, COLLECTION_OPERATOR } from "@bright-byte/types";
 // local imports
 import type { TCreateFilterConfig, TCreateProjectFilterParams } from "../../../rich-filters";
 import { createFilterConfig, createOperatorConfigEntry, getProjectMultiSelectConfig } from "../../../rich-filters";

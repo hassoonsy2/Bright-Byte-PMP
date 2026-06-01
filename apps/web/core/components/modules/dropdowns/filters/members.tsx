@@ -8,9 +8,9 @@ import { useMemo, useState } from "react";
 import { sortBy } from "lodash-es";
 import { observer } from "mobx-react";
 // plane ui
-import { Avatar, Loader } from "@plane/ui";
+import { Avatar, Loader } from "@bright-byte/ui";
 // components
-import { getFileURL } from "@plane/utils";
+import { getFileURL } from "@bright-byte/utils";
 import { FilterHeader, FilterOption } from "@/components/issues/issue-layouts/filters";
 // helpers
 // hooks

@@ -6,14 +6,14 @@
 
 import React from "react";
 import { observer } from "mobx-react";
-import { useTranslation } from "@plane/i18n";
-import { LinkIcon, EditIcon, TrashIcon, CloseIcon } from "@plane/propel/icons";
+import { useTranslation } from "@bright-byte/i18n";
+import { LinkIcon, EditIcon, TrashIcon, CloseIcon } from "@bright-byte/propel/icons";
 // plane imports
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TIssue, TIssueServiceType } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
-import { ControlLink, CustomMenu } from "@plane/ui";
-import { generateWorkItemLink } from "@plane/utils";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import type { TIssue, TIssueServiceType } from "@bright-byte/types";
+import { EIssueServiceType } from "@bright-byte/types";
+import { ControlLink, CustomMenu } from "@bright-byte/ui";
+import { generateWorkItemLink } from "@bright-byte/utils";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useProject } from "@/hooks/store/use-project";

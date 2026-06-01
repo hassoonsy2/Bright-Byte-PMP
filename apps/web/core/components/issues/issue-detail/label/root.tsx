@@ -6,10 +6,10 @@
 
 import { useMemo } from "react";
 import { observer } from "mobx-react";
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { IIssueLabel, TIssue, TIssueServiceType } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
+import { useTranslation } from "@bright-byte/i18n";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { IIssueLabel, TIssue, TIssueServiceType } from "@bright-byte/types";
+import { EIssueServiceType } from "@bright-byte/types";
 // components
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";

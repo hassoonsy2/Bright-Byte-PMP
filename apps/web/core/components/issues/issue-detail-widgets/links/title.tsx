@@ -7,9 +7,9 @@
 import React, { useMemo } from "react";
 import { observer } from "mobx-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import type { TIssueServiceType } from "@plane/types";
-import { CollapsibleButton } from "@plane/ui";
+import { useTranslation } from "@bright-byte/i18n";
+import type { TIssueServiceType } from "@bright-byte/types";
+import { CollapsibleButton } from "@bright-byte/ui";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 // local imports

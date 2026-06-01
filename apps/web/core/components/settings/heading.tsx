@@ -5,7 +5,7 @@
  */
 
 // plane imports
-import { cn } from "@plane/ui";
+import { cn } from "@bright-byte/ui";
 
 type Props = {
   className?: string;

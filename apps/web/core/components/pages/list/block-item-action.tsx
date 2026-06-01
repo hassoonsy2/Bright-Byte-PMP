@@ -7,10 +7,10 @@
 import { observer } from "mobx-react";
 import { Earth, Info, Minus } from "lucide-react";
 // plane imports
-import { LockIcon } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import { Avatar, FavoriteStar } from "@plane/ui";
-import { renderFormattedDate, getFileURL } from "@plane/utils";
+import { LockIcon } from "@bright-byte/propel/icons";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import { Avatar, FavoriteStar } from "@bright-byte/ui";
+import { renderFormattedDate, getFileURL } from "@bright-byte/utils";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
 import { usePageOperations } from "@/hooks/use-page-operations";

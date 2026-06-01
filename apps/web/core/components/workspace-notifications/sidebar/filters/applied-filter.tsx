@@ -6,10 +6,10 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import { ENotificationFilterType, FILTER_TYPE_OPTIONS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { CloseIcon } from "@plane/propel/icons";
-import { Header, EHeaderVariant, Tag } from "@plane/ui";
+import { ENotificationFilterType, FILTER_TYPE_OPTIONS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { CloseIcon } from "@bright-byte/propel/icons";
+import { Header, EHeaderVariant, Tag } from "@bright-byte/ui";
 // hooks
 import { useWorkspaceNotifications } from "@/hooks/store/notifications";
 

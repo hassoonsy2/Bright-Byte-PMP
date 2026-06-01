@@ -6,9 +6,9 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import { setPromiseToast } from "@plane/propel/toast";
-import type { IProject } from "@plane/types";
-import { ToggleSwitch } from "@plane/ui";
+import { setPromiseToast } from "@bright-byte/propel/toast";
+import type { IProject } from "@bright-byte/types";
+import { ToggleSwitch } from "@bright-byte/ui";
 // components
 import { SettingsBoxedControlItem } from "@/components/settings/boxed-control-item";
 // hooks

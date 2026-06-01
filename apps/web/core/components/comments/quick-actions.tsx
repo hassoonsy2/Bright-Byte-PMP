@@ -8,14 +8,14 @@ import { useMemo } from "react";
 import { observer } from "mobx-react";
 import { MoreHorizontal } from "lucide-react";
 // plane imports
-import { EIssueCommentAccessSpecifier } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { IconButton } from "@plane/propel/icon-button";
-import { LinkIcon, GlobeIcon, LockIcon, EditIcon, TrashIcon } from "@plane/propel/icons";
-import type { TIssueComment, TCommentsOperations } from "@plane/types";
-import type { TContextMenuItem } from "@plane/ui";
-import { CustomMenu } from "@plane/ui";
-import { cn } from "@plane/utils";
+import { EIssueCommentAccessSpecifier } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { IconButton } from "@bright-byte/propel/icon-button";
+import { LinkIcon, GlobeIcon, LockIcon, EditIcon, TrashIcon } from "@bright-byte/propel/icons";
+import type { TIssueComment, TCommentsOperations } from "@bright-byte/types";
+import type { TContextMenuItem } from "@bright-byte/ui";
+import { CustomMenu } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 // hooks
 import { useUser } from "@/hooks/store/user";
 

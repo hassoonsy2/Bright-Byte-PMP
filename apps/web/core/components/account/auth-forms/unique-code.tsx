@@ -6,10 +6,10 @@
 
 import { useEffect, useState } from "react";
 import { CircleCheck, XCircle } from "lucide-react";
-import { API_BASE_URL } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { Input, Spinner } from "@plane/ui";
+import { API_BASE_URL } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { Button } from "@bright-byte/propel/button";
+import { Input, Spinner } from "@bright-byte/ui";
 // constants
 // helpers
 import { EAuthModes } from "@/helpers/authentication.helper";

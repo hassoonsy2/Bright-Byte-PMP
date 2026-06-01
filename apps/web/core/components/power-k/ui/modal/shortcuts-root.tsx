@@ -7,9 +7,9 @@
 import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 // plane imports
-import { CloseIcon, SearchIcon } from "@plane/propel/icons";
-import { ScrollArea } from "@plane/propel/scrollarea";
-import { Input } from "@plane/ui";
+import { CloseIcon, SearchIcon } from "@bright-byte/propel/icons";
+import { ScrollArea } from "@bright-byte/propel/scrollarea";
+import { Input } from "@bright-byte/ui";
 // hooks
 import { usePowerK } from "@/hooks/store/use-power-k";
 // local imports

@@ -5,7 +5,7 @@
  */
 
 import { useMemo } from "react";
-import { useTranslation } from "@plane/i18n";
+import { useTranslation } from "@bright-byte/i18n";
 import { getAnalyticsTabs } from "./tabs";
 
 export const useAnalyticsTabs = (_workspaceSlug: string) => {

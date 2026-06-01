@@ -14,10 +14,10 @@ import {
   GROUPED_PROFILE_SETTINGS,
   PROFILE_SETTINGS_CATEGORIES,
   PROFILE_SETTINGS_CATEGORY_LABELS,
-} from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import type { ISvgIcons } from "@plane/propel/icons";
-import type { TProfileSettingsTabs } from "@plane/types";
+} from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import type { ISvgIcons } from "@bright-byte/propel/icons";
+import type { TProfileSettingsTabs } from "@bright-byte/types";
 // local imports
 import { SettingsSidebarItem } from "../../sidebar/item";
 import { ProfileSettingsSidebarWorkspaceOptions } from "./workspace-options";

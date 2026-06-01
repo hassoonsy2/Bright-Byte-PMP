@@ -8,11 +8,11 @@ import { observer } from "mobx-react";
 import { Controller, useForm } from "react-hook-form";
 import { Box, PenTool, Rocket, Monitor, RefreshCw } from "lucide-react";
 // plane imports
-import { Button } from "@plane/propel/button";
-import { CheckIcon, ViewsIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TUserProfile } from "@plane/types";
-import { EOnboardingSteps } from "@plane/types";
+import { Button } from "@bright-byte/propel/button";
+import { CheckIcon, ViewsIcon } from "@bright-byte/propel/icons";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TUserProfile } from "@bright-byte/types";
+import { EOnboardingSteps } from "@bright-byte/types";
 // hooks
 import { useUserProfile } from "@/hooks/store/user";
 // local components

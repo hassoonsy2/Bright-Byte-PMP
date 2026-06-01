@@ -6,8 +6,8 @@
 
 import { useState } from "react";
 // ui
-import { Button } from "@plane/propel/button";
-import { EModalPosition, EModalWidth, ModalCore } from "@plane/ui";
+import { Button } from "@bright-byte/propel/button";
+import { EModalPosition, EModalWidth, ModalCore } from "@bright-byte/ui";
 
 type Props = {
   isOpen: boolean;

@@ -5,8 +5,8 @@
  */
 
 // plane imports
-import type { ICycle, TCycleGroups, TFilterProperty, TSupportedOperators } from "@plane/types";
-import { EQUALITY_OPERATOR, COLLECTION_OPERATOR } from "@plane/types";
+import type { ICycle, TCycleGroups, TFilterProperty, TSupportedOperators } from "@bright-byte/types";
+import { EQUALITY_OPERATOR, COLLECTION_OPERATOR } from "@bright-byte/types";
 // local imports
 import type { TCreateFilterConfigParams, IFilterIconConfig, TCreateFilterConfig } from "../../../rich-filters";
 import { createFilterConfig, getMultiSelectConfig, createOperatorConfigEntry } from "../../../rich-filters";

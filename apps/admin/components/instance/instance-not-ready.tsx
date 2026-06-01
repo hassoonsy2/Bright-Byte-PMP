@@ -5,7 +5,7 @@
  */
 
 import Link from "next/link";
-import { Button } from "@plane/propel/button";
+import { Button } from "@bright-byte/propel/button";
 // assets
 import PlaneTakeOffImage from "@/app/assets/images/plane-takeoff.png?url";
 

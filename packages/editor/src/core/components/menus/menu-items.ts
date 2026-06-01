@@ -29,7 +29,7 @@ import {
   AlignCenter,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
-import { LinkIcon } from "@plane/propel/icons";
+import { LinkIcon } from "@bright-byte/propel/icons";
 // constants
 import { CORE_EXTENSIONS } from "@/constants/extension";
 // helpers
@@ -56,7 +56,7 @@ import {
 } from "@/helpers/editor-commands";
 // types
 import type { TCommandWithProps, TEditorCommands } from "@/types";
-import type { ISvgIcons } from "@plane/propel/icons";
+import type { ISvgIcons } from "@bright-byte/propel/icons";
 type isActiveFunction<T extends TEditorCommands> = (params?: TCommandWithProps<T>) => boolean;
 type commandFunction<T extends TEditorCommands> = (params?: TCommandWithProps<T>) => void;
 
@@ -199,16 +199,16 @@ export const ImageItem = (editor: Editor): EditorMenuItem<"image"> => ({
 });
 
 export const HorizontalRuleItem = (editor: Editor): EditorMenuItem<"divider"> =>
-  ({
+  (({
     key: "divider",
     name: "Divider",
     isActive: () => editor?.isActive(CORE_EXTENSIONS.HORIZONTAL_RULE),
     command: () => insertHorizontalRule(editor),
-    icon: MinusSquare,
-  }) as const;
+    icon: MinusSquare
+  }) as const);
 
 export const LinkItem = (editor: Editor): EditorMenuItem<"link"> =>
-  ({
+  (({
     key: "link",
     name: "Link",
     isActive: () => editor?.isActive("link"),
@@ -219,8 +219,8 @@ export const LinkItem = (editor: Editor): EditorMenuItem<"link"> =>
       else unsetLinkEditor(editor);
     },
 
-    icon: LinkIcon,
-  }) as const;
+    icon: LinkIcon
+  }) as const);
 
 export const TextColorItem = (editor: Editor): EditorMenuItem<"text-color"> => ({
   key: "text-color",

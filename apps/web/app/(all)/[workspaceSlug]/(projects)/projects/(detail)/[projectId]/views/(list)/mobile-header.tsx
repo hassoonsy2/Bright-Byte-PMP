@@ -7,9 +7,9 @@
 import { observer } from "mobx-react";
 // icons
 import { ListFilter } from "lucide-react";
-import { ChevronDownIcon } from "@plane/propel/icons";
+import { ChevronDownIcon } from "@bright-byte/propel/icons";
 // components
-import { Row } from "@plane/ui";
+import { Row } from "@bright-byte/ui";
 import { FiltersDropdown } from "@/components/issues/issue-layouts/filters";
 import { ViewFiltersSelection } from "@/components/views/filters/filter-selection";
 import { ViewOrderByDropdown } from "@/components/views/filters/order-by";

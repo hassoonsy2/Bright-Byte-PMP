@@ -4,8 +4,8 @@
  * See the LICENSE file for details.
  */
 
-import { API_BASE_URL } from "@plane/constants";
-import type { IWebhook } from "@plane/types";
+import { API_BASE_URL } from "@bright-byte/constants";
+import type { IWebhook } from "@bright-byte/types";
 import { APIService } from "../api.service";
 
 /**

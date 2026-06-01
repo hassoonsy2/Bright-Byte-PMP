@@ -16,9 +16,9 @@ import type {
   TCycleEstimateDistribution,
   TCycleDistribution,
   TCycleEstimateType,
-} from "@plane/types";
-import type { DistributionUpdates } from "@plane/utils";
-import { orderCycles, shouldFilterCycle, getDate, updateDistribution } from "@plane/utils";
+} from "@bright-byte/types";
+import type { DistributionUpdates } from "@bright-byte/utils";
+import { orderCycles, shouldFilterCycle, getDate, updateDistribution } from "@bright-byte/utils";
 // helpers
 // services
 import { CycleService } from "@/services/cycle.service";

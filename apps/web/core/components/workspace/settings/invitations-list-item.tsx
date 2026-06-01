@@ -8,13 +8,13 @@ import { useState } from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 // plane imports
-import { ROLE, EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { LinkIcon, TrashIcon, ChevronDownIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TContextMenuItem } from "@plane/ui";
-import { CustomSelect, CustomMenu } from "@plane/ui";
-import { cn, copyTextToClipboard } from "@plane/utils";
+import { ROLE, EUserPermissions, EUserPermissionsLevel } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { LinkIcon, TrashIcon, ChevronDownIcon } from "@bright-byte/propel/icons";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TContextMenuItem } from "@bright-byte/ui";
+import { CustomSelect, CustomMenu } from "@bright-byte/ui";
+import { cn, copyTextToClipboard } from "@bright-byte/utils";
 // components
 import { ConfirmWorkspaceMemberRemove } from "@/components/workspace/confirm-workspace-member-remove";
 // hooks

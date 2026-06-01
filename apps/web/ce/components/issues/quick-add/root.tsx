@@ -10,10 +10,10 @@ import { observer } from "mobx-react";
 import type { UseFormRegister, UseFormSetFocus } from "react-hook-form";
 // plane constants
 // plane helpers
-import { useOutsideClickDetector } from "@plane/hooks";
+import { useOutsideClickDetector } from "@bright-byte/hooks";
 // types
-import type { TIssue } from "@plane/types";
-import { EIssueLayoutTypes } from "@plane/types";
+import type { TIssue } from "@bright-byte/types";
+import { EIssueLayoutTypes } from "@bright-byte/types";
 // components
 import type { TQuickAddIssueForm } from "@/components/issues/issue-layouts/quick-add";
 import {

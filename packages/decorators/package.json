@@ -1,5 +1,5 @@
 {
-  "name": "@plane/decorators",
+  "name": "@bright-byte/decorators",
   "version": "0.1.0",
   "private": true,
   "description": "Controller and route decorators for Express.js applications",
@@ -23,7 +23,7 @@
     "clean": "rm -rf .turbo && rm -rf .next && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@plane/typescript-config": "workspace:*",
+    "@bright-byte/typescript-config": "workspace:*",
     "@types/express": "catalog:",
     "@types/node": "catalog:",
     "@types/ws": "catalog:",

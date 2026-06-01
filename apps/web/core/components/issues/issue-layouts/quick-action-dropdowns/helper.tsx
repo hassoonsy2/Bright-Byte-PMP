@@ -7,12 +7,12 @@
 import { useMemo } from "react";
 import { XCircle, ArchiveRestoreIcon } from "lucide-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import { LinkIcon, CopyIcon, NewTabIcon, EditIcon, ArchiveIcon, TrashIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { EIssuesStoreType, TIssue } from "@plane/types";
-import type { TContextMenuItem } from "@plane/ui";
-import { copyUrlToClipboard, generateWorkItemLink } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import { LinkIcon, CopyIcon, NewTabIcon, EditIcon, ArchiveIcon, TrashIcon } from "@bright-byte/propel/icons";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { EIssuesStoreType, TIssue } from "@bright-byte/types";
+import type { TContextMenuItem } from "@bright-byte/ui";
+import { copyUrlToClipboard, generateWorkItemLink } from "@bright-byte/utils";
 // types
 import { createCopyMenuWithDuplication } from "@/plane-web/components/issues/issue-layouts/quick-action-dropdowns";
 

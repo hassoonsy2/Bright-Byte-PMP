@@ -8,14 +8,14 @@ import { uniq, unset, set, update, sortBy } from "lodash-es";
 import { action, computed, makeObservable, observable, runInAction } from "mobx";
 import { computedFn } from "mobx-utils";
 // plane imports
-import { EUserPermissions } from "@plane/constants";
+import { EUserPermissions } from "@bright-byte/constants";
 import type {
   EUserProjectRoles,
   IProjectBulkAddFormData,
   IProjectUserPropertiesResponse,
   IUserLite,
   TProjectMembership,
-} from "@plane/types";
+} from "@bright-byte/types";
 // plane web imports
 import type { RootStore } from "@/plane-web/store/root.store";
 // services

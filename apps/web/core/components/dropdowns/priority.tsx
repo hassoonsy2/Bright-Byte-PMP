@@ -9,16 +9,16 @@ import { useRef, useState } from "react";
 import { usePopper } from "react-popper";
 import { SignalHigh } from "lucide-react";
 import { Combobox } from "@headlessui/react";
-import { ISSUE_PRIORITIES } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
+import { ISSUE_PRIORITIES } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
 // types
-import { CheckIcon, PriorityIcon, ChevronDownIcon, SearchIcon } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TIssuePriorities } from "@plane/types";
+import { CheckIcon, PriorityIcon, ChevronDownIcon, SearchIcon } from "@bright-byte/propel/icons";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import type { TIssuePriorities } from "@bright-byte/types";
 // ui
-import { ComboDropDown } from "@plane/ui";
+import { ComboDropDown } from "@bright-byte/ui";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 // hooks
 import { useDropdown } from "@/hooks/use-dropdown";
 import { usePlatformOS } from "@/hooks/use-platform-os";

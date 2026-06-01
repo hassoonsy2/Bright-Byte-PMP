@@ -6,10 +6,10 @@
 
 import React from "react";
 // plane imports
-import { LiteTextEditorWithRef } from "@plane/editor";
-import type { EditorRefApi, ILiteTextEditorProps, TFileHandler } from "@plane/editor";
-import type { MakeOptional } from "@plane/types";
-import { cn, isCommentEmpty } from "@plane/utils";
+import { LiteTextEditorWithRef } from "@bright-byte/editor";
+import type { EditorRefApi, ILiteTextEditorProps, TFileHandler } from "@bright-byte/editor";
+import type { MakeOptional } from "@bright-byte/types";
+import { cn, isCommentEmpty } from "@bright-byte/utils";
 // helpers
 import { getEditorFileHandlers } from "@/helpers/editor.helper";
 // hooks

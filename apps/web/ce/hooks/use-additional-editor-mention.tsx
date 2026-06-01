@@ -6,9 +6,9 @@
 
 import { useCallback, useMemo } from "react";
 // plane editor
-import type { TMentionSection } from "@plane/editor";
+import type { TMentionSection } from "@bright-byte/editor";
 // plane types
-import type { TSearchEntities, TSearchResponse } from "@plane/types";
+import type { TSearchEntities, TSearchResponse } from "@bright-byte/types";
 
 export type TUseAdditionalEditorMentionArgs = {
   enableAdvancedMentions: boolean;

@@ -5,7 +5,7 @@
  */
 
 // plane types
-import type { TSearchEntities } from "@plane/types";
+import type { TSearchEntities } from "@bright-byte/types";
 
 export type TMentionSuggestion = {
   entity_identifier: string;

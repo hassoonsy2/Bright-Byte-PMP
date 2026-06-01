@@ -5,7 +5,7 @@
  */
 
 // plane imports
-import type { TOAuthConfigs } from "@plane/types";
+import type { TOAuthConfigs } from "@bright-byte/types";
 
 export const useExtendedOAuthConfig = (_oauthActionText: string): TOAuthConfigs => ({
   isOAuthEnabled: false,

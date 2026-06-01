@@ -8,11 +8,11 @@ import { useState, useRef } from "react";
 import { observer } from "mobx-react";
 
 // plane imports
-import { EIconSize, STATE_TRACKER_ELEMENTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { PlusIcon, StateGroupIcon, ChevronDownIcon } from "@plane/propel/icons";
-import type { IState, TStateGroups, TStateOperationsCallbacks } from "@plane/types";
-import { cn } from "@plane/utils";
+import { EIconSize, STATE_TRACKER_ELEMENTS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { PlusIcon, StateGroupIcon, ChevronDownIcon } from "@bright-byte/propel/icons";
+import type { IState, TStateGroups, TStateOperationsCallbacks } from "@bright-byte/types";
+import { cn } from "@bright-byte/utils";
 // components
 import { StateList, StateCreate } from "@/components/project-states";
 

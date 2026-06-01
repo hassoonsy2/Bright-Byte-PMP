@@ -16,8 +16,8 @@ import {
   YAxis,
 } from "recharts";
 // plane imports
-import { AXIS_LABEL_CLASSNAME } from "@plane/constants";
-import type { TLineChartProps } from "@plane/types";
+import { AXIS_LABEL_CLASSNAME } from "@bright-byte/constants";
+import type { TLineChartProps } from "@bright-byte/types";
 // local components
 import { getLegendProps } from "../components/legend";
 import { CustomXAxisTick, CustomYAxisTick } from "../components/tick";
@@ -145,12 +145,12 @@ export const LineChart = React.memo(function LineChart<K extends string, T exten
           />
           {legend && (
             // @ts-expect-error recharts types are not up to date
-            <Legend
+            (<Legend
               onMouseEnter={(payload) => setActiveLegend(payload.value)}
               onMouseLeave={() => setActiveLegend(null)}
               formatter={(value) => itemLabels[value]}
               {...getLegendProps(legend)}
-            />
+            />)
           )}
           {showTooltip && (
             <Tooltip

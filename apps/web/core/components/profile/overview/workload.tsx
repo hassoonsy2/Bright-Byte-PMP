@@ -5,11 +5,11 @@
  */
 
 // plane imports
-import { STATE_GROUPS } from "@plane/constants";
+import { STATE_GROUPS } from "@bright-byte/constants";
 // types
-import { useTranslation } from "@plane/i18n";
-import type { IUserStateDistribution } from "@plane/types";
-import { Card, ECardDirection, ECardSpacing } from "@plane/ui";
+import { useTranslation } from "@bright-byte/i18n";
+import type { IUserStateDistribution } from "@bright-byte/types";
+import { Card, ECardDirection, ECardSpacing } from "@bright-byte/ui";
 // constants
 
 type Props = {

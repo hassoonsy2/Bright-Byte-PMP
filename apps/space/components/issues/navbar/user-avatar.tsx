@@ -12,11 +12,11 @@ import { usePopper } from "react-popper";
 import { LogOut } from "lucide-react";
 import { Popover, Transition } from "@headlessui/react";
 // plane imports
-import { API_BASE_URL } from "@plane/constants";
-import { Button } from "@plane/propel/button";
-import { AuthService } from "@plane/services";
-import { Avatar } from "@plane/ui";
-import { getFileURL } from "@plane/utils";
+import { API_BASE_URL } from "@bright-byte/constants";
+import { Button } from "@bright-byte/propel/button";
+import { AuthService } from "@bright-byte/services";
+import { Avatar } from "@bright-byte/ui";
+import { getFileURL } from "@bright-byte/utils";
 // helpers
 import { queryParamGenerator } from "@/helpers/query-param-generator";
 // hooks

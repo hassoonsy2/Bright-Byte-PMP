@@ -4,8 +4,8 @@
  * See the LICENSE file for details.
  */
 
-import { useTranslation } from "@plane/i18n";
-import { Input } from "@plane/ui";
+import { useTranslation } from "@bright-byte/i18n";
+import { Input } from "@bright-byte/ui";
 
 type Props = {
   value: string;

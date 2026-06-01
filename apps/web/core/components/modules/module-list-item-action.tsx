@@ -9,14 +9,14 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { SquareUser } from "lucide-react";
 // Plane imports
-import { MODULE_STATUS, EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@plane/constants";
-import { useLocalStorage } from "@plane/hooks";
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setPromiseToast, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IModule } from "@plane/types";
-import { FavoriteStar } from "@plane/ui";
-import { renderFormattedPayloadDate, getDate } from "@plane/utils";
+import { MODULE_STATUS, EUserPermissions, EUserPermissionsLevel, IS_FAVORITE_MENU_OPEN } from "@bright-byte/constants";
+import { useLocalStorage } from "@bright-byte/hooks";
+import { useTranslation } from "@bright-byte/i18n";
+import { TOAST_TYPE, setPromiseToast, setToast } from "@bright-byte/propel/toast";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import type { IModule } from "@bright-byte/types";
+import { FavoriteStar } from "@bright-byte/ui";
+import { renderFormattedPayloadDate, getDate } from "@bright-byte/utils";
 // components
 import { DateRangeDropdown } from "@/components/dropdowns/date-range";
 import { ModuleQuickActions } from "@/components/modules";

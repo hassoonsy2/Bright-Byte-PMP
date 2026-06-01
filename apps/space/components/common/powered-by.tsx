@@ -4,9 +4,9 @@
  * See the LICENSE file for details.
  */
 
-import { WEBSITE_URL } from "@plane/constants";
+import { WEBSITE_URL } from "@bright-byte/constants";
 // assets
-import { PlaneLogo } from "@plane/propel/icons";
+import { PlaneLogo } from "@bright-byte/propel/icons";
 
 type TPoweredBy = {
   disabled?: boolean;

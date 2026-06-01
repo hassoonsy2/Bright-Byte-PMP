@@ -8,8 +8,8 @@ import React from "react";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 // plane imports
-import { DraftIcon, HomeIcon, PiChatLogo, YourWorkIcon, DashboardIcon } from "@plane/propel/icons";
-import { EUserWorkspaceRoles } from "@plane/types";
+import { DraftIcon, HomeIcon, ByteLogo, YourWorkIcon, DashboardIcon } from "@bright-byte/propel/icons";
+import { EUserWorkspaceRoles } from "@bright-byte/types";
 // hooks
 import { useUserPermissions, useUser } from "@/hooks/store/user";
 // local imports
@@ -52,11 +52,11 @@ export const SidebarUserMenu = observer(function SidebarUserMenu() {
       Icon: DraftIcon,
     },
     {
-      key: "pi-chat",
-      labelTranslationKey: "sidebar.pi_chat",
-      href: `/${workspaceSlug.toString()}/pi-chat/`,
+      key: "byte",
+      labelTranslationKey: "sidebar.byte",
+      href: `/${workspaceSlug.toString()}/byte/`,
       access: [EUserWorkspaceRoles.ADMIN, EUserWorkspaceRoles.MEMBER, EUserWorkspaceRoles.GUEST],
-      Icon: PiChatLogo,
+      Icon: ByteLogo,
     },
   ];
 

@@ -6,8 +6,8 @@
 
 import { action, makeObservable, runInAction } from "mobx";
 // plane imports
-import { SitesIssueService } from "@plane/services";
-import type { IssuePaginationOptions, TLoader } from "@plane/types";
+import { SitesIssueService } from "@bright-byte/services";
+import type { IssuePaginationOptions, TLoader } from "@bright-byte/types";
 // store
 import type { RootStore } from "@/store/root.store";
 // types

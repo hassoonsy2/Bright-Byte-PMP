@@ -8,8 +8,8 @@ import { useCallback } from "react";
 import { observer } from "mobx-react";
 import { useRouter, useSearchParams } from "next/navigation";
 // plane imports
-import type { TPageVersion } from "@plane/types";
-import { cn } from "@plane/utils";
+import type { TPageVersion } from "@bright-byte/types";
+import { cn } from "@bright-byte/utils";
 // hooks
 import { useQueryParams } from "@/hooks/use-query-params";
 // plane web imports

@@ -7,13 +7,13 @@
 import { useRef } from "react";
 import { observer } from "mobx-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import { CopyLinkIcon } from "@plane/propel/icons";
-import { IconButton } from "@plane/propel/icon-button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import { EIssuesStoreType } from "@plane/types";
-import { generateWorkItemLink, copyTextToClipboard } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import { CopyLinkIcon } from "@bright-byte/propel/icons";
+import { IconButton } from "@bright-byte/propel/icon-button";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import { EIssuesStoreType } from "@bright-byte/types";
+import { generateWorkItemLink, copyTextToClipboard } from "@bright-byte/utils";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useIssues } from "@/hooks/store/use-issues";

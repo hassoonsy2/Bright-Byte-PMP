@@ -4,8 +4,8 @@
  * See the LICENSE file for details.
  */
 
-import type { TEstimateSystemKeys } from "@plane/types";
-import { EEstimateSystem } from "@plane/types";
+import type { TEstimateSystemKeys } from "@bright-byte/types";
+import { EEstimateSystem } from "@bright-byte/types";
 
 export const isEstimateSystemEnabled = (key: TEstimateSystemKeys) => {
   switch (key) {

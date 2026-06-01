@@ -8,11 +8,11 @@ import { useCallback, useState } from "react";
 import { observer } from "mobx-react";
 import { ChartNoAxesColumn, SlidersHorizontal } from "lucide-react";
 // plane imports
-import { EIssueFilterType, ISSUE_STORE_TO_FILTERS_MAP } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import type { IIssueDisplayFilterOptions, IIssueDisplayProperties } from "@plane/types";
-import { EIssueLayoutTypes, EIssuesStoreType } from "@plane/types";
+import { EIssueFilterType, ISSUE_STORE_TO_FILTERS_MAP } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { Button } from "@bright-byte/propel/button";
+import type { IIssueDisplayFilterOptions, IIssueDisplayProperties } from "@bright-byte/types";
+import { EIssueLayoutTypes, EIssuesStoreType } from "@bright-byte/types";
 // hooks
 import { useIssues } from "@/hooks/store/use-issues";
 // plane web imports

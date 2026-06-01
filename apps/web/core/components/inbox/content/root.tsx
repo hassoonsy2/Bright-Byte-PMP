@@ -7,10 +7,10 @@
 import { useEffect, useState } from "react";
 import { observer } from "mobx-react";
 import useSWR from "swr";
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import type { TNameDescriptionLoader } from "@plane/types";
+import { EUserPermissions, EUserPermissionsLevel } from "@bright-byte/constants";
+import type { TNameDescriptionLoader } from "@bright-byte/types";
 // components
-import { ContentWrapper } from "@plane/ui";
+import { ContentWrapper } from "@bright-byte/ui";
 // hooks
 import { useProjectInbox } from "@/hooks/store/use-project-inbox";
 import { useUser, useUserPermissions } from "@/hooks/store/user";

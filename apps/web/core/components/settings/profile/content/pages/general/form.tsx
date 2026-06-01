@@ -9,13 +9,13 @@ import { observer } from "mobx-react";
 import { Controller, useForm } from "react-hook-form";
 import { CircleUserRound } from "lucide-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { TOAST_TYPE, setPromiseToast, setToast } from "@plane/propel/toast";
-import { EFileAssetType } from "@plane/types";
-import type { IUser, TUserProfile } from "@plane/types";
-import { Input } from "@plane/ui";
-import { getFileURL } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import { Button } from "@bright-byte/propel/button";
+import { TOAST_TYPE, setPromiseToast, setToast } from "@bright-byte/propel/toast";
+import { EFileAssetType } from "@bright-byte/types";
+import type { IUser, TUserProfile } from "@bright-byte/types";
+import { Input } from "@bright-byte/ui";
+import { getFileURL } from "@bright-byte/utils";
 // components
 import { DeactivateAccountModal } from "@/components/account/deactivate-account-modal";
 import { ImagePickerPopover } from "@/components/core/image-picker-popover";
@@ -29,7 +29,7 @@ import { handleCoverImageChange } from "@/helpers/cover-image.helper";
 import { useInstance } from "@/hooks/store/use-instance";
 import { useUser, useUserProfile } from "@/hooks/store/user";
 // utils
-import { validatePersonName, validateDisplayName } from "@plane/utils";
+import { validatePersonName, validateDisplayName } from "@bright-byte/utils";
 
 type TUserProfileForm = {
   avatar_url: string;

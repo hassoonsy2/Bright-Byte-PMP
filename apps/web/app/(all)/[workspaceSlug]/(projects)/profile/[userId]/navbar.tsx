@@ -7,10 +7,10 @@
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 // plane imports
-import { PROFILE_VIEWER_TAB, PROFILE_ADMINS_TAB } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Header, EHeaderVariant } from "@plane/ui";
-import { cn } from "@plane/utils";
+import { PROFILE_VIEWER_TAB, PROFILE_ADMINS_TAB } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { Header, EHeaderVariant } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 
 type Props = {
   isAuthorized: boolean;

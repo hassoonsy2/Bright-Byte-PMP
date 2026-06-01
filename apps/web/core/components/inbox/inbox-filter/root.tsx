@@ -5,10 +5,10 @@
  */
 
 import { ListFilter } from "lucide-react";
-import { getButtonStyling } from "@plane/propel/button";
+import { getButtonStyling } from "@bright-byte/propel/button";
 // plane imports
-import { ChevronDownIcon } from "@plane/propel/icons";
-import { cn } from "@plane/utils";
+import { ChevronDownIcon } from "@bright-byte/propel/icons";
+import { cn } from "@bright-byte/utils";
 // components
 import { FiltersDropdown } from "@/components/issues/issue-layouts/filters";
 // hooks

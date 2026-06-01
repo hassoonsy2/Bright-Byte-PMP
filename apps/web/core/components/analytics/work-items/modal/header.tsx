@@ -7,8 +7,8 @@
 import { observer } from "mobx-react";
 // plane package imports
 import { Expand, Shrink } from "lucide-react";
-import { CloseIcon } from "@plane/propel/icons";
-import type { ICycle, IModule } from "@plane/types";
+import { CloseIcon } from "@bright-byte/propel/icons";
+import type { ICycle, IModule } from "@bright-byte/types";
 // icons
 
 type Props = {

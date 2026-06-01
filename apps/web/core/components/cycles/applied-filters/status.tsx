@@ -6,10 +6,10 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import { CYCLE_STATUS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { CloseIcon } from "@plane/propel/icons";
-import { cn } from "@plane/utils";
+import { CYCLE_STATUS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { CloseIcon } from "@bright-byte/propel/icons";
+import { cn } from "@bright-byte/utils";
 
 type Props = {
   handleRemove: (val: string) => void;

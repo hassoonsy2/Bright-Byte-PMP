@@ -6,14 +6,14 @@
 
 import React, { useState } from "react";
 // plane constants
-import type { EIssueCommentAccessSpecifier } from "@plane/constants";
+import type { EIssueCommentAccessSpecifier } from "@bright-byte/constants";
 // plane editor
-import { LiteTextEditorWithRef } from "@plane/editor";
-import type { EditorRefApi, ILiteTextEditorProps, TFileHandler } from "@plane/editor";
+import { LiteTextEditorWithRef } from "@bright-byte/editor";
+import type { EditorRefApi, ILiteTextEditorProps, TFileHandler } from "@bright-byte/editor";
 // components
-import type { TSticky } from "@plane/types";
+import type { TSticky } from "@bright-byte/types";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 // hooks
 import { useEditorConfig } from "@/hooks/editor";
 import { useParseEditorContent } from "@/hooks/use-parse-editor-content";

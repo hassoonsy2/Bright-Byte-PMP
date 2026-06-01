@@ -6,7 +6,7 @@
 
 import { Download } from "lucide-react";
 // plane imports
-import { Tooltip } from "@plane/propel/tooltip";
+import { Tooltip } from "@bright-byte/propel/tooltip";
 
 type Props = {
   src: string;

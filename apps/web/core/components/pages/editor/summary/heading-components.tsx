@@ -5,8 +5,8 @@
  */
 
 // plane imports
-import type { IMarking } from "@plane/editor";
-import { cn } from "@plane/utils";
+import type { IMarking } from "@bright-byte/editor";
+import { cn } from "@bright-byte/utils";
 
 export type THeadingComponentProps = {
   marking: IMarking;

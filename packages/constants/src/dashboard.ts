@@ -5,7 +5,7 @@
  */
 
 // types
-import type { TIssuesListTypes } from "@plane/types";
+import type { TIssuesListTypes } from "@bright-byte/types";
 
 export enum EDurationFilters {
   NONE = "none",

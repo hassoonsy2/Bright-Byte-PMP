@@ -15,7 +15,7 @@ import type {
   TWidgetStatsResponse,
   TWidgetKeys,
   TWidgetStatsRequestParams,
-} from "@plane/types";
+} from "@bright-byte/types";
 // services
 import { DashboardService } from "@/services/dashboard.service";
 // plane web store

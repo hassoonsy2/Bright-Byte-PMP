@@ -5,7 +5,7 @@
  */
 
 // plane imports
-import type { TCallbackMentionComponentProps } from "@plane/editor";
+import type { TCallbackMentionComponentProps } from "@bright-byte/editor";
 
 export type TEditorMentionComponentProps = TCallbackMentionComponentProps;
 

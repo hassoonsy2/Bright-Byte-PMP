@@ -9,13 +9,13 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import useSWR, { mutate } from "swr";
 import { CheckCircle } from "lucide-react";
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { Button } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IAppIntegration, IWorkspaceIntegration } from "@plane/types";
+import { EUserPermissions, EUserPermissionsLevel } from "@bright-byte/constants";
+import { Button } from "@bright-byte/propel/button";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import type { IAppIntegration, IWorkspaceIntegration } from "@bright-byte/types";
 // ui
-import { Loader } from "@plane/ui";
+import { Loader } from "@bright-byte/ui";
 // assets
 import GithubLogo from "@/app/assets/services/github.png?url";
 import SlackLogo from "@/app/assets/services/slack.png?url";

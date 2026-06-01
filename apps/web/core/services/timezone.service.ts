@@ -4,8 +4,8 @@
  * See the LICENSE file for details.
  */
 
-import { API_BASE_URL } from "@plane/constants";
-import type { TTimezones } from "@plane/types";
+import { API_BASE_URL } from "@bright-byte/constants";
+import type { TTimezones } from "@bright-byte/types";
 // helpers
 // api services
 import { APIService } from "@/services/api.service";

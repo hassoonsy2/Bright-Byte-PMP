@@ -8,9 +8,9 @@ import { useState } from "react";
 import { observer } from "mobx-react";
 // ui
 import { useParams } from "next/navigation";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import { AlertModalCore } from "@plane/ui";
-import { getPageName } from "@plane/utils";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import { AlertModalCore } from "@bright-byte/ui";
+import { getPageName } from "@bright-byte/utils";
 // constants
 // plane web hooks
 import { useAppRouter } from "@/hooks/use-app-router";

@@ -6,10 +6,10 @@
 
 import { useState } from "react";
 // ui
-import { Button } from "@plane/propel/button";
-import type { IExportData } from "@plane/types";
+import { Button } from "@bright-byte/propel/button";
+import type { IExportData } from "@bright-byte/types";
 // helpers
-import { getDate, renderFormattedDate } from "@plane/utils";
+import { getDate, renderFormattedDate } from "@bright-byte/utils";
 // types
 
 type Props = {

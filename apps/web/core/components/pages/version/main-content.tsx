@@ -9,10 +9,10 @@ import { observer } from "mobx-react";
 import useSWR from "swr";
 import { EyeIcon, TriangleAlert } from "lucide-react";
 // plane imports
-import { Button } from "@plane/propel/button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TPageVersion } from "@plane/types";
-import { renderFormattedDate, renderFormattedTime } from "@plane/utils";
+import { Button } from "@bright-byte/propel/button";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TPageVersion } from "@bright-byte/types";
+import { renderFormattedDate, renderFormattedTime } from "@bright-byte/utils";
 // helpers
 import type { EPageStoreType } from "@/plane-web/hooks/store";
 // local imports

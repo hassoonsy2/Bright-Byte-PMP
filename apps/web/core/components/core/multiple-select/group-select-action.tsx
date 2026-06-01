@@ -5,9 +5,9 @@
  */
 
 // ui
-import { Checkbox } from "@plane/ui";
+import { Checkbox } from "@bright-byte/ui";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 // hooks
 import type { TSelectionHelper } from "@/hooks/use-multiple-select";
 

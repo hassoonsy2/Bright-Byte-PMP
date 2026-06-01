@@ -6,8 +6,8 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import { ENotificationLoader, ENotificationQueryParamType } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
+import { ENotificationLoader, ENotificationQueryParamType } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
 // components
 import { NotificationItem } from "@/components/workspace-notifications/sidebar/notification-card/item";
 // hooks

@@ -6,8 +6,8 @@
 
 import { useEffect, useRef } from "react";
 // plane imports
-import type { IWorkspaceMemberInvitation } from "@plane/types";
-import { EOnboardingSteps } from "@plane/types";
+import type { IWorkspaceMemberInvitation } from "@bright-byte/types";
+import { EOnboardingSteps } from "@bright-byte/types";
 // local components
 import { ProfileSetupStep } from "./profile";
 import { RoleSetupStep } from "./role";

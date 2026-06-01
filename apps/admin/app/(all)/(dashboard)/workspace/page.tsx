@@ -10,11 +10,11 @@ import Link from "next/link";
 import useSWR from "swr";
 import { Loader as LoaderIcon } from "lucide-react";
 // types
-import { Button, getButtonStyling } from "@plane/propel/button";
-import { setPromiseToast } from "@plane/propel/toast";
-import type { TInstanceConfigurationKeys } from "@plane/types";
-import { Loader, ToggleSwitch } from "@plane/ui";
-import { cn } from "@plane/utils";
+import { Button, getButtonStyling } from "@bright-byte/propel/button";
+import { setPromiseToast } from "@bright-byte/propel/toast";
+import type { TInstanceConfigurationKeys } from "@bright-byte/types";
+import { Loader, ToggleSwitch } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 // components
 import { PageWrapper } from "@/components/common/page-wrapper";
 import { WorkspaceListItem } from "@/components/workspace/list-item";

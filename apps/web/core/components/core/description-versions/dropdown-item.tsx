@@ -6,10 +6,10 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import type { TDescriptionVersion } from "@plane/types";
-import { Avatar, CustomMenu } from "@plane/ui";
-import { calculateTimeAgo, getFileURL } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import type { TDescriptionVersion } from "@bright-byte/types";
+import { Avatar, CustomMenu } from "@bright-byte/ui";
+import { calculateTimeAgo, getFileURL } from "@bright-byte/utils";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
 

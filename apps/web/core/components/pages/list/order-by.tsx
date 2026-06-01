@@ -6,11 +6,11 @@
 
 import { ArrowDownWideNarrow, ArrowUpWideNarrow } from "lucide-react";
 // plane imports
-import { getButtonStyling } from "@plane/propel/button";
+import { getButtonStyling } from "@bright-byte/propel/button";
 // types
-import { CheckIcon } from "@plane/propel/icons";
-import type { TPageFiltersSortBy, TPageFiltersSortKey } from "@plane/types";
-import { CustomMenu } from "@plane/ui";
+import { CheckIcon } from "@bright-byte/propel/icons";
+import type { TPageFiltersSortBy, TPageFiltersSortKey } from "@bright-byte/types";
+import { CustomMenu } from "@bright-byte/ui";
 
 type Props = {
   onChange: (value: { key?: TPageFiltersSortKey; order?: TPageFiltersSortBy }) => void;

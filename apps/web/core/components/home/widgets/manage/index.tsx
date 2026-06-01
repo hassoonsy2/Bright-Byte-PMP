@@ -7,8 +7,8 @@
 import { observer } from "mobx-react";
 // plane types
 // plane ui
-import { useTranslation } from "@plane/i18n";
-import { EModalWidth, ModalCore } from "@plane/ui";
+import { useTranslation } from "@bright-byte/i18n";
+import { EModalWidth, ModalCore } from "@bright-byte/ui";
 import { WidgetList } from "./widget-list";
 
 export type TProps = {

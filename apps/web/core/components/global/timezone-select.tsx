@@ -6,8 +6,8 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import { CustomSearchSelect } from "@plane/ui";
-import { cn } from "@plane/utils";
+import { CustomSearchSelect } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 // hooks
 import useTimezone from "@/hooks/use-timezone";
 

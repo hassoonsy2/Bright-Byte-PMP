@@ -8,10 +8,10 @@ import { memo } from "react";
 import { ALargeSmall, Ban } from "lucide-react";
 import { Popover } from "@headlessui/react";
 // plane editor
-import { COLORS_LIST } from "@plane/editor";
-import type { TEditorCommands } from "@plane/editor";
+import { COLORS_LIST } from "@bright-byte/editor";
+import type { TEditorCommands } from "@bright-byte/editor";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 
 type Props = {
   handleColorSelect: (

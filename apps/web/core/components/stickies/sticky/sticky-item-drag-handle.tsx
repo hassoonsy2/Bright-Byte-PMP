@@ -6,9 +6,9 @@
 
 import { observer } from "mobx-react";
 // ui
-import { DragHandle } from "@plane/ui";
+import { DragHandle } from "@bright-byte/ui";
 // helper
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 
 type Props = {
   isDragging: boolean;

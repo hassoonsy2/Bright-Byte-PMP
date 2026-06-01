@@ -8,11 +8,11 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import useSWR from "swr";
 // ui
-import { useTranslation } from "@plane/i18n";
-import { Avatar } from "@plane/propel/avatar";
-import { EmptyStateCompact } from "@plane/propel/empty-state";
-import { Loader, Card } from "@plane/ui";
-import { calculateTimeAgo, getFileURL } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import { Avatar } from "@bright-byte/propel/avatar";
+import { EmptyStateCompact } from "@bright-byte/propel/empty-state";
+import { Loader, Card } from "@bright-byte/ui";
+import { calculateTimeAgo, getFileURL } from "@bright-byte/utils";
 // components
 import { ActivityMessage, IssueLink } from "@/components/core/activity";
 // constants

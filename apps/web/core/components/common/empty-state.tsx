@@ -7,7 +7,7 @@
 import React from "react";
 
 // ui
-import { Button } from "@plane/propel/button";
+import { Button } from "@bright-byte/propel/button";
 
 type Props = {
   title: string;

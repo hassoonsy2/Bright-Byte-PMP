@@ -7,8 +7,8 @@
 import React from "react";
 import { observer } from "mobx-react";
 // plane imports
-import type { TIssueServiceType } from "@plane/types";
-import { Collapsible } from "@plane/ui";
+import type { TIssueServiceType } from "@bright-byte/types";
+import { Collapsible } from "@bright-byte/ui";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 // local imports

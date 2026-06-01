@@ -6,13 +6,13 @@
 
 import { useCallback } from "react";
 // plane editor
-import type { TMentionSection, TMentionSuggestion } from "@plane/editor";
+import type { TMentionSection, TMentionSuggestion } from "@bright-byte/editor";
 // plane types
-import type { TSearchEntities, TSearchEntityRequestPayload, TSearchResponse, TUserSearchResponse } from "@plane/types";
+import type { TSearchEntities, TSearchEntityRequestPayload, TSearchResponse, TUserSearchResponse } from "@bright-byte/types";
 // plane ui
-import { Avatar } from "@plane/ui";
+import { Avatar } from "@bright-byte/ui";
 // helpers
-import { getFileURL } from "@plane/utils";
+import { getFileURL } from "@bright-byte/utils";
 // plane web hooks
 import { useAdditionalEditorMention } from "@/plane-web/hooks/use-additional-editor-mention";
 

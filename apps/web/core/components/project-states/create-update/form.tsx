@@ -6,9 +6,9 @@
 
 import { useEffect, useState } from "react";
 import { TwitterPicker } from "react-color";
-import { Button } from "@plane/propel/button";
-import type { IState } from "@plane/types";
-import { Popover, Input, TextArea } from "@plane/ui";
+import { Button } from "@bright-byte/propel/button";
+import type { IState } from "@bright-byte/types";
+import { Popover, Input, TextArea } from "@bright-byte/ui";
 
 type TStateForm = {
   data: Partial<IState>;

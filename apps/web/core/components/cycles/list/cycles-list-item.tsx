@@ -8,12 +8,12 @@ import type { MouseEvent } from "react";
 import { useRef } from "react";
 import { observer } from "mobx-react";
 import { usePathname, useSearchParams } from "next/navigation";
-import { CheckIcon } from "@plane/propel/icons";
+import { CheckIcon } from "@bright-byte/propel/icons";
 // plane imports
-import type { TCycleGroups } from "@plane/types";
-import { CircularProgressIndicator } from "@plane/ui";
+import type { TCycleGroups } from "@bright-byte/types";
+import { CircularProgressIndicator } from "@bright-byte/ui";
 // components
-import { generateQueryParams, calculateCycleProgress } from "@plane/utils";
+import { generateQueryParams, calculateCycleProgress } from "@bright-byte/utils";
 import { ListItem } from "@/components/core/list";
 // hooks
 import { useCycle } from "@/hooks/store/use-cycle";

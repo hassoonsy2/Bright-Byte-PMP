@@ -8,12 +8,12 @@
 import { observer } from "mobx-react";
 import { ArrowDownWideNarrow, ArrowUpNarrowWide, CheckIcon, ChevronDownIcon, Eraser, MoveRight } from "lucide-react";
 // constants
-import type { IProjectMemberDisplayProperties, TMemberOrderByOptions } from "@plane/constants";
-import { MEMBER_PROPERTY_DETAILS } from "@plane/constants";
+import type { IProjectMemberDisplayProperties, TMemberOrderByOptions } from "@bright-byte/constants";
+import { MEMBER_PROPERTY_DETAILS } from "@bright-byte/constants";
 // i18n
-import { useTranslation } from "@plane/i18n";
+import { useTranslation } from "@bright-byte/i18n";
 // types
-import { CustomMenu } from "@plane/ui";
+import { CustomMenu } from "@bright-byte/ui";
 import type { IMemberFilters } from "@/store/member/utils";
 
 interface Props {

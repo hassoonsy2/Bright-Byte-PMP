@@ -6,9 +6,9 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import { InboxIcon } from "@plane/propel/icons";
-import { Breadcrumbs, Header } from "@plane/ui";
+import { useTranslation } from "@bright-byte/i18n";
+import { InboxIcon } from "@bright-byte/propel/icons";
+import { Breadcrumbs, Header } from "@bright-byte/ui";
 // components
 import { BreadcrumbLink } from "@/components/common/breadcrumb-link";
 // local imports

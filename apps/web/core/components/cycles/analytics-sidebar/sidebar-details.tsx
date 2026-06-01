@@ -9,14 +9,14 @@ import { isEmpty } from "lodash-es";
 import { observer } from "mobx-react";
 import { SquareUser } from "lucide-react";
 // plane types
-import { EEstimateSystem } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { MembersPropertyIcon, WorkItemsIcon } from "@plane/propel/icons";
-import type { ICycle } from "@plane/types";
+import { EEstimateSystem } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { MembersPropertyIcon, WorkItemsIcon } from "@bright-byte/propel/icons";
+import type { ICycle } from "@bright-byte/types";
 // plane ui
-import { Avatar, AvatarGroup, TextArea } from "@plane/ui";
+import { Avatar, AvatarGroup, TextArea } from "@bright-byte/ui";
 // helpers
-import { getFileURL } from "@plane/utils";
+import { getFileURL } from "@bright-byte/utils";
 // hooks
 import { useProjectEstimates } from "@/hooks/store/estimates";
 import { useMember } from "@/hooks/store/use-member";

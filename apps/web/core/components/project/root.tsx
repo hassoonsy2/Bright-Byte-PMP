@@ -8,9 +8,9 @@ import { useCallback, useEffect } from "react";
 import { observer } from "mobx-react";
 import { useParams, usePathname } from "next/navigation";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import type { TProjectAppliedDisplayFilterKeys, TProjectFilters } from "@plane/types";
-import { calculateTotalFilters } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import type { TProjectAppliedDisplayFilterKeys, TProjectFilters } from "@bright-byte/types";
+import { calculateTotalFilters } from "@bright-byte/utils";
 // components
 import { PageHead } from "@/components/core/page-title";
 // hooks

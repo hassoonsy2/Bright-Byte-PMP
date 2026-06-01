@@ -10,11 +10,11 @@ import { useParams } from "next/navigation";
 import { Settings, UserPlus } from "lucide-react";
 import { Menu } from "@headlessui/react";
 // plane imports
-import { EUserPermissions } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { CheckIcon } from "@plane/propel/icons";
-import type { IWorkspace } from "@plane/types";
-import { cn, getFileURL, getUserRole } from "@plane/utils";
+import { EUserPermissions } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { CheckIcon } from "@bright-byte/propel/icons";
+import type { IWorkspace } from "@bright-byte/types";
+import { cn, getFileURL, getUserRole } from "@bright-byte/utils";
 // plane web imports
 import { SubscriptionPill } from "@/plane-web/components/common/subscription/subscription-pill";
 

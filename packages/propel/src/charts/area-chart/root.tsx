@@ -7,8 +7,8 @@
 import React, { useMemo, useState } from "react";
 import { Area, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis, Line, ComposedChart, CartesianGrid } from "recharts";
 // plane imports
-import { AXIS_LABEL_CLASSNAME } from "@plane/constants";
-import type { TAreaChartProps } from "@plane/types";
+import { AXIS_LABEL_CLASSNAME } from "@bright-byte/constants";
+import type { TAreaChartProps } from "@bright-byte/types";
 // local components
 import { getLegendProps } from "../components/legend";
 import { CustomXAxisTick, CustomYAxisTick } from "../components/tick";
@@ -159,12 +159,12 @@ export const AreaChart = React.memo(function AreaChart<K extends string, T exten
           />
           {legend && (
             // @ts-expect-error recharts types are not up to date
-            <Legend
+            (<Legend
               formatter={(value) => itemLabels[value]}
               onMouseEnter={(payload) => setActiveLegend(payload.value)}
               onMouseLeave={() => setActiveLegend(null)}
               {...getLegendProps(legend)}
-            />
+            />)
           )}
           {showTooltip && (
             <Tooltip

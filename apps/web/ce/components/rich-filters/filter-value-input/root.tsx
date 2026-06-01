@@ -7,7 +7,7 @@
 import React from "react";
 import { observer } from "mobx-react";
 // plane imports
-import type { TFilterValue, TFilterProperty } from "@plane/types";
+import type { TFilterValue, TFilterProperty } from "@bright-byte/types";
 // local imports
 import type { TFilterValueInputProps } from "@/components/rich-filters/shared";
 
@@ -17,8 +17,7 @@ export const AdditionalFilterValueInput = observer(function AdditionalFilterValu
 >(_props: TFilterValueInputProps<P, V>) {
   return (
     // Fallback
-    <div className="flex h-full cursor-not-allowed items-center px-4 text-11 text-placeholder transition-opacity duration-200">
-      Filter type not supported
-    </div>
+    <div className="flex h-full cursor-not-allowed items-center px-4 text-11 text-placeholder transition-opacity duration-200">Filter type not supported
+          </div>
   );
 });

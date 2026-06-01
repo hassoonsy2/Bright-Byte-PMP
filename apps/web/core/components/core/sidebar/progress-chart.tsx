@@ -6,9 +6,9 @@
 
 import React from "react";
 // plane imports
-import { AreaChart } from "@plane/propel/charts/area-chart";
-import type { TChartData, TModuleCompletionChartDistribution } from "@plane/types";
-import { renderFormattedDateWithoutYear } from "@plane/utils";
+import { AreaChart } from "@bright-byte/propel/charts/area-chart";
+import type { TChartData, TModuleCompletionChartDistribution } from "@bright-byte/types";
+import { renderFormattedDateWithoutYear } from "@bright-byte/utils";
 
 type Props = {
   distribution: TModuleCompletionChartDistribution;

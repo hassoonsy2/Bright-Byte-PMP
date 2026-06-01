@@ -6,11 +6,11 @@
 
 import { useMemo } from "react";
 // plane types
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { InstructionType, TSticky } from "@plane/types";
+import { useTranslation } from "@bright-byte/i18n";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { InstructionType, TSticky } from "@bright-byte/types";
 // plane utils
-import { isCommentEmpty } from "@plane/utils";
+import { isCommentEmpty } from "@bright-byte/utils";
 // components
 import { STICKY_COLORS_LIST } from "@/components/editor/sticky-editor/color-palette";
 // hooks

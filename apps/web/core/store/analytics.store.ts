@@ -5,8 +5,8 @@
  */
 
 import { action, computed, makeObservable, observable, runInAction } from "mobx";
-import { ANALYTICS_DURATION_FILTER_OPTIONS } from "@plane/constants";
-import type { TAnalyticsTabsBase } from "@plane/types";
+import { ANALYTICS_DURATION_FILTER_OPTIONS } from "@bright-byte/constants";
+import type { TAnalyticsTabsBase } from "@bright-byte/types";
 
 type DurationType = (typeof ANALYTICS_DURATION_FILTER_OPTIONS)[number]["value"];
 

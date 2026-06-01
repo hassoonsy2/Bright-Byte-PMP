@@ -7,9 +7,9 @@
 import React from "react";
 import { observer } from "mobx-react";
 import Link from "next/link";
-import { AUTH_TRACKER_ELEMENTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { PlaneLockup } from "@plane/propel/icons";
+import { AUTH_TRACKER_ELEMENTS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { PlaneLockup } from "@bright-byte/propel/icons";
 import { PageHead } from "@/components/core/page-title";
 import { EAuthModes } from "@/helpers/authentication.helper";
 import { useInstance } from "@/hooks/store/use-instance";

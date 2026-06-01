@@ -5,8 +5,8 @@
  */
 
 // type
-import { API_BASE_URL } from "@plane/constants";
-import type { IModule } from "@plane/types";
+import { API_BASE_URL } from "@bright-byte/constants";
+import type { IModule } from "@bright-byte/types";
 // helpers
 // services
 import { APIService } from "@/services/api.service";

@@ -5,8 +5,8 @@
  */
 
 import React, { useState } from "react";
-import type { E_PASSWORD_STRENGTH } from "@plane/constants";
-import { cn, getPasswordStrength } from "@plane/utils";
+import type { E_PASSWORD_STRENGTH } from "@bright-byte/constants";
+import { cn, getPasswordStrength } from "@bright-byte/utils";
 import { PasswordStrengthIndicator } from "../form-fields/password/indicator";
 import { AuthInput } from "./auth-input";
 

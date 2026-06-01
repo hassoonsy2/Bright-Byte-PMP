@@ -31,9 +31,9 @@ import {
   Underline,
 } from "lucide-react";
 // plane imports
-import type { TCommandExtraProps, TEditorCommands, TEditorFontStyle } from "@plane/editor";
-import { MonospaceIcon, SansSerifIcon, SerifIcon } from "@plane/propel/icons";
-import { convertRemToPixel } from "@plane/utils";
+import type { TCommandExtraProps, TEditorCommands, TEditorFontStyle } from "@bright-byte/editor";
+import { MonospaceIcon, SansSerifIcon, SerifIcon } from "@bright-byte/propel/icons";
+import { convertRemToPixel } from "@bright-byte/utils";
 
 type TEditorTypes = "lite" | "document" | "sticky";
 

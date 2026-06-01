@@ -6,10 +6,10 @@
 
 import { forwardRef } from "react";
 // plane imports
-import { RichTextEditorWithRef } from "@plane/editor";
-import type { EditorRefApi, IRichTextEditorProps, TFileHandler } from "@plane/editor";
-import type { MakeOptional, TSearchEntityRequestPayload, TSearchResponse } from "@plane/types";
-import { cn } from "@plane/utils";
+import { RichTextEditorWithRef } from "@bright-byte/editor";
+import type { EditorRefApi, IRichTextEditorProps, TFileHandler } from "@bright-byte/editor";
+import type { MakeOptional, TSearchEntityRequestPayload, TSearchResponse } from "@bright-byte/types";
+import { cn } from "@bright-byte/utils";
 // components
 import { EditorMentionsRoot } from "@/components/editor/embeds/mentions";
 // hooks

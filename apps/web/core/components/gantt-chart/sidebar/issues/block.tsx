@@ -6,9 +6,9 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import type { IGanttBlock } from "@plane/types";
-import { Row } from "@plane/ui";
-import { cn } from "@plane/utils";
+import type { IGanttBlock } from "@bright-byte/types";
+import { Row } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 // components
 import { MultipleSelectEntityAction } from "@/components/core/multiple-select";
 import { IssueGanttSidebarBlock } from "@/components/issues/issue-layouts/gantt/blocks";

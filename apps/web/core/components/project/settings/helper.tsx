@@ -5,11 +5,11 @@
  */
 
 import Link from "next/link";
-import { PROJECT_TRACKER_ELEMENTS } from "@plane/constants";
-import { ChevronRightIcon } from "@plane/propel/icons";
-import { EPillVariant, Pill, EPillSize } from "@plane/propel/pill";
-import { ToggleSwitch } from "@plane/ui";
-import { joinUrlPath } from "@plane/utils";
+import { PROJECT_TRACKER_ELEMENTS } from "@bright-byte/constants";
+import { ChevronRightIcon } from "@bright-byte/propel/icons";
+import { EPillVariant, Pill, EPillSize } from "@bright-byte/propel/pill";
+import { ToggleSwitch } from "@bright-byte/ui";
+import { joinUrlPath } from "@bright-byte/utils";
 
 type Props = {
   workspaceSlug: string;

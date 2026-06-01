@@ -9,10 +9,10 @@ import { extractInstruction } from "@atlaskit/pragmatic-drag-and-drop-hitbox/tre
 import { clone, isNil, pull, uniq, concat } from "lodash-es";
 import scrollIntoView from "smooth-scroll-into-view-if-needed";
 // plane types
-import { EIconSize, ISSUE_PRIORITIES, STATE_GROUPS } from "@plane/constants";
-import { Logo } from "@plane/propel/emoji-icon-picker";
-import type { ISvgIcons } from "@plane/propel/icons";
-import { CycleGroupIcon, CycleIcon, ModuleIcon, PriorityIcon, StateGroupIcon } from "@plane/propel/icons";
+import { EIconSize, ISSUE_PRIORITIES, STATE_GROUPS } from "@bright-byte/constants";
+import { Logo } from "@bright-byte/propel/emoji-icon-picker";
+import type { ISvgIcons } from "@bright-byte/propel/icons";
+import { CycleGroupIcon, CycleIcon, ModuleIcon, PriorityIcon, StateGroupIcon } from "@bright-byte/propel/icons";
 import type {
   GroupByColumnTypes,
   IGroupByColumn,
@@ -26,11 +26,11 @@ import type {
   TGroupedIssues,
   IIssueDisplayFilterOptions,
   TGetColumns,
-} from "@plane/types";
-import { EIssuesStoreType } from "@plane/types";
+} from "@bright-byte/types";
+import { EIssuesStoreType } from "@bright-byte/types";
 // plane ui
-import { Avatar } from "@plane/ui";
-import { renderFormattedDate, getFileURL } from "@plane/utils";
+import { Avatar } from "@bright-byte/ui";
+import { renderFormattedDate, getFileURL } from "@bright-byte/utils";
 // helpers
 // store
 import { store } from "@/lib/store-context";

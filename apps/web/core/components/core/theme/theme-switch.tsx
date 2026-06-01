@@ -5,11 +5,11 @@
  */
 
 // plane imports
-import type { I_THEME_OPTION } from "@plane/constants";
-import { THEME_OPTIONS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
+import type { I_THEME_OPTION } from "@bright-byte/constants";
+import { THEME_OPTIONS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
 // constants
-import { CustomSelect } from "@plane/ui";
+import { CustomSelect } from "@bright-byte/ui";
 // ui
 
 type Props = {

@@ -7,10 +7,10 @@
 import React from "react";
 import { observer } from "mobx-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import { PlusIcon, WorkItemsIcon } from "@plane/propel/icons";
-import type { TIssue, TIssueServiceType } from "@plane/types";
-import { CustomMenu } from "@plane/ui";
+import { useTranslation } from "@bright-byte/i18n";
+import { PlusIcon, WorkItemsIcon } from "@bright-byte/propel/icons";
+import type { TIssue, TIssueServiceType } from "@bright-byte/types";
+import { CustomMenu } from "@bright-byte/ui";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 

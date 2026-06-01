@@ -9,7 +9,7 @@ import { combine } from "@atlaskit/pragmatic-drag-and-drop/combine";
 import { autoScrollForElements } from "@atlaskit/pragmatic-drag-and-drop-auto-scroll/element";
 import { observer } from "mobx-react";
 // plane constants
-import type { TSupportedFilterTypeForUpdate } from "@plane/constants";
+import type { TSupportedFilterTypeForUpdate } from "@bright-byte/constants";
 // types
 import type {
   TGroupedIssues,
@@ -18,11 +18,11 @@ import type {
   TPaginationData,
   ICalendarWeek,
   TSupportedFilterForUpdate,
-} from "@plane/types";
-import { EIssuesStoreType, EIssueLayoutTypes } from "@plane/types";
+} from "@bright-byte/types";
+import { EIssuesStoreType, EIssueLayoutTypes } from "@bright-byte/types";
 // ui
-import { Spinner } from "@plane/ui";
-import { renderFormattedPayloadDate, cn } from "@plane/utils";
+import { Spinner } from "@bright-byte/ui";
+import { renderFormattedPayloadDate, cn } from "@bright-byte/utils";
 // constants
 import { MONTHS_LIST } from "@/constants/calendar";
 // helpers

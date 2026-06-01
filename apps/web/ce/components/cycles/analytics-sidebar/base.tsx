@@ -7,10 +7,10 @@
 import { Fragment } from "react";
 import { observer } from "mobx-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import type { TCycleEstimateType } from "@plane/types";
-import { Loader } from "@plane/ui";
-import { getDate } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import type { TCycleEstimateType } from "@bright-byte/types";
+import { Loader } from "@bright-byte/ui";
+import { getDate } from "@bright-byte/utils";
 // components
 import ProgressChart from "@/components/core/sidebar/progress-chart";
 import { validateCycleSnapshot } from "@/components/cycles/analytics-sidebar/issue-progress";

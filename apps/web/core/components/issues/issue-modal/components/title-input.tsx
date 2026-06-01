@@ -9,14 +9,14 @@ import { observer } from "mobx-react";
 import type { Control, FormState } from "react-hook-form";
 import { Controller } from "react-hook-form";
 // plane imports
-import { ETabIndices } from "@plane/constants";
+import { ETabIndices } from "@bright-byte/constants";
 // types
-import { useTranslation } from "@plane/i18n";
-import type { TIssue } from "@plane/types";
+import { useTranslation } from "@bright-byte/i18n";
+import type { TIssue } from "@bright-byte/types";
 // ui
-import { Input } from "@plane/ui";
+import { Input } from "@bright-byte/ui";
 // helpers
-import { getTabIndex } from "@plane/utils";
+import { getTabIndex } from "@bright-byte/utils";
 // hooks
 import { usePlatformOS } from "@/hooks/use-platform-os";
 

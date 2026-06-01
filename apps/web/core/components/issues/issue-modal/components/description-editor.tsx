@@ -10,16 +10,16 @@ import type { Control } from "react-hook-form";
 import { Controller } from "react-hook-form";
 import { Sparkle } from "lucide-react";
 // plane imports
-import { ETabIndices } from "@plane/constants";
-import type { EditorRefApi } from "@plane/editor";
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TIssue } from "@plane/types";
-import { EFileAssetType } from "@plane/types";
-import { Loader } from "@plane/ui";
-import { getDescriptionPlaceholderI18n, getTabIndex } from "@plane/utils";
+import { ETabIndices } from "@bright-byte/constants";
+import type { EditorRefApi } from "@bright-byte/editor";
+import { useTranslation } from "@bright-byte/i18n";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TIssue } from "@bright-byte/types";
+import { EFileAssetType } from "@bright-byte/types";
+import { Loader } from "@bright-byte/ui";
+import { getDescriptionPlaceholderI18n, getTabIndex } from "@bright-byte/utils";
 // components
-import { GptAssistantPopover } from "@/components/core/modals/gpt-assistant-popover";
+import { ByteAssistantPopover } from "@/components/core/modals/byte-assistant-popover";
 import { RichTextEditor } from "@/components/editor/rich-text";
 // helpers
 // hooks
@@ -43,13 +43,13 @@ type TIssueDescriptionEditorProps = {
   descriptionHtmlData: string | undefined;
   editorRef: React.MutableRefObject<EditorRefApi | null>;
   submitBtnRef: React.MutableRefObject<HTMLButtonElement | null>;
-  gptAssistantModal: boolean;
+  byteAssistantPopover: boolean;
   workspaceSlug: string;
   projectId: string | null;
   handleFormChange: () => void;
   handleDescriptionHTMLDataChange: (descriptionHtmlData: string) => void;
-  setGptAssistantModal: React.Dispatch<React.SetStateAction<boolean>>;
-  handleGptAssistantClose: () => void;
+  setByteAssistantPopover: React.Dispatch<React.SetStateAction<boolean>>;
+  handleByteAssistantClose: () => void;
   onAssetUpload: (assetId: string) => void;
   onClose: () => void;
 };
@@ -63,13 +63,13 @@ export const IssueDescriptionEditor = observer(function IssueDescriptionEditor(p
     descriptionHtmlData,
     editorRef,
     submitBtnRef,
-    gptAssistantModal,
+    byteAssistantPopover,
     workspaceSlug,
     projectId,
     handleFormChange,
     handleDescriptionHTMLDataChange,
-    setGptAssistantModal,
-    handleGptAssistantClose,
+    setByteAssistantPopover,
+    handleByteAssistantClose,
     onAssetUpload,
     onClose,
   } = props;
@@ -264,12 +264,12 @@ export const IssueDescriptionEditor = observer(function IssueDescriptionEditor(p
               </button>
             )}
             {config?.has_llm_configured && projectId && (
-              <GptAssistantPopover
-                isOpen={gptAssistantModal}
+              <ByteAssistantPopover
+                isOpen={byteAssistantPopover}
                 handleClose={() => {
-                  setGptAssistantModal((prevData) => !prevData);
-                  // this is done so that the title do not reset after gpt popover closed
-                  handleGptAssistantClose();
+                  setByteAssistantPopover((prevData) => !prevData);
+                  // this is done so that the title does not reset after the Byte popover closes
+                  handleByteAssistantClose();
                 }}
                 onResponse={(response) => {
                   handleAiAssistance(response);
@@ -279,7 +279,7 @@ export const IssueDescriptionEditor = observer(function IssueDescriptionEditor(p
                   <button
                     type="button"
                     className="flex items-center gap-1 rounded-sm bg-surface-2 px-1.5 py-1 text-caption-sm-regular hover:bg-layer-1"
-                    onClick={() => setGptAssistantModal((prevData) => !prevData)}
+                    onClick={() => setByteAssistantPopover((prevData) => !prevData)}
                     tabIndex={-1}
                   >
                     <Sparkle className="h-4 w-4" />

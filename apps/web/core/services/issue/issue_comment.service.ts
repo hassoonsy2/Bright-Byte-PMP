@@ -5,9 +5,9 @@
  */
 
 // plane types
-import { API_BASE_URL } from "@plane/constants";
-import type { TIssueComment, TIssueServiceType } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
+import { API_BASE_URL } from "@bright-byte/constants";
+import type { TIssueComment, TIssueServiceType } from "@bright-byte/types";
+import { EIssueServiceType } from "@bright-byte/types";
 // services
 import { APIService } from "@/services/api.service";
 import { FileUploadService } from "@/services/file-upload.service";

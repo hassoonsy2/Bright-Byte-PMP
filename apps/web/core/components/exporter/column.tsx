@@ -5,8 +5,8 @@
  */
 
 import { Download } from "lucide-react";
-import type { IExportData } from "@plane/types";
-import { getDate, getFileURL, renderFormattedDate } from "@plane/utils";
+import type { IExportData } from "@bright-byte/types";
+import { getDate, getFileURL, renderFormattedDate } from "@bright-byte/utils";
 
 type RowData = IExportData;
 const checkExpiry = (inputDateString: string) => {

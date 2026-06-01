@@ -4,9 +4,9 @@
  * See the LICENSE file for details.
  */
 
-import type { TIssueLayout } from "@plane/constants";
-import { ListLayoutIcon, BoardLayoutIcon } from "@plane/propel/icons";
-import type { ISvgIcons } from "@plane/propel/icons";
+import type { TIssueLayout } from "@bright-byte/constants";
+import { ListLayoutIcon, BoardLayoutIcon } from "@bright-byte/propel/icons";
+import type { ISvgIcons } from "@bright-byte/propel/icons";
 
 export function IssueLayoutIcon({
   layout,

@@ -6,7 +6,7 @@
 
 import { observer } from "mobx-react";
 // components
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 // local imports
 import type { TPopoverMenuOptions } from "./root";
 

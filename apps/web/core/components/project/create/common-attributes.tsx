@@ -7,14 +7,14 @@
 import type { ChangeEvent } from "react";
 import type { UseFormSetValue } from "react-hook-form";
 import { Controller, useFormContext } from "react-hook-form";
-import { InfoIcon } from "@plane/propel/icons";
+import { InfoIcon } from "@bright-byte/propel/icons";
 // plane imports
-import { ETabIndices } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
+import { ETabIndices } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
 // ui
-import { Tooltip } from "@plane/propel/tooltip";
-import { Input, TextArea } from "@plane/ui";
-import { cn, projectIdentifierSanitizer, getTabIndex } from "@plane/utils";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import { Input, TextArea } from "@bright-byte/ui";
+import { cn, projectIdentifierSanitizer, getTabIndex } from "@bright-byte/utils";
 // plane utils
 // helpers
 // plane-web types

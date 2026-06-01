@@ -8,7 +8,7 @@ import type { Editor } from "@tiptap/react";
 import { ALargeSmall, Ban } from "lucide-react";
 import { useMemo } from "react";
 // plane utils
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 // constants
 import { COLORS_LIST } from "@/constants/common";
 // local imports

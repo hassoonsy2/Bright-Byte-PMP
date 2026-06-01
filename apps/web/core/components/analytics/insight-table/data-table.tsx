@@ -22,12 +22,12 @@ import {
   useReactTable,
 } from "@tanstack/react-table";
 
-import { useTranslation } from "@plane/i18n";
-import { EmptyStateCompact } from "@plane/propel/empty-state";
-import { SearchIcon, CloseIcon } from "@plane/propel/icons";
+import { useTranslation } from "@bright-byte/i18n";
+import { EmptyStateCompact } from "@bright-byte/propel/empty-state";
+import { SearchIcon, CloseIcon } from "@bright-byte/propel/icons";
 // plane package imports
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@plane/propel/table";
-import { cn } from "@plane/utils";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@bright-byte/propel/table";
+import { cn } from "@bright-byte/utils";
 // plane web components
 
 interface DataTableProps<TData, TValue> {

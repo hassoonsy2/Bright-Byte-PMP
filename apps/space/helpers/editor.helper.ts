@@ -5,10 +5,10 @@
  */
 
 // plane imports
-import { MAX_FILE_SIZE } from "@plane/constants";
-import type { TFileHandler } from "@plane/editor";
-import { SitesFileService } from "@plane/services";
-import { getFileURL } from "@plane/utils";
+import { MAX_FILE_SIZE } from "@bright-byte/constants";
+import type { TFileHandler } from "@bright-byte/editor";
+import { SitesFileService } from "@bright-byte/services";
+import { getFileURL } from "@bright-byte/utils";
 // services
 const sitesFileService = new SitesFileService();
 

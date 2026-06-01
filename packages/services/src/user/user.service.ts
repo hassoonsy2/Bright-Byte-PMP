@@ -5,8 +5,8 @@
  */
 
 // plane imports
-import { API_BASE_URL } from "@plane/constants";
-import type { IUser, TUserProfile } from "@plane/types";
+import { API_BASE_URL } from "@bright-byte/constants";
+import type { IUser, TUserProfile } from "@bright-byte/types";
 // api service
 import { APIService } from "../api.service";
 

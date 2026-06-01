@@ -9,11 +9,11 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import { MoreHorizontal } from "lucide-react";
 // plane imports
-import { useOutsideClickDetector } from "@plane/hooks";
-import { Popover } from "@plane/propel/popover";
-import type { TIssue } from "@plane/types";
-import { ControlLink } from "@plane/ui";
-import { cn, generateWorkItemLink } from "@plane/utils";
+import { useOutsideClickDetector } from "@bright-byte/hooks";
+import { Popover } from "@bright-byte/propel/popover";
+import type { TIssue } from "@bright-byte/types";
+import { ControlLink } from "@bright-byte/ui";
+import { cn, generateWorkItemLink } from "@bright-byte/utils";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 import { useIssues } from "@/hooks/store/use-issues";

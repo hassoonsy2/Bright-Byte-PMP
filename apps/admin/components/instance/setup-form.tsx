@@ -9,11 +9,11 @@ import { useSearchParams } from "next/navigation";
 // icons
 import { Eye, EyeOff } from "lucide-react";
 // plane internal packages
-import { API_BASE_URL, E_PASSWORD_STRENGTH } from "@plane/constants";
-import { Button } from "@plane/propel/button";
-import { AuthService } from "@plane/services";
-import { Checkbox, Input, PasswordStrengthIndicator, Spinner } from "@plane/ui";
-import { getPasswordStrength, validatePersonName, validateCompanyName } from "@plane/utils";
+import { API_BASE_URL, E_PASSWORD_STRENGTH } from "@bright-byte/constants";
+import { Button } from "@bright-byte/propel/button";
+import { AuthService } from "@bright-byte/services";
+import { Checkbox, Input, PasswordStrengthIndicator, Spinner } from "@bright-byte/ui";
+import { getPasswordStrength, validatePersonName, validateCompanyName } from "@bright-byte/utils";
 // components
 import { AuthHeader } from "@/app/(all)/(home)/auth-header";
 import { Banner } from "../common/banner";

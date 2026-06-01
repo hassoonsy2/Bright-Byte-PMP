@@ -7,18 +7,18 @@
 import React, { useEffect, useState, useCallback } from "react";
 import type { LucideIcon } from "lucide-react";
 
-import { EIssueCommentAccessSpecifier } from "@plane/constants";
+import { EIssueCommentAccessSpecifier } from "@bright-byte/constants";
 // editor
-import type { EditorRefApi } from "@plane/editor";
+import type { EditorRefApi } from "@bright-byte/editor";
 // i18n
-import { useTranslation } from "@plane/i18n";
+import { useTranslation } from "@bright-byte/i18n";
 // ui
-import { Button } from "@plane/propel/button";
-import { GlobeIcon, LockIcon } from "@plane/propel/icons";
-import type { ISvgIcons } from "@plane/propel/icons";
-import { Tooltip } from "@plane/propel/tooltip";
+import { Button } from "@bright-byte/propel/button";
+import { GlobeIcon, LockIcon } from "@bright-byte/propel/icons";
+import type { ISvgIcons } from "@bright-byte/propel/icons";
+import { Tooltip } from "@bright-byte/propel/tooltip";
 // constants
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 import type { ToolbarMenuItem } from "@/constants/editor";
 import { TOOLBAR_ITEMS } from "@/constants/editor";
 // helpers

@@ -5,7 +5,7 @@
  */
 
 // plane ui
-import { Loader } from "@plane/ui";
+import { Loader } from "@bright-byte/ui";
 
 export function StickiesLoader() {
   return (

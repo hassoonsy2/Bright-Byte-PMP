@@ -7,10 +7,10 @@
 import React, { useState } from "react";
 import { observer } from "mobx-react";
 // plane imports
-import { DEFAULT_GLOBAL_VIEWS_LIST } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { SearchIcon } from "@plane/propel/icons";
-import { Input } from "@plane/ui";
+import { DEFAULT_GLOBAL_VIEWS_LIST } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { SearchIcon } from "@bright-byte/propel/icons";
+import { Input } from "@bright-byte/ui";
 // components
 import { PageHead } from "@/components/core/page-title";
 import { GlobalDefaultViewListItem } from "@/components/workspace/views/default-view-list-item";

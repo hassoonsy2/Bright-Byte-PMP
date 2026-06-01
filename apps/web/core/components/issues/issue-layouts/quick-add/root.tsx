@@ -11,11 +11,11 @@ import { useParams } from "next/navigation";
 import type { UseFormRegister } from "react-hook-form";
 import { useForm } from "react-hook-form";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import { PlusIcon } from "@plane/propel/icons";
-import { setPromiseToast } from "@plane/propel/toast";
-import type { IProject, TIssue, EIssueLayoutTypes } from "@plane/types";
-import { cn, createIssuePayload } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import { PlusIcon } from "@bright-byte/propel/icons";
+import { setPromiseToast } from "@bright-byte/propel/toast";
+import type { IProject, TIssue, EIssueLayoutTypes } from "@bright-byte/types";
+import { cn, createIssuePayload } from "@bright-byte/utils";
 // plane web imports
 import { QuickAddIssueFormRoot } from "@/plane-web/components/issues/quick-add";
 // local imports
@@ -116,12 +116,12 @@ export const QuickAddIssueRoot = observer(function QuickAddIssueRoot(props: TQui
           message: () => `${isEpic ? t("epic.create.success") : t("issue.create.success")}`,
           actionItems: (data) => (
             // TODO: Translate here
-            <CreateIssueToastActionItems
+            (<CreateIssueToastActionItems
               workspaceSlug={workspaceSlug.toString()}
               projectId={projectId.toString()}
               issueId={data.id}
               isEpic={isEpic}
-            />
+            />)
           ),
         },
         error: {

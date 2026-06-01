@@ -7,11 +7,11 @@
 import { useState } from "react";
 import { observer } from "mobx-react";
 // plane imports
-import { Button } from "@plane/propel/button";
-import { ChevronDownIcon } from "@plane/propel/icons";
-import { EUserProjectRoles, EUserWorkspaceRoles } from "@plane/types";
+import { Button } from "@bright-byte/propel/button";
+import { ChevronDownIcon } from "@bright-byte/propel/icons";
+import { EUserProjectRoles, EUserWorkspaceRoles } from "@bright-byte/types";
 // plane ui
-import { CustomMenu } from "@plane/ui";
+import { CustomMenu } from "@bright-byte/ui";
 // components
 import { FilterHeader, FilterOption } from "@/components/issues/issue-layouts/filters";
 

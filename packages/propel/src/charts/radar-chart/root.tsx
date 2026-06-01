@@ -14,7 +14,7 @@ import {
   Tooltip,
   Legend,
 } from "recharts";
-import type { TRadarChartProps } from "@plane/types";
+import type { TRadarChartProps } from "@bright-byte/types";
 import { getLegendProps } from "../components/legend";
 import { CustomRadarAxisTick } from "../components/tick";
 import { CustomTooltip } from "../components/tooltip";
@@ -69,7 +69,7 @@ function RadarChart<T extends string, K extends string>(props: TRadarChartProps<
           )}
           {legend && (
             // @ts-expect-error recharts types are not up to date
-            <Legend
+            (<Legend
               onMouseEnter={(payload) => {
                 // @ts-expect-error recharts types are not up to date
                 const key: string | undefined = payload.payload?.key;
@@ -79,7 +79,7 @@ function RadarChart<T extends string, K extends string>(props: TRadarChartProps<
               }}
               onMouseLeave={() => setActiveLegend(null)}
               {...getLegendProps(legend)}
-            />
+            />)
           )}
           {radars.map((radar) => (
             <Radar

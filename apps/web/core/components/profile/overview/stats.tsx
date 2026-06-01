@@ -8,10 +8,10 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 // ui
-import { useTranslation } from "@plane/i18n";
-import { UserCirclePropertyIcon, CreateIcon, LayerStackIcon } from "@plane/propel/icons";
-import type { IUserProfileData } from "@plane/types";
-import { Loader, Card, ECardSpacing, ECardDirection } from "@plane/ui";
+import { useTranslation } from "@bright-byte/i18n";
+import { UserCirclePropertyIcon, CreateIcon, LayerStackIcon } from "@bright-byte/propel/icons";
+import type { IUserProfileData } from "@bright-byte/types";
+import { Loader, Card, ECardSpacing, ECardDirection } from "@bright-byte/ui";
 // types
 
 type Props = {

@@ -8,12 +8,12 @@ import { useState } from "react";
 import { observer } from "mobx-react";
 import { MoreHorizontal } from "lucide-react";
 // plane imports
-import { EUserPermissions, EUserPermissionsLevel } from "@plane/constants";
-import { IconButton } from "@plane/propel/icon-button";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TContextMenuItem } from "@plane/ui";
-import { ContextMenu, CustomMenu } from "@plane/ui";
-import { copyUrlToClipboard, cn } from "@plane/utils";
+import { EUserPermissions, EUserPermissionsLevel } from "@bright-byte/constants";
+import { IconButton } from "@bright-byte/propel/icon-button";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TContextMenuItem } from "@bright-byte/ui";
+import { ContextMenu, CustomMenu } from "@bright-byte/ui";
+import { copyUrlToClipboard, cn } from "@bright-byte/utils";
 // components
 import { useModuleMenuItems } from "@/components/common/quick-actions-helper";
 import { ArchiveModuleModal, CreateUpdateModuleModal, DeleteModuleModal } from "@/components/modules";

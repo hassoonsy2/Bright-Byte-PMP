@@ -5,10 +5,10 @@
  */
 
 import { observer } from "mobx-react";
-import { PROJECT_CREATED_AT_FILTER_OPTIONS } from "@plane/constants";
-import { CloseIcon } from "@plane/propel/icons";
+import { PROJECT_CREATED_AT_FILTER_OPTIONS } from "@bright-byte/constants";
+import { CloseIcon } from "@bright-byte/propel/icons";
 // helpers
-import { renderFormattedDate, capitalizeFirstLetter } from "@plane/utils";
+import { renderFormattedDate, capitalizeFirstLetter } from "@bright-byte/utils";
 // constants
 
 type Props = {

@@ -5,13 +5,13 @@
  */
 
 import Link from "next/link";
-import { GOD_MODE_URL } from "@plane/constants";
+import { GOD_MODE_URL } from "@bright-byte/constants";
 // assets
 import GradientLogo from "@/app/assets/auth/gradient-logo.webp?url";
 import GradientBgLogo from "@/app/assets/auth/gradient-bg-logo.webp?url";
 import DefaultLayout from "@/layouts/default-layout";
-import { PlaneLockup } from "@plane/propel/icons";
-import { Button } from "@plane/propel/button";
+import { PlaneLockup } from "@bright-byte/propel/icons";
+import { Button } from "@bright-byte/propel/button";
 
 export function InstanceNotReady() {
   return (

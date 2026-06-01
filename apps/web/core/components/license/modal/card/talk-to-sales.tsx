@@ -7,10 +7,10 @@
 import { observer } from "mobx-react";
 // types
 // plane imports
-import { getButtonStyling } from "@plane/propel/button";
-import type { EProductSubscriptionEnum, IPaymentProduct, TSubscriptionPrice } from "@plane/types";
-import { Loader } from "@plane/ui";
-import { cn } from "@plane/utils";
+import { getButtonStyling } from "@bright-byte/propel/button";
+import type { EProductSubscriptionEnum, IPaymentProduct, TSubscriptionPrice } from "@bright-byte/types";
+import { Loader } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 // local imports
 import { BasePaidPlanCard } from "./base-paid-plan-card";
 

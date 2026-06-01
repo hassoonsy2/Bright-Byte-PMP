@@ -7,9 +7,9 @@
 import { useEffect, useRef, useState } from "react";
 import { observer } from "mobx-react";
 // plane helpers
-import { useOutsideClickDetector } from "@plane/hooks";
-import { PreferencesIcon } from "@plane/propel/icons";
-import { ScrollArea } from "@plane/propel/scrollarea";
+import { useOutsideClickDetector } from "@bright-byte/hooks";
+import { PreferencesIcon } from "@bright-byte/propel/icons";
+import { ScrollArea } from "@bright-byte/propel/scrollarea";
 // components
 import { CustomizeNavigationDialog } from "@/components/navigation/customize-navigation-dialog";
 // hooks
@@ -18,7 +18,7 @@ import useSize from "@/hooks/use-window-size";
 // plane web components
 import { WorkspaceEditionBadge } from "@/plane-web/components/workspace/edition-badge";
 import { AppSidebarToggleButton } from "./sidebar-toggle-button";
-import { IconButton } from "@plane/propel/icon-button";
+import { IconButton } from "@bright-byte/propel/icon-button";
 
 type TSidebarWrapperProps = {
   title: string;

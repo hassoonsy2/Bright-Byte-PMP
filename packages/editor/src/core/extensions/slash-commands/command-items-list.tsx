@@ -226,7 +226,7 @@ export const getSlashCommandFilteredSections =
           },
           ...COLORS_LIST.map(
             (color) =>
-              ({
+              (({
                 commandKey: "text-color",
                 key: `text-color-${color.key}`,
                 title: color.label,
@@ -242,8 +242,8 @@ export const getSlashCommandFilteredSections =
                   />
                 ),
 
-                command: ({ editor, range }) => toggleTextColor(color.key, editor, range),
-              }) as ISlashCommandItem
+                command: ({ editor, range }) => toggleTextColor(color.key, editor, range)
+              }) as ISlashCommandItem)
           ),
         ],
       },
@@ -267,7 +267,7 @@ export const getSlashCommandFilteredSections =
           },
           ...COLORS_LIST.map(
             (color) =>
-              ({
+              (({
                 commandKey: "background-color",
                 key: `background-color-${color.key}`,
                 title: color.label,
@@ -280,8 +280,8 @@ export const getSlashCommandFilteredSections =
                   backgroundColor: color.backgroundColor,
                 },
 
-                command: ({ editor, range }) => toggleBackgroundColor(color.key, editor, range),
-              }) as ISlashCommandItem
+                command: ({ editor, range }) => toggleBackgroundColor(color.key, editor, range)
+              }) as ISlashCommandItem)
           ),
         ],
       },

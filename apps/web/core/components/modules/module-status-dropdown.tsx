@@ -6,12 +6,12 @@
 
 import React from "react";
 import { observer } from "mobx-react";
-import { MODULE_STATUS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import type { TModuleStatus } from "@plane/propel/icons";
-import { ModuleStatusIcon } from "@plane/propel/icons";
-import type { IModule } from "@plane/types";
-import { CustomSelect } from "@plane/ui";
+import { MODULE_STATUS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import type { TModuleStatus } from "@bright-byte/propel/icons";
+import { ModuleStatusIcon } from "@bright-byte/propel/icons";
+import type { IModule } from "@bright-byte/types";
+import { CustomSelect } from "@bright-byte/ui";
 
 type Props = {
   isDisabled: boolean;

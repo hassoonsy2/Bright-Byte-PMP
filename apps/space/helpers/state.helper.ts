@@ -4,8 +4,8 @@
  * See the LICENSE file for details.
  */
 
-import { STATE_GROUPS } from "@plane/constants";
-import type { IState } from "@plane/types";
+import { STATE_GROUPS } from "@bright-byte/constants";
+import type { IState } from "@bright-byte/types";
 
 export const sortStates = (states: IState[]) => {
   if (!states || states.length === 0) return;

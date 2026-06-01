@@ -6,12 +6,12 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { observer } from "mobx-react";
-import { useTranslation } from "@plane/i18n";
-import type { TNameDescriptionLoader } from "@plane/types";
+import { useTranslation } from "@bright-byte/i18n";
+import type { TNameDescriptionLoader } from "@bright-byte/types";
 // components
-import { TextArea } from "@plane/ui";
+import { TextArea } from "@bright-byte/ui";
 // types
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 import useDebounce from "@/hooks/use-debounce";
 import type { TIssueOperations } from "./issue-detail";
 // hooks

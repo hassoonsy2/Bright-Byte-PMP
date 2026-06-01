@@ -6,10 +6,10 @@
 
 import useSWR from "swr";
 // plane imports
-import { GROUP_CHOICES } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import type { IUserStateDistribution, TStateGroups } from "@plane/types";
-import { ContentWrapper } from "@plane/ui";
+import { GROUP_CHOICES } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import type { IUserStateDistribution, TStateGroups } from "@bright-byte/types";
+import { ContentWrapper } from "@bright-byte/ui";
 // components
 import { PageHead } from "@/components/core/page-title";
 import { ProfileActivity } from "@/components/profile/overview/activity";

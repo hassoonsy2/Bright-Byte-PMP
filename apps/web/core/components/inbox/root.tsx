@@ -8,11 +8,11 @@ import { useEffect, useState } from "react";
 import { observer } from "mobx-react";
 import { PanelLeft } from "lucide-react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import { EmptyStateCompact } from "@plane/propel/empty-state";
-import { IntakeIcon } from "@plane/propel/icons";
-import { EInboxIssueCurrentTab } from "@plane/types";
-import { cn } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import { EmptyStateCompact } from "@bright-byte/propel/empty-state";
+import { IntakeIcon } from "@bright-byte/propel/icons";
+import { EInboxIssueCurrentTab } from "@bright-byte/types";
+import { cn } from "@bright-byte/utils";
 // components
 import { InboxContentRoot } from "@/components/inbox/content";
 import { InboxSidebar } from "@/components/inbox/sidebar";

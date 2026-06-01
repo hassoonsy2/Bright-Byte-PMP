@@ -6,12 +6,12 @@
 
 import { Info } from "lucide-react";
 // plane imports
-import { EEstimateSystem, ESTIMATE_SYSTEMS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { TEstimateSystemKeys } from "@plane/types";
+import { EEstimateSystem, ESTIMATE_SYSTEMS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import type { TEstimateSystemKeys } from "@bright-byte/types";
 // components
-import { convertMinutesToHoursMinutesString } from "@plane/utils";
+import { convertMinutesToHoursMinutesString } from "@bright-byte/utils";
 // plane web imports
 import { isEstimateSystemEnabled } from "@/plane-web/components/estimates/helper";
 import { UpgradeBadge } from "@/plane-web/components/workspace/upgrade-badge";

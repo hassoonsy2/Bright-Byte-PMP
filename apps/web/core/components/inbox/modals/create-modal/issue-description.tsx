@@ -7,13 +7,13 @@
 import type { RefObject } from "react";
 import { observer } from "mobx-react";
 // plane imports
-import { ETabIndices } from "@plane/constants";
-import type { EditorRefApi } from "@plane/editor";
-import { useTranslation } from "@plane/i18n";
-import type { TIssue } from "@plane/types";
-import { EFileAssetType } from "@plane/types";
-import { Loader } from "@plane/ui";
-import { getDescriptionPlaceholderI18n, getTabIndex } from "@plane/utils";
+import { ETabIndices } from "@bright-byte/constants";
+import type { EditorRefApi } from "@bright-byte/editor";
+import { useTranslation } from "@bright-byte/i18n";
+import type { TIssue } from "@bright-byte/types";
+import { EFileAssetType } from "@bright-byte/types";
+import { Loader } from "@bright-byte/ui";
+import { getDescriptionPlaceholderI18n, getTabIndex } from "@bright-byte/utils";
 // components
 import { RichTextEditor } from "@/components/editor/rich-text/editor";
 // hooks

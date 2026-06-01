@@ -9,12 +9,12 @@ import { isEmpty } from "lodash-es";
 import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 // plane imports
-import { EUserPermissionsLevel, WORK_ITEM_TRACKER_ELEMENTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { EmptyStateDetailed } from "@plane/propel/empty-state";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { ISearchIssueResponse } from "@plane/types";
-import { EIssuesStoreType, EUserProjectRoles } from "@plane/types";
+import { EUserPermissionsLevel, WORK_ITEM_TRACKER_ELEMENTS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { EmptyStateDetailed } from "@bright-byte/propel/empty-state";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { ISearchIssueResponse } from "@bright-byte/types";
+import { EIssuesStoreType, EUserProjectRoles } from "@bright-byte/types";
 // components
 import { ExistingIssuesListModal } from "@/components/core/modals/existing-issues-list-modal";
 import { useCommandPalette } from "@/hooks/store/use-command-palette";
@@ -84,11 +84,11 @@ export const CycleEmptyState = observer(function CycleEmptyState() {
       <div className="grid h-full w-full place-items-center">
         {isCompletedAndEmpty ? (
           // TODO: Empty state ux copy needs to be updated
-          <EmptyStateDetailed
+          (<EmptyStateDetailed
             assetKey="work-item"
             title={t("project_cycles.empty_state.completed_no_issues.title")}
             description={t("project_cycles.empty_state.completed_no_issues.description")}
-          />
+          />)
         ) : cycleWorkItemFilter?.hasActiveFilters ? (
           <EmptyStateDetailed
             assetKey="search"

@@ -7,11 +7,11 @@
 import { useEffect } from "react";
 import { observer } from "mobx-react";
 // plane imports
-import type { EditorRefApi } from "@plane/editor";
-import { EFileAssetType } from "@plane/types";
-import type { TNameDescriptionLoader } from "@plane/types";
+import type { EditorRefApi } from "@bright-byte/editor";
+import { EFileAssetType } from "@bright-byte/types";
+import type { TNameDescriptionLoader } from "@bright-byte/types";
 // components
-import { getTextContent } from "@plane/utils";
+import { getTextContent } from "@bright-byte/utils";
 // components
 import { DescriptionVersionsRoot } from "@/components/core/description-versions";
 import { DescriptionInput } from "@/components/editor/rich-text/description-input";

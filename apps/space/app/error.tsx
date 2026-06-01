@@ -5,7 +5,7 @@
  */
 
 // ui
-import { Button } from "@plane/propel/button";
+import { Button } from "@bright-byte/propel/button";
 
 function ErrorPage() {
   const handleRetry = () => {

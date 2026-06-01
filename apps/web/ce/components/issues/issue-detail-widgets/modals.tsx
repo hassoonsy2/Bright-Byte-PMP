@@ -5,7 +5,7 @@
  */
 
 // plane types
-import type { TIssueServiceType, TWorkItemWidgets } from "@plane/types";
+import type { TIssueServiceType, TWorkItemWidgets } from "@bright-byte/types";
 
 export type TWorkItemAdditionalWidgetModalsProps = {
   hideWidgets: TWorkItemWidgets[];

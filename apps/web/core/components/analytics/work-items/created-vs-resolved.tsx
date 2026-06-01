@@ -9,11 +9,11 @@ import { observer } from "mobx-react";
 import { useParams } from "next/navigation";
 import useSWR from "swr";
 // plane package imports
-import { useTranslation } from "@plane/i18n";
-import { AreaChart } from "@plane/propel/charts/area-chart";
-import { EmptyStateCompact } from "@plane/propel/empty-state";
-import type { IChartResponse, TChartData } from "@plane/types";
-import { renderFormattedDate } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import { AreaChart } from "@bright-byte/propel/charts/area-chart";
+import { EmptyStateCompact } from "@bright-byte/propel/empty-state";
+import type { IChartResponse, TChartData } from "@bright-byte/types";
+import { renderFormattedDate } from "@bright-byte/utils";
 // hooks
 import { useAnalytics } from "@/hooks/store/use-analytics";
 // services

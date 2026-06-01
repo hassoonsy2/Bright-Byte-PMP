@@ -6,8 +6,8 @@
 
 import { differenceInCalendarDays } from "date-fns/differenceInCalendarDays";
 // plane internal
-import { STATE_GROUPS } from "@plane/constants";
-import type { TStateGroups } from "@plane/types";
+import { STATE_GROUPS } from "@bright-byte/constants";
+import type { TStateGroups } from "@bright-byte/types";
 // helpers
 import { getDate } from "@/helpers/date-time.helper";
 

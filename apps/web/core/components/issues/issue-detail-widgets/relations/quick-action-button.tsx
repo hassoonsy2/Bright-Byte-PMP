@@ -7,11 +7,11 @@
 import React from "react";
 import { observer } from "mobx-react";
 
-import { useTranslation } from "@plane/i18n";
-import { PlusIcon } from "@plane/propel/icons";
+import { useTranslation } from "@bright-byte/i18n";
+import { PlusIcon } from "@bright-byte/propel/icons";
 // plane imports
-import type { TIssueServiceType } from "@plane/types";
-import { CustomMenu } from "@plane/ui";
+import type { TIssueServiceType } from "@bright-byte/types";
+import { CustomMenu } from "@bright-byte/ui";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 // Plane-web

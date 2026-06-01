@@ -5,10 +5,10 @@
  */
 
 // plane imports
-import type { TIssuePriorities } from "@plane/constants";
-import { ISSUE_PRIORITIES } from "@plane/constants";
-import type { TFilterProperty, TSupportedOperators } from "@plane/types";
-import { EQUALITY_OPERATOR, COLLECTION_OPERATOR } from "@plane/types";
+import type { TIssuePriorities } from "@bright-byte/constants";
+import { ISSUE_PRIORITIES } from "@bright-byte/constants";
+import type { TFilterProperty, TSupportedOperators } from "@bright-byte/types";
+import { EQUALITY_OPERATOR, COLLECTION_OPERATOR } from "@bright-byte/types";
 // local imports
 import type { TCreateFilterConfigParams, IFilterIconConfig, TCreateFilterConfig } from "../../../rich-filters";
 import { createFilterConfig, getMultiSelectConfig, createOperatorConfigEntry } from "../../../rich-filters";

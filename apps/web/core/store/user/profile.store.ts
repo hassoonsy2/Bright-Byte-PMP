@@ -7,11 +7,11 @@
 import { cloneDeep, set } from "lodash-es";
 import { action, makeObservable, observable, runInAction } from "mobx";
 // plane imports
-import { setLanguage } from "@plane/i18n";
-import type { TLanguage } from "@plane/i18n";
+import { setLanguage } from "@bright-byte/i18n";
+import type { TLanguage } from "@bright-byte/i18n";
 // types
-import type { IUserTheme, TUserProfile } from "@plane/types";
-import { EStartOfTheWeek } from "@plane/types";
+import type { IUserTheme, TUserProfile } from "@bright-byte/types";
+import { EStartOfTheWeek } from "@bright-byte/types";
 // services
 import { UserService } from "@/services/user.service";
 // store

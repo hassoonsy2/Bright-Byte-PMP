@@ -10,8 +10,8 @@ import { Controller } from "react-hook-form";
 // icons
 import { Eye, EyeOff } from "lucide-react";
 // plane internal packages
-import { Input } from "@plane/ui";
-import { cn } from "@plane/utils";
+import { Input } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 
 type Props = {
   control: Control<any>;

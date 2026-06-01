@@ -9,10 +9,10 @@ import { debounce } from "lodash-es";
 import { observer } from "mobx-react";
 import { Controller, useForm } from "react-hook-form";
 // plane imports
-import type { EditorRefApi, TExtensions } from "@plane/editor";
-import { useTranslation } from "@plane/i18n";
-import type { EFileAssetType, TNameDescriptionLoader } from "@plane/types";
-import { getDescriptionPlaceholderI18n } from "@plane/utils";
+import type { EditorRefApi, TExtensions } from "@bright-byte/editor";
+import { useTranslation } from "@bright-byte/i18n";
+import type { EFileAssetType, TNameDescriptionLoader } from "@bright-byte/types";
+import { getDescriptionPlaceholderI18n } from "@bright-byte/utils";
 // components
 import { RichTextEditor } from "@/components/editor/rich-text";
 // hooks

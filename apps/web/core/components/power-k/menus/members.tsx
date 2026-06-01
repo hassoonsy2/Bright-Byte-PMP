@@ -7,8 +7,8 @@
 import { Command } from "cmdk";
 import { observer } from "mobx-react";
 // plane imports
-import { Avatar } from "@plane/ui";
-import { getFileURL } from "@plane/utils";
+import { Avatar } from "@bright-byte/ui";
+import { getFileURL } from "@bright-byte/utils";
 // hooks
 import { useMember } from "@/hooks/store/use-member";
 // local imports

@@ -9,8 +9,8 @@ import { Link } from "react-router";
 import { useTheme } from "next-themes";
 import useSWR from "swr";
 // plane imports
-import { SPACE_BASE_PATH } from "@plane/constants";
-import { PlaneLockup } from "@plane/propel/icons";
+import { SPACE_BASE_PATH } from "@bright-byte/constants";
+import { PlaneLockup } from "@bright-byte/propel/icons";
 // assets
 import PlaneBackgroundPatternDark from "@/app/assets/auth/background-pattern-dark.svg?url";
 import PlaneBackgroundPattern from "@/app/assets/auth/background-pattern.svg?url";

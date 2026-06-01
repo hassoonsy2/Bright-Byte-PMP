@@ -6,10 +6,10 @@
 
 import { useState } from "react";
 import { observer } from "mobx-react";
-import { ISSUE_PRIORITIES } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { PriorityIcon } from "@plane/propel/icons";
-import type { TIssuePriorities } from "@plane/types";
+import { ISSUE_PRIORITIES } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { PriorityIcon } from "@bright-byte/propel/icons";
+import type { TIssuePriorities } from "@bright-byte/types";
 // plane constants
 // components
 import { FilterHeader, FilterOption } from "@/components/issues/issue-layouts/filters";

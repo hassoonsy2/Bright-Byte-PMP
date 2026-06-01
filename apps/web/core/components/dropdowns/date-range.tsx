@@ -12,13 +12,13 @@ import { usePopper } from "react-popper";
 import { ArrowRight, CalendarDays } from "lucide-react";
 import { Combobox } from "@headlessui/react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
+import { useTranslation } from "@bright-byte/i18n";
 // ui
-import type { DateRange, Matcher } from "@plane/propel/calendar";
-import { Calendar } from "@plane/propel/calendar";
-import { CloseIcon, DueDatePropertyIcon } from "@plane/propel/icons";
-import { ComboDropDown } from "@plane/ui";
-import { cn, renderFormattedDate } from "@plane/utils";
+import type { DateRange, Matcher } from "@bright-byte/propel/calendar";
+import { Calendar } from "@bright-byte/propel/calendar";
+import { CloseIcon, DueDatePropertyIcon } from "@bright-byte/propel/icons";
+import { ComboDropDown } from "@bright-byte/ui";
+import { cn, renderFormattedDate } from "@bright-byte/utils";
 // helpers
 // hooks
 import { useUserProfile } from "@/hooks/store/user";
@@ -192,7 +192,7 @@ export const DateRangeDropdown = observer(function DateRangeDropdown(props: Prop
       >
         {mergeDates ? (
           // Merged date display
-          <div className="flex w-full items-center gap-1.5">
+          (<div className="flex w-full items-center gap-1.5">
             {!hideIcon.from && <CalendarDays className="h-3 w-3 flex-shrink-0" />}
             {dateRange.from || dateRange.to ? (
               <MergedDateDisplay
@@ -221,10 +221,10 @@ export const DateRangeDropdown = observer(function DateRangeDropdown(props: Prop
                 }}
               />
             )}
-          </div>
+          </div>)
         ) : (
           // Original separate date display
-          <>
+          (<>
             <span
               className={cn(
                 "flex h-full flex-grow items-center justify-center gap-1 rounded-xs",
@@ -254,7 +254,7 @@ export const DateRangeDropdown = observer(function DateRangeDropdown(props: Prop
                 }}
               />
             )}
-          </>
+          </>)
         )}
       </DropdownButton>
     </button>

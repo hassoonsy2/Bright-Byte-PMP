@@ -10,13 +10,13 @@ import { useParams, useRouter } from "next/navigation";
 import { MoreHorizontal, ArchiveIcon, Settings } from "lucide-react";
 import { Disclosure } from "@headlessui/react";
 // plane imports
-import { EUserPermissionsLevel } from "@plane/constants";
-import { useOutsideClickDetector } from "@plane/hooks";
-import { useTranslation } from "@plane/i18n";
-import { ChevronRightIcon } from "@plane/propel/icons";
-import { EUserWorkspaceRoles } from "@plane/types";
-import { CustomMenu } from "@plane/ui";
-import { cn } from "@plane/utils";
+import { EUserPermissionsLevel } from "@bright-byte/constants";
+import { useOutsideClickDetector } from "@bright-byte/hooks";
+import { useTranslation } from "@bright-byte/i18n";
+import { ChevronRightIcon } from "@bright-byte/propel/icons";
+import { EUserWorkspaceRoles } from "@bright-byte/types";
+import { CustomMenu } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 // store hooks
 import { useUserPermissions } from "@/hooks/store/user";
 

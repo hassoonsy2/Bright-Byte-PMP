@@ -6,8 +6,8 @@
 
 import type { Control } from "react-hook-form";
 import { Controller } from "react-hook-form";
-import type { IWebhook } from "@plane/types";
-import { Checkbox } from "@plane/ui";
+import type { IWebhook } from "@bright-byte/types";
+import { Checkbox } from "@bright-byte/ui";
 
 export const INDIVIDUAL_WEBHOOK_OPTIONS: {
   key: keyof IWebhook;

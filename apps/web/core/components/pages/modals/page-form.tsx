@@ -9,15 +9,15 @@ import { useState } from "react";
 import type { LucideIcon } from "lucide-react";
 
 // plane imports
-import { ETabIndices, EPageAccess } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Button } from "@plane/propel/button";
-import { EmojiPicker, EmojiIconPickerTypes, Logo } from "@plane/propel/emoji-icon-picker";
-import { GlobeIcon, LockIcon, PageIcon } from "@plane/propel/icons";
-import type { ISvgIcons } from "@plane/propel/icons";
-import type { TPage } from "@plane/types";
-import { Input } from "@plane/ui";
-import { getTabIndex } from "@plane/utils";
+import { ETabIndices, EPageAccess } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { Button } from "@bright-byte/propel/button";
+import { EmojiPicker, EmojiIconPickerTypes, Logo } from "@bright-byte/propel/emoji-icon-picker";
+import { GlobeIcon, LockIcon, PageIcon } from "@bright-byte/propel/icons";
+import type { ISvgIcons } from "@bright-byte/propel/icons";
+import type { TPage } from "@bright-byte/types";
+import { Input } from "@bright-byte/ui";
+import { getTabIndex } from "@bright-byte/utils";
 // components
 import { AccessField } from "@/components/common/access-field";
 // hooks

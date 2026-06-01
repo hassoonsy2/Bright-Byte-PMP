@@ -6,10 +6,10 @@
 
 import { observer } from "mobx-react";
 // plane imports
-import { Tooltip } from "@plane/propel/tooltip";
-import { cn } from "@plane/propel/utils";
-import type { IFilterInstance } from "@plane/shared-state";
-import type { TExternalFilter, TFilterProperty, TSupportedOperators } from "@plane/types";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import { cn } from "@bright-byte/propel/utils";
+import type { IFilterInstance } from "@bright-byte/shared-state";
+import type { TExternalFilter, TFilterProperty, TSupportedOperators } from "@bright-byte/types";
 // local imports
 import { AddFilterDropdown } from "../add-filters/dropdown";
 import { COMMON_FILTER_ITEM_BORDER_CLASSNAME } from "../shared";

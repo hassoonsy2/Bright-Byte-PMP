@@ -7,9 +7,9 @@
 import type { RefObject } from "react";
 import { useState } from "react";
 import { observer } from "mobx-react";
-import type { IBaseLayoutsBaseItem, IBlockUpdateData } from "@plane/types";
-import { Loader, Row } from "@plane/ui";
-import { cn } from "@plane/utils";
+import type { IBaseLayoutsBaseItem, IBlockUpdateData } from "@bright-byte/types";
+import { Loader, Row } from "@bright-byte/ui";
+import { cn } from "@bright-byte/utils";
 import RenderIfVisible from "@/components/core/render-if-visible-HOC";
 import { BLOCK_HEIGHT } from "@/components/gantt-chart/constants";
 import { GanttDnDHOC } from "@/components/gantt-chart/sidebar/gantt-dnd-HOC";

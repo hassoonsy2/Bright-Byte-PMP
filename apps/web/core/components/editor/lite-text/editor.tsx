@@ -6,13 +6,13 @@
 
 import React, { useState } from "react";
 // plane constants
-import type { EIssueCommentAccessSpecifier } from "@plane/constants";
+import type { EIssueCommentAccessSpecifier } from "@bright-byte/constants";
 // plane imports
-import { LiteTextEditorWithRef } from "@plane/editor";
-import type { EditorRefApi, ILiteTextEditorProps, TFileHandler } from "@plane/editor";
-import { useTranslation } from "@plane/i18n";
-import type { MakeOptional } from "@plane/types";
-import { cn, isCommentEmpty } from "@plane/utils";
+import { LiteTextEditorWithRef } from "@bright-byte/editor";
+import type { EditorRefApi, ILiteTextEditorProps, TFileHandler } from "@bright-byte/editor";
+import { useTranslation } from "@bright-byte/i18n";
+import type { MakeOptional } from "@bright-byte/types";
+import { cn, isCommentEmpty } from "@bright-byte/utils";
 // components
 import { EditorMentionsRoot } from "@/components/editor/embeds/mentions";
 import { IssueCommentToolbar } from "@/components/editor/lite-text/toolbar";

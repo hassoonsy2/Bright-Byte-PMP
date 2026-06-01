@@ -6,8 +6,8 @@
 
 import type { ReactNode } from "react";
 // plane imports
-import type { TAuthErrorInfo } from "@plane/constants";
-import { E_PASSWORD_STRENGTH, EErrorAlertType, EAuthErrorCodes } from "@plane/constants";
+import type { TAuthErrorInfo } from "@bright-byte/constants";
+import { E_PASSWORD_STRENGTH, EErrorAlertType, EAuthErrorCodes } from "@bright-byte/constants";
 
 /**
  * @description Password strength levels

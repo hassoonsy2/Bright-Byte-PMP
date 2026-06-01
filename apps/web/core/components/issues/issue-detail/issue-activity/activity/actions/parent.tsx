@@ -5,7 +5,7 @@
  */
 
 import { observer } from "mobx-react";
-import { ParentPropertyIcon } from "@plane/propel/icons";
+import { ParentPropertyIcon } from "@bright-byte/propel/icons";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 // components

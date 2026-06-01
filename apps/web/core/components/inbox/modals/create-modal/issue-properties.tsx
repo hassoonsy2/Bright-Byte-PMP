@@ -6,11 +6,11 @@
 
 import { useState } from "react";
 import { observer } from "mobx-react";
-import { ETabIndices } from "@plane/constants";
-import { ParentPropertyIcon } from "@plane/propel/icons";
-import type { ISearchIssueResponse, TIssue } from "@plane/types";
-import { CustomMenu } from "@plane/ui";
-import { renderFormattedPayloadDate, getDate, getTabIndex } from "@plane/utils";
+import { ETabIndices } from "@bright-byte/constants";
+import { ParentPropertyIcon } from "@bright-byte/propel/icons";
+import type { ISearchIssueResponse, TIssue } from "@bright-byte/types";
+import { CustomMenu } from "@bright-byte/ui";
+import { renderFormattedPayloadDate, getDate, getTabIndex } from "@bright-byte/utils";
 // components
 import { CycleDropdown } from "@/components/dropdowns/cycle";
 import { DateDropdown } from "@/components/dropdowns/date";

@@ -8,12 +8,12 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { observer } from "mobx-react";
 import { ListFilter } from "lucide-react";
 // plane imports
-import { useOutsideClickDetector } from "@plane/hooks";
-import { IconButton } from "@plane/propel/icon-button";
-import { useTranslation } from "@plane/i18n";
-import { SearchIcon, CloseIcon } from "@plane/propel/icons";
-import type { TCycleFilters } from "@plane/types";
-import { cn, calculateTotalFilters } from "@plane/utils";
+import { useOutsideClickDetector } from "@bright-byte/hooks";
+import { IconButton } from "@bright-byte/propel/icon-button";
+import { useTranslation } from "@bright-byte/i18n";
+import { SearchIcon, CloseIcon } from "@bright-byte/propel/icons";
+import type { TCycleFilters } from "@bright-byte/types";
+import { cn, calculateTotalFilters } from "@bright-byte/utils";
 // components
 import { FiltersDropdown } from "@/components/issues/issue-layouts/filters";
 // hooks

@@ -7,10 +7,10 @@
 import { useParams } from "next/navigation";
 // react-hook-form
 import { Controller, useForm } from "react-hook-form";
-import { Button } from "@plane/propel/button";
-import type { IProject } from "@plane/types";
+import { Button } from "@bright-byte/propel/button";
+import type { IProject } from "@bright-byte/types";
 // ui
-import { Input, EModalPosition, EModalWidth, ModalCore } from "@plane/ui";
+import { Input, EModalPosition, EModalWidth, ModalCore } from "@bright-byte/ui";
 
 // types
 type Props = {

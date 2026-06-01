@@ -8,16 +8,16 @@ import { concat, orderBy, set, uniq, update } from "lodash-es";
 import { action, makeObservable, observable, runInAction } from "mobx";
 import { computedFn } from "mobx-utils";
 // plane package imports
-import type { E_SORT_ORDER } from "@plane/constants";
-import { EActivityFilterType } from "@plane/constants";
+import type { E_SORT_ORDER } from "@bright-byte/constants";
+import { EActivityFilterType } from "@bright-byte/constants";
 import type {
   TIssueActivityComment,
   TIssueActivity,
   TIssueActivityMap,
   TIssueActivityIdMap,
   TIssueServiceType,
-} from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
+} from "@bright-byte/types";
+import { EIssueServiceType } from "@bright-byte/types";
 // plane web constants
 // services
 import { IssueActivityService } from "@/services/issue";

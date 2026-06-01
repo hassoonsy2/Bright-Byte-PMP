@@ -17,8 +17,8 @@ import {
   CartesianGrid,
 } from "recharts";
 // plane imports
-import { AXIS_LABEL_CLASSNAME } from "@plane/constants";
-import type { TBarChartProps } from "@plane/types";
+import { AXIS_LABEL_CLASSNAME } from "@bright-byte/constants";
+import type { TBarChartProps } from "@bright-byte/types";
 // local components
 import { getLegendProps } from "../components/legend";
 import { CustomXAxisTick, CustomYAxisTick } from "../components/tick";
@@ -170,12 +170,12 @@ export const BarChart = React.memo(function BarChart<K extends string, T extends
           />
           {legend && (
             // @ts-expect-error recharts types are not up to date
-            <Legend
+            (<Legend
               onMouseEnter={(payload) => setActiveLegend(payload.value)}
               onMouseLeave={() => setActiveLegend(null)}
               formatter={(value) => stackLabels[value]}
               {...getLegendProps(legend)}
-            />
+            />)
           )}
           {showTooltip && (
             <Tooltip

@@ -6,11 +6,11 @@
 
 import { useCallback } from "react";
 import { PanelLeft } from "lucide-react";
-import { useTranslation } from "@plane/i18n";
-import { LinkIcon, SearchIcon } from "@plane/propel/icons";
+import { useTranslation } from "@bright-byte/i18n";
+import { LinkIcon, SearchIcon } from "@bright-byte/propel/icons";
 // plane imports
-import { setToast, TOAST_TYPE } from "@plane/propel/toast";
-import { copyTextToClipboard } from "@plane/utils";
+import { setToast, TOAST_TYPE } from "@bright-byte/propel/toast";
+import { copyTextToClipboard } from "@bright-byte/utils";
 // components
 import type { TPowerKCommandConfig } from "@/components/power-k/core/types";
 // hooks

@@ -7,8 +7,8 @@
 import Link from "next/link";
 import { useParams } from "next/navigation";
 // Plane imports
-import type { IWebhook } from "@plane/types";
-import { ToggleSwitch } from "@plane/ui";
+import type { IWebhook } from "@bright-byte/types";
+import { ToggleSwitch } from "@bright-byte/ui";
 // hooks
 import { useWebhook } from "@/hooks/store/use-webhook";
 

@@ -5,7 +5,7 @@
  */
 
 // plane imports
-import { Loader } from "@plane/ui";
+import { Loader } from "@bright-byte/ui";
 
 export function IssueActivityLoader() {
   return (

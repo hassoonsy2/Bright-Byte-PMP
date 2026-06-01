@@ -9,7 +9,7 @@ import * as React from "react";
 import { IconWrapper } from "../icon-wrapper";
 import type { ISvgIcons } from "../type";
 
-export function PiChatLogo({ color = "currentColor", ...rest }: ISvgIcons) {
+export function ByteLogo({ color = "currentColor", ...rest }: ISvgIcons) {
   return (
     <IconWrapper color={color} viewBox="0 0 24 24" {...rest}>
       {/* Byte mark — stylized "B" with the assistant spark, rendered in currentColor */}

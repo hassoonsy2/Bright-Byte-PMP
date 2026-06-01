@@ -7,7 +7,7 @@
 import React, { useMemo, useState } from "react";
 import { Cell, PieChart as CorePieChart, Label, Legend, Pie, ResponsiveContainer, Tooltip } from "recharts";
 // plane imports
-import type { TPieChartProps } from "@plane/types";
+import type { TPieChartProps } from "@bright-byte/types";
 // local components
 import { getLegendProps } from "../components/legend";
 import { CustomActiveShape } from "./active-shape";
@@ -113,7 +113,7 @@ export const PieChart = React.memo(function PieChart<K extends string, T extends
           </Pie>
           {legend && (
             // @ts-expect-error recharts types are not up to date
-            <Legend
+            (<Legend
               onMouseEnter={(payload) => {
                 // @ts-expect-error recharts types are not up to date
                 const key: string | undefined = payload.payload?.key;
@@ -123,7 +123,7 @@ export const PieChart = React.memo(function PieChart<K extends string, T extends
               }}
               onMouseLeave={() => setActiveLegend(null)}
               {...getLegendProps(legend)}
-            />
+            />)
           )}
           {showTooltip && (
             <Tooltip

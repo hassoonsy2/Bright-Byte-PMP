@@ -8,8 +8,8 @@ import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react";
 import { Tab } from "@headlessui/react";
 // plane package imports
-import type { ICycle, IModule, IProject } from "@plane/types";
-import { Spinner } from "@plane/ui";
+import type { ICycle, IModule, IProject } from "@bright-byte/types";
+import { Spinner } from "@bright-byte/ui";
 // hooks
 import { useAnalytics } from "@/hooks/store/use-analytics";
 // plane web components

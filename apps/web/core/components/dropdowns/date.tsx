@@ -11,11 +11,11 @@ import { usePopper } from "react-popper";
 import { CalendarDays } from "lucide-react";
 import { Combobox } from "@headlessui/react";
 // ui
-import type { Matcher } from "@plane/propel/calendar";
-import { Calendar } from "@plane/propel/calendar";
-import { CloseIcon } from "@plane/propel/icons";
-import { ComboDropDown } from "@plane/ui";
-import { cn, renderFormattedDate, getDate } from "@plane/utils";
+import type { Matcher } from "@bright-byte/propel/calendar";
+import { Calendar } from "@bright-byte/propel/calendar";
+import { CloseIcon } from "@bright-byte/propel/icons";
+import { ComboDropDown } from "@bright-byte/ui";
+import { cn, renderFormattedDate, getDate } from "@bright-byte/utils";
 // helpers
 // hooks
 import { useUserProfile } from "@/hooks/store/user";

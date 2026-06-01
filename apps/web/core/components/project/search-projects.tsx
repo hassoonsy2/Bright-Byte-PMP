@@ -7,15 +7,15 @@
 import { useRef, useState } from "react";
 import { observer } from "mobx-react";
 // plane hooks
-import { useOutsideClickDetector } from "@plane/hooks";
+import { useOutsideClickDetector } from "@bright-byte/hooks";
 // i18n
-import { useTranslation } from "@plane/i18n";
-import { SearchIcon, CloseIcon } from "@plane/propel/icons";
+import { useTranslation } from "@bright-byte/i18n";
+import { SearchIcon, CloseIcon } from "@bright-byte/propel/icons";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 // hooks
 import { useProjectFilter } from "@/hooks/store/use-project-filter";
-import { IconButton } from "@plane/propel/icon-button";
+import { IconButton } from "@bright-byte/propel/icon-button";
 
 export const ProjectSearch = observer(function ProjectSearch() {
   // i18n

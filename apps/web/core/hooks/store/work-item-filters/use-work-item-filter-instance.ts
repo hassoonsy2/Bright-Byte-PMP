@@ -5,8 +5,8 @@
  */
 
 // plane imports
-import type { IWorkItemFilterInstance } from "@plane/shared-state";
-import type { EIssuesStoreType } from "@plane/types";
+import type { IWorkItemFilterInstance } from "@bright-byte/shared-state";
+import type { EIssuesStoreType } from "@bright-byte/types";
 // local imports
 import { useWorkItemFilters } from "./use-work-item-filters";
 

@@ -7,8 +7,8 @@
 import { set } from "lodash-es";
 import { action, observable, runInAction, makeObservable, computed } from "mobx";
 // plane imports
-import { InstanceWorkspaceService } from "@plane/services";
-import type { IWorkspace, TLoader, TPaginationInfo } from "@plane/types";
+import { InstanceWorkspaceService } from "@bright-byte/services";
+import type { IWorkspace, TLoader, TPaginationInfo } from "@bright-byte/types";
 // root store
 import type { RootStore } from "@/store/root.store";
 

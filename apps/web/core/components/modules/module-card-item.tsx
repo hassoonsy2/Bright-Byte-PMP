@@ -17,14 +17,14 @@ import {
   EUserPermissions,
   EUserPermissionsLevel,
   IS_FAVORITE_MENU_OPEN,
-} from "@plane/constants";
-import { useLocalStorage } from "@plane/hooks";
-import { WorkItemsIcon } from "@plane/propel/icons";
-import { TOAST_TYPE, setPromiseToast, setToast } from "@plane/propel/toast";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { IModule } from "@plane/types";
-import { Card, FavoriteStar, LinearProgressIndicator } from "@plane/ui";
-import { getDate, renderFormattedPayloadDate, generateQueryParams } from "@plane/utils";
+} from "@bright-byte/constants";
+import { useLocalStorage } from "@bright-byte/hooks";
+import { WorkItemsIcon } from "@bright-byte/propel/icons";
+import { TOAST_TYPE, setPromiseToast, setToast } from "@bright-byte/propel/toast";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import type { IModule } from "@bright-byte/types";
+import { Card, FavoriteStar, LinearProgressIndicator } from "@bright-byte/ui";
+import { getDate, renderFormattedPayloadDate, generateQueryParams } from "@bright-byte/utils";
 // components
 import { DateRangeDropdown } from "@/components/dropdowns/date-range";
 import { ButtonAvatars } from "@/components/dropdowns/member/avatar";

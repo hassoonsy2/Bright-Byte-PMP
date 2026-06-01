@@ -7,12 +7,12 @@
 import React from "react";
 import { useParams } from "next/navigation";
 import useSWRInfinite from "swr/infinite";
-import type { IWorkspaceIntegration } from "@plane/types";
+import type { IWorkspaceIntegration } from "@bright-byte/types";
 // services
 // ui
-import { CustomSearchSelect } from "@plane/ui";
+import { CustomSearchSelect } from "@bright-byte/ui";
 // helpers
-import { truncateText } from "@plane/utils";
+import { truncateText } from "@bright-byte/utils";
 import { ProjectService } from "@/services/project";
 // types
 

@@ -5,11 +5,11 @@
  */
 
 // plane imports
-import { ISSUE_LAYOUTS } from "@plane/constants";
-import { useTranslation } from "@plane/i18n";
-import { Tooltip } from "@plane/propel/tooltip";
-import type { EIssueLayoutTypes } from "@plane/types";
-import { cn } from "@plane/utils";
+import { ISSUE_LAYOUTS } from "@bright-byte/constants";
+import { useTranslation } from "@bright-byte/i18n";
+import { Tooltip } from "@bright-byte/propel/tooltip";
+import type { EIssueLayoutTypes } from "@bright-byte/types";
+import { cn } from "@bright-byte/utils";
 // components
 import { IssueLayoutIcon } from "@/components/issues/issue-layouts/layout-icon";
 // hooks

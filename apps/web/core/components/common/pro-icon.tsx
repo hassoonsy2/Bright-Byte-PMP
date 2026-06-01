@@ -6,7 +6,7 @@
 
 import { Crown } from "lucide-react";
 // helpers
-import { cn } from "@plane/utils";
+import { cn } from "@bright-byte/utils";
 
 type TProIcon = {
   className?: string;

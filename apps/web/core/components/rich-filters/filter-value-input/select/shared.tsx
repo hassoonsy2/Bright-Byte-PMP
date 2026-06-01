@@ -5,8 +5,8 @@
  */
 
 // plane imports
-import type { TSupportedFilterFieldConfigs, IFilterOption, TFilterValue } from "@plane/types";
-import { cn } from "@plane/utils";
+import type { TSupportedFilterFieldConfigs, IFilterOption, TFilterValue } from "@bright-byte/types";
+import { cn } from "@bright-byte/utils";
 // local imports
 import { COMMON_FILTER_ITEM_BORDER_CLASSNAME } from "../../shared";
 

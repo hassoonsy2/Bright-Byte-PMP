@@ -7,12 +7,12 @@
 import { useEffect } from "react";
 import { observer } from "mobx-react";
 import { Controller, useForm } from "react-hook-form";
-import { useTranslation } from "@plane/i18n";
+import { useTranslation } from "@bright-byte/i18n";
 // plane types
-import { Button } from "@plane/propel/button";
-import type { TIssueLinkEditableFields, TIssueServiceType } from "@plane/types";
+import { Button } from "@bright-byte/propel/button";
+import type { TIssueLinkEditableFields, TIssueServiceType } from "@bright-byte/types";
 // plane ui
-import { Input, ModalCore } from "@plane/ui";
+import { Input, ModalCore } from "@bright-byte/ui";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 // types

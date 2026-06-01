@@ -5,8 +5,8 @@
  */
 
 // helpers
-import type { IWebhook, IWorkspace } from "@plane/types";
-import { renderFormattedPayloadDate } from "@plane/utils";
+import type { IWebhook, IWorkspace } from "@bright-byte/types";
+import { renderFormattedPayloadDate } from "@bright-byte/utils";
 // types
 
 export const getCurrentHookAsCSV = (

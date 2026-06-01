@@ -27,6 +27,6 @@
 export function PreloadResources() {
   return (
     // usePreloadResources();
-    null
+    (null)
   );
 }

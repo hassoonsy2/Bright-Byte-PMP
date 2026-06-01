@@ -6,11 +6,11 @@
 
 import { useMemo } from "react";
 // plane imports
-import { useTranslation } from "@plane/i18n";
-import { TOAST_TYPE, setToast } from "@plane/propel/toast";
-import type { TIssue, TIssueServiceType } from "@plane/types";
-import { EIssueServiceType } from "@plane/types";
-import { copyUrlToClipboard } from "@plane/utils";
+import { useTranslation } from "@bright-byte/i18n";
+import { TOAST_TYPE, setToast } from "@bright-byte/propel/toast";
+import type { TIssue, TIssueServiceType } from "@bright-byte/types";
+import { EIssueServiceType } from "@bright-byte/types";
+import { copyUrlToClipboard } from "@bright-byte/utils";
 // hooks
 import { useIssueDetail } from "@/hooks/store/use-issue-detail";
 

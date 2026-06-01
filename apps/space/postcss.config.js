@@ -1,3 +1,3 @@
-import postcssConfig from "@plane/tailwind-config/postcss.config.js";
+import postcssConfig from "@bright-byte/tailwind-config/postcss.config.js";
 
 export default postcssConfig;
