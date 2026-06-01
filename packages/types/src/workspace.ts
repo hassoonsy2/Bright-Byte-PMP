@@ -5,7 +5,6 @@
  */
 
 import type { TPaginationInfo } from "./common";
-import type { ICycle } from "./cycle";
 import type { TUserPermissions } from "./enums";
 import type { TProjectMembership } from "./project";
 import type { IUser, IUserLite } from "./users";
@@ -214,17 +213,6 @@ export interface IProductUpdateResponse {
     rocket: number;
     eyes: number;
   };
-}
-
-export interface IWorkspaceActiveCyclesResponse {
-  count: number;
-  extra_stats: null;
-  next_cursor: string;
-  next_page_results: boolean;
-  prev_cursor: string;
-  prev_page_results: boolean;
-  results: ICycle[];
-  total_pages: number;
 }
 
 export interface IWorkspaceProgressResponse {

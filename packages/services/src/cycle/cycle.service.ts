@@ -5,7 +5,7 @@
  */
 
 import { API_BASE_URL } from "@bright-byte/constants";
-import type { CycleDateCheckData, ICycle, TIssuesResponse, IWorkspaceActiveCyclesResponse } from "@bright-byte/types";
+import type { CycleDateCheckData, ICycle, TIssuesResponse } from "@bright-byte/types";
 import { APIService } from "../api.service";
 
 /**
@@ -16,31 +16,6 @@ import { APIService } from "../api.service";
 export class CycleService extends APIService {
   constructor(BASE_URL?: string) {
     super(BASE_URL || API_BASE_URL);
-  }
-
-  /**
-   * Retrieves paginated list of active cycles in a workspace.
-   * @param {string} workspaceSlug - The workspace identifier
-   * @param {string} cursor - The pagination cursor
-   * @param {number} per_page - Number of items per page
-   * @returns {Promise<IWorkspaceActiveCyclesResponse>} Paginated active cycles data
-   * @throws {Error} If the request fails
-   */
-  async workspaceActiveCycles(
-    workspaceSlug: string,
-    cursor: string,
-    per_page: number
-  ): Promise<IWorkspaceActiveCyclesResponse> {
-    return this.get(`/api/workspaces/${workspaceSlug}/active-cycles/`, {
-      params: {
-        per_page,
-        cursor,
-      },
-    })
-      .then((res) => res?.data)
-      .catch((err) => {
-        throw err?.response?.data;
-      });
   }
 
   /**
