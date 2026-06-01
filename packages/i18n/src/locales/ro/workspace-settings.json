@@ -20,7 +20,7 @@
         "delete_btn": "Șterge acest spațiu de lucru",
         "delete_modal": {
           "title": "Ești sigur că vrei să ștergi acest spațiu de lucru?",
-          "description": "Ai o perioadă de probă activă pentru unul dintre planurile noastre plătite. Te rugăm să o anulezi înainte de a continua.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Renunță",
           "cancel": "Anulează perioadă de probă",
           "success_title": "Spațiul de lucru a fost șters.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Anulează mai întâi perioada de probă.",
-        "description": "Ai o perioadă de probă activă pentru unul dintre planurile noastre plătite. Te rugăm să o anulezi mai întâi pentru a continua.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Respinge",
         "cancel": "Anulează perioada de probă",
         "cancel_success_title": "Perioada de probă anulată.",

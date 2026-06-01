@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "Upgrade zum Freischalten von Wiki",
-      "description": "Schalten Sie öffentliche Seiten, Versionsverlauf, geteilte Seiten, Echtzeit-Zusammenarbeit und Arbeitsbereichsseiten für Wikis, unternehmensweite Dokumente und Wissensdatenbanken mit Bright-Byte PMP Pro frei.",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "Upgrade"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "Mehr erfahren"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "Verschachtelte Seiten erfordern einen kostenpflichtigen Plan. Führen Sie ein Upgrade durch, um sie freizuschalten."
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

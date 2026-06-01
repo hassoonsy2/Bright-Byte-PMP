@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "İş öğesi tiplerini etkinleştirmek için Pro'ya geçin.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "İş öğelerinizi İş öğesi tipleriyle şekillendirin. Simgeler, arka planlar ve özelliklerle özelleştirin ve bu proje için yapılandırın.",
         "primary_button": {
-          "text": "Pro'ya Geç"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "İş öğesi tiplerini etkinleştirmek için yükseltin.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "İş öğelerinizi İş öğesi tipleriyle şekillendirin. Simgeler, arka planlar ve özelliklerle özelleştirin ve bu proje için yapılandırın.",
         "primary_button": {
-          "text": "Yükselt"
+          "text": "Unavailable"
         }
       }
     }

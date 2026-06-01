@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "Nâng cấp để mở khóa Wiki",
-      "description": "Mở khóa trang công khai, lịch sử phiên bản, trang được chia sẻ, cộng tác thời gian thực và trang không gian làm việc cho wiki, tài liệu toàn công ty và cơ sở kiến thức với Bright-Byte PMP Pro.",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "Nâng cấp"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "Tìm hiểu thêm"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "Trang lồng nhau yêu cầu gói trả phí. Nâng cấp để mở khóa."
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

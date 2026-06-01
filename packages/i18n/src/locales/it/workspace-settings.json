@@ -20,7 +20,7 @@
         "delete_btn": "Elimina questo spazio di lavoro",
         "delete_modal": {
           "title": "Sei sicuro di voler eliminare questo spazio di lavoro?",
-          "description": "Hai un periodo di prova attivo per uno dei nostri piani a pagamento. Per procedere, annulla prima il periodo di prova.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Annulla",
           "cancel": "Annulla periodo di prova",
           "success_title": "Spazio di lavoro eliminato.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Cancella la tua prova prima.",
-        "description": "Hai una prova attiva per uno dei nostri piani pagati. Per procedere, per favore cancella prima.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Ignora",
         "cancel": "Cancella prova",
         "cancel_success_title": "Prova cancellata.",

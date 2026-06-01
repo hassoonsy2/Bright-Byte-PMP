@@ -20,7 +20,7 @@
         "delete_btn": "刪除此工作區",
         "delete_modal": {
           "title": "您確定要刪除此工作區嗎？",
-          "description": "您有一個使用中的付費方案試用期。請先取消試用期再繼續。",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "關閉",
           "cancel": "取消試用",
           "success_title": "工作區已刪除。",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "請先取消您的試用期。",
-        "description": "您有一個我們付費方案的有效試用期。請先取消它才能繼續。",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "忽略",
         "cancel": "取消試用期",
         "cancel_success_title": "試用期已取消。",

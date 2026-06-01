@@ -20,7 +20,7 @@
         "delete_btn": "Arbeitsbereich löschen",
         "delete_modal": {
           "title": "Möchten Sie diesen Arbeitsbereich wirklich löschen?",
-          "description": "Sie haben eine aktive Testversion. Bitte kündigen Sie diese zuerst.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Schließen",
           "cancel": "Testversion kündigen",
           "success_title": "Arbeitsbereich gelöscht.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Kündigen Sie zuerst Ihre Testphase.",
-        "description": "Sie haben eine aktive Testphase für einen unserer kostenpflichtigen Pläne. Bitte kündigen Sie diese zuerst, um fortzufahren.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Schließen",
         "cancel": "Testphase kündigen",
         "cancel_success_title": "Testphase gekündigt.",

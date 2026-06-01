@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "Mettez à niveau pour débloquer le Wiki",
-      "description": "Débloquez les pages publiques, l’historique des versions, les pages partagées, la collaboration en temps réel et les pages d’espace de travail pour les wikis, la documentation d’entreprise et les bases de connaissances avec Bright-Byte PMP Pro.",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "Mettre à niveau"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "En savoir plus"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "Les pages imbriquées nécessitent un forfait payant. Mettez à niveau pour débloquer."
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

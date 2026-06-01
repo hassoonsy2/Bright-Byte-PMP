@@ -20,7 +20,7 @@
         "delete_btn": "Excluir este espaço de trabalho",
         "delete_modal": {
           "title": "Tem certeza de que deseja excluir este espaço de trabalho?",
-          "description": "Você tem uma avaliação ativa para um de nossos planos pagos. Cancele-o primeiro para prosseguir.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Dispensar",
           "cancel": "Cancelar avaliação",
           "success_title": "Espaço de trabalho excluído.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Cancele seu período de teste primeiro.",
-        "description": "Você tem um período de teste ativo para um de nossos planos pagos. Por favor, cancele-o primeiro para prosseguir.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Dispensar",
         "cancel": "Cancelar período de teste",
         "cancel_success_title": "Período de teste cancelado.",

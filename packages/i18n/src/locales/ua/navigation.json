@@ -23,12 +23,12 @@
     "intake": "Надходження",
     "drafts": "Чернетки",
     "favorites": "Вибране",
-    "pro": "Pro",
-    "upgrade": "Підвищити",
+    "pro": "Edition",
+    "upgrade": "Plan",
     "byte": "Byte",
     "epics": "Епікс",
-    "upgrade_plan": "Апгрейд план",
-    "plane_pro": "Плейн Про",
-    "business": "Бізнес"
+    "upgrade_plan": "Workspace plan",
+    "plane_pro": "Bright-Byte PMP",
+    "business": "Workspace"
   }
 }

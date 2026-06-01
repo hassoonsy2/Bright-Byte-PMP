@@ -20,7 +20,7 @@
         "delete_btn": "Usuń przestrzeń",
         "delete_modal": {
           "title": "Czy na pewno chcesz usunąć tę przestrzeń?",
-          "description": "Masz aktywną wersję próbną. Najpierw ją anuluj.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Zamknij",
           "cancel": "Anuluj wersję próbną",
           "success_title": "Przestrzeń usunięta.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Najpierw anuluj swój okres próbny.",
-        "description": "Masz aktywny okres próbny jednego z naszych płatnych planów. Proszę najpierw go anulować, aby kontynuować.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Odrzuć",
         "cancel": "Anuluj okres próbny",
         "cancel_success_title": "Okres próbny anulowany.",

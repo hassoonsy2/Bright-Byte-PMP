@@ -23,12 +23,12 @@
     "intake": "Intake",
     "drafts": "Bozze",
     "favorites": "Preferiti",
-    "pro": "Pro",
-    "upgrade": "Aggiorna",
+    "pro": "Edition",
+    "upgrade": "Plan",
     "byte": "Byte",
     "epics": "Epiche",
-    "upgrade_plan": "Piano di aggiornamento",
-    "plane_pro": "Bright-Byte PMP Pro",
-    "business": "Business"
+    "upgrade_plan": "Workspace plan",
+    "plane_pro": "Bright-Byte PMP",
+    "business": "Workspace"
   }
 }

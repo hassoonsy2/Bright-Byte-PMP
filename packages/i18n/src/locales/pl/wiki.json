@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "Uaktualnij, aby odblokować Wiki",
-      "description": "Odblokuj publiczne strony, historię wersji, udostępnione strony, współpracę w czasie rzeczywistym oraz strony przestrzeni roboczej dla wiki, dokumentacji firmowej i baz wiedzy dzięki Bright-Byte PMP Pro.",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "Uaktualnij"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "Dowiedz się więcej"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "Zagnieżdżone strony wymagają planu płatnego. Uaktualnij, aby odblokować."
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

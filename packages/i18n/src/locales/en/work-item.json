@@ -361,7 +361,7 @@
     "empty_state": {
       "upgrade": {
         "title": "Your work, on autopilot",
-        "description": "Set it once. We’ll bring it back when it’s due. Upgrade to Business to make recurring work feel effortless."
+        "description": "Set it once. We’ll bring it back when it’s due."
       },
       "no_templates": {
         "button": "Create your first recurring work item"

@@ -20,7 +20,7 @@
         "delete_btn": "Xóa không gian làm việc này",
         "delete_modal": {
           "title": "Bạn có chắc chắn muốn xóa không gian làm việc này không?",
-          "description": "Bạn hiện đang dùng thử gói trả phí của chúng tôi. Vui lòng hủy dùng thử trước khi tiếp tục.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Đóng",
           "cancel": "Hủy dùng thử",
           "success_title": "Đã xóa không gian làm việc.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Hủy bỏ dùng thử trước.",
-        "description": "Bạn đang có gói dùng thử cho một trong các gói trả phí của chúng tôi. Vui lòng hủy nó trước để tiếp tục.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Bỏ qua",
         "cancel": "Hủy dùng thử",
         "cancel_success_title": "Đã hủy dùng thử.",

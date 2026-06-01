@@ -20,7 +20,7 @@
         "delete_btn": "このワークスペースを削除",
         "delete_modal": {
           "title": "このワークスペースを削除してもよろしいですか？",
-          "description": "有料プランの無料トライアルが有効です。続行するには、まずトライアルをキャンセルしてください。",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "閉じる",
           "cancel": "トライアルをキャンセル",
           "success_title": "ワークスペースが削除されました。",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "まずトライアルをキャンセルしてください。",
-        "description": "有料プランのトライアルが有効です。続行するには、まずキャンセルしてください。",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "閉じる",
         "cancel": "トライアルをキャンセル",
         "cancel_success_title": "トライアルがキャンセルされました。",

@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "Wiki'yi açmak için yükseltin",
-      "description": "Bright-Byte PMP Pro ile genel sayfaları, sürüm geçmişini, paylaşılan sayfaları, gerçek zamanlı işbirliğini ve wiki'ler, şirket içi belgeler ve bilgi tabanları için çalışma alanı sayfalarını açın.",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "Yükselt"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "Daha fazla bilgi"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "İç içe sayfalar ücretli bir plan gerektirir. Açmak için yükseltin."
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

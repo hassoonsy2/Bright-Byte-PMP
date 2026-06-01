@@ -20,7 +20,7 @@
         "delete_btn": "Delete this workspace",
         "delete_modal": {
           "title": "Are you sure you want to delete this workspace?",
-          "description": "You have an active trial to one of our paid plans. Please cancel it first to proceed.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Dismiss",
           "cancel": "Cancel trial",
           "success_title": "Workspace deleted.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Cancel your trial first.",
-        "description": "You have an active trial to one of our paid plans. Please cancel it first to proceed.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Dismiss",
         "cancel": "Cancel trial",
         "cancel_success_title": "Trial cancelled.",

@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "Оновіться, щоб розблокувати Wiki",
-      "description": "Розблокуйте публічні сторінки, історію версій, спільні сторінки, спільне редагування в реальному часі та сторінки робочого простору для wiki, корпоративних документів і баз знань з Bright-Byte PMP Pro.",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "Оновити"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "Дізнатися більше"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "Вкладені сторінки вимагають платного плану. Оновіться, щоб розблокувати."
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

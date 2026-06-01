@@ -20,7 +20,7 @@
         "delete_btn": "Удалить пространство",
         "delete_modal": {
           "title": "Подтвердите удаление пространства",
-          "description": "У вас есть активная пробная подписка. Сначала отмените её.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Отмена",
           "cancel": "Отменить подписку",
           "success_title": "Пространство удалено",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Сначала отмените свою пробную версию.",
-        "description": "У вас есть активная пробная версия одного из наших платных планов. Пожалуйста, отмените ее сначала, чтобы продолжить.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Закрыть",
         "cancel": "Отменить пробную версию",
         "cancel_success_title": "Пробная версия отменена.",

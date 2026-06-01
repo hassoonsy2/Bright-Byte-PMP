@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "Nâng cấp lên Pro để kích hoạt Loại mục công việc.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Định hình mục công việc theo công việc của bạn với Loại mục công việc. Tùy chỉnh với biểu tượng, nền và thuộc tính và cấu hình chúng cho dự án này.",
         "primary_button": {
-          "text": "Nâng cấp lên Pro"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "Nâng cấp để kích hoạt Loại mục công việc.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Định hình mục công việc theo công việc của bạn với Loại mục công việc. Tùy chỉnh với biểu tượng, nền và thuộc tính và cấu hình chúng cho dự án này.",
         "primary_button": {
-          "text": "Nâng cấp"
+          "text": "Unavailable"
         }
       }
     }

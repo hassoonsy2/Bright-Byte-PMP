@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "Obtén Pro para habilitar tipos de elementos de trabajo.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Da forma a los elementos de trabajo con tipos de elementos de trabajo. Personaliza con iconos, fondos y propiedades y configúralos para este proyecto.",
         "primary_button": {
-          "text": "Obtener Pro"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "Actualiza para habilitar tipos de elementos de trabajo.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Da forma a los elementos de trabajo con tipos de elementos de trabajo. Personaliza con iconos, fondos y propiedades y configúralos para este proyecto.",
         "primary_button": {
-          "text": "Actualizar"
+          "text": "Unavailable"
         }
       }
     }

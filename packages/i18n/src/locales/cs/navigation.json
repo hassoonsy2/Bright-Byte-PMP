@@ -23,12 +23,12 @@
     "intake": "Příjem",
     "drafts": "Koncepty",
     "favorites": "Oblíbené",
-    "pro": "Pro",
-    "upgrade": "Upgrade",
+    "pro": "Edition",
+    "upgrade": "Plan",
     "byte": "Byte",
     "epics": "Epiky",
-    "upgrade_plan": "Plán upgradu",
-    "plane_pro": "Bright-Byte PMP Pro",
-    "business": "Byznys"
+    "upgrade_plan": "Workspace plan",
+    "plane_pro": "Bright-Byte PMP",
+    "business": "Workspace"
   }
 }

@@ -18,7 +18,7 @@
       }
     },
     "upgrade": {
-      "description": "Upgrade your plan to view this attachment."
+      "description": "This attachment is unavailable in this edition."
     },
     "aria": {
       "click_to_upload": "Click to upload attachment"

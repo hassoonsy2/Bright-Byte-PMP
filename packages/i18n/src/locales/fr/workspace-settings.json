@@ -20,7 +20,7 @@
         "delete_btn": "Supprimer cet espace de travail",
         "delete_modal": {
           "title": "Êtes-vous sûr de vouloir supprimer cet espace de travail ?",
-          "description": "Vous avez un essai actif sur l’un de nos forfaits payants. Veuillez d’abord l’annuler pour continuer.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Fermer",
           "cancel": "Annuler l’essai",
           "success_title": "Espace de travail supprimé.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Annulez d'abord votre période d'essai.",
-        "description": "Vous avez une période d'essai active sur l'un de nos forfaits payants. Veuillez d'abord l'annuler pour continuer.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Fermer",
         "cancel": "Annuler l'essai",
         "cancel_success_title": "Période d'essai annulée.",

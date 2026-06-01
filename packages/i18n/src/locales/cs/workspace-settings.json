@@ -20,7 +20,7 @@
         "delete_btn": "Smazat prostor",
         "delete_modal": {
           "title": "Opravdu chcete smazat tento prostor?",
-          "description": "Máte aktivní zkušební verzi. Nejprve ji zrušte.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Zavřít",
           "cancel": "Zrušit zkušební verzi",
           "success_title": "Prostor smazán.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Nejprve zrušte svou zkušební verzi.",
-        "description": "Máte aktivní zkušební verzi jednoho z našich placených plánů. Nejprve ji prosím zrušte, abyste mohli pokračovat.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Zavřít",
         "cancel": "Zrušit zkušební verzi",
         "cancel_success_title": "Zkušební verze zrušena.",

@@ -123,7 +123,7 @@
   "active_cycles": "Ciclos activos",
   "active_cycles_description": "Monitorea ciclos en todos los proyectos, rastrea elementos de trabajo de alta prioridad y enfócate en los ciclos que necesitan atención.",
   "on_demand_snapshots_of_all_your_cycles": "Instantáneas bajo demanda de todos tus ciclos",
-  "upgrade": "Actualizar",
+  "upgrade": "Unavailable",
   "10000_feet_view": "Vista panorámica de todos los ciclos activos.",
   "10000_feet_view_description": "Aléjate para ver los ciclos en ejecución en todos tus proyectos a la vez en lugar de ir de Ciclo en Ciclo en cada proyecto.",
   "get_snapshot_of_each_active_cycle": "Obtén una instantánea de cada ciclo activo.",
@@ -654,7 +654,7 @@
     "from": "de {name}",
     "authenticated": "Autenticado",
     "select": "Seleccionar",
-    "upgrade": "Mejorar",
+    "upgrade": "Unavailable",
     "add_seats": "Agregar asientos",
     "projects": "Proyectos",
     "workspace": "Espacio de trabajo",
@@ -682,8 +682,8 @@
     "members": "Miembros",
     "you": "Tú",
     "upgrade_cta": {
-      "higher_subscription": "Mejorar a una suscripción más alta",
-      "talk_to_sales": "Hablar con ventas"
+      "higher_subscription": "Feature unavailable",
+      "talk_to_sales": "Contact support"
     },
     "category": "Categoría",
     "categories": "Categorías",

@@ -23,12 +23,12 @@
     "intake": "Zgłoszenia",
     "drafts": "Szkice",
     "favorites": "Ulubione",
-    "pro": "Pro",
-    "upgrade": "Uaktualnij",
+    "pro": "Edition",
+    "upgrade": "Plan",
     "byte": "Byte",
     "epics": "Epiki",
-    "upgrade_plan": "Apgrejduj plan",
-    "plane_pro": "Plejn Pro",
-    "business": "Biznes"
+    "upgrade_plan": "Workspace plan",
+    "plane_pro": "Bright-Byte PMP",
+    "business": "Workspace"
   }
 }

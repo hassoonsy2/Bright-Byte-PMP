@@ -23,12 +23,12 @@
     "intake": "Cereri",
     "drafts": "Schițe",
     "favorites": "Favorite",
-    "pro": "Pro",
-    "upgrade": "Treci la versiunea superioară",
+    "pro": "Edition",
+    "upgrade": "Plan",
     "byte": "Byte",
     "epics": "Epice",
-    "upgrade_plan": "Actualizare plan",
-    "plane_pro": "Bright-Byte PMP Pro",
-    "business": "Business"
+    "upgrade_plan": "Workspace plan",
+    "plane_pro": "Bright-Byte PMP",
+    "business": "Workspace"
   }
 }

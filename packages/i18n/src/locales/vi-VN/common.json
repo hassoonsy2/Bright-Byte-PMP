@@ -123,7 +123,7 @@
   "active_cycles": "Chu kỳ hoạt động",
   "active_cycles_description": "Theo dõi chu kỳ trên các dự án, theo dõi mục công việc ưu tiên cao và chú ý đến các chu kỳ cần quan tâm.",
   "on_demand_snapshots_of_all_your_cycles": "Ảnh chụp nhanh theo yêu cầu của tất cả chu kỳ của bạn",
-  "upgrade": "Nâng cấp",
+  "upgrade": "Unavailable",
   "10000_feet_view": "Góc nhìn tổng quan về tất cả chu kỳ hoạt động.",
   "10000_feet_view_description": "Phóng to tầm nhìn để xem tất cả chu kỳ đang diễn ra trong tất cả dự án cùng một lúc, thay vì xem từng chu kỳ trong mỗi dự án.",
   "get_snapshot_of_each_active_cycle": "Nhận ảnh chụp nhanh của mỗi chu kỳ hoạt động.",
@@ -654,7 +654,7 @@
     "from": "Từ {name}",
     "authenticated": "Đã xác thực",
     "select": "Chọn",
-    "upgrade": "Nâng cấp",
+    "upgrade": "Unavailable",
     "add_seats": "Thêm vị trí",
     "projects": "Dự án",
     "workspace": "Không gian làm việc",
@@ -682,8 +682,8 @@
     "members": "Thành viên",
     "you": "Bạn",
     "upgrade_cta": {
-      "higher_subscription": "Nâng cấp lên gói cao hơn",
-      "talk_to_sales": "Liên hệ bộ phận bán hàng"
+      "higher_subscription": "Feature unavailable",
+      "talk_to_sales": "Contact support"
     },
     "category": "Danh mục",
     "categories": "Danh mục",

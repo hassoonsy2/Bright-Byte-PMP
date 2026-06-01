@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "Holen Sie sich Pro, um Arbeitsaufgabentypen zu aktivieren.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Gestalten Sie Arbeitsaufgaben an Ihre Arbeit mit Arbeitsaufgabentypen an. Passen Sie sie mit Icons, Hintergründen und Eigenschaften an und konfigurieren Sie sie für dieses Projekt.",
         "primary_button": {
-          "text": "Pro holen"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "Upgrade durchführen, um Arbeitsaufgabentypen zu aktivieren.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Gestalten Sie Arbeitsaufgaben an Ihre Arbeit mit Arbeitsaufgabentypen an. Passen Sie sie mit Icons, Hintergründen und Eigenschaften an und konfigurieren Sie sie für dieses Projekt.",
         "primary_button": {
-          "text": "Upgrade"
+          "text": "Unavailable"
         }
       }
     }

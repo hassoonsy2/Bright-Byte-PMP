@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "升级以解锁 Wiki",
-      "description": "升级到 Bright-Byte PMP Pro 以解锁公共页面、版本历史、共享页面、实时协作，以及用于 Wiki、公司内部文档和知识库的工作区页面。",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "升级"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "了解更多"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "嵌套页面需要付费计划。升级以解锁。"
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

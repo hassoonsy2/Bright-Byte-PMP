@@ -23,12 +23,12 @@
     "intake": "Thu thập",
     "drafts": "Bản nháp",
     "favorites": "Yêu thích",
-    "pro": "Phiên bản Pro",
-    "upgrade": "Nâng cấp",
+    "pro": "Edition",
+    "upgrade": "Plan",
     "byte": "Byte",
     "epics": "Epics",
-    "upgrade_plan": "Nâng cấp gói",
-    "plane_pro": "Bright-Byte PMP Pro",
-    "business": "Doanh nghiệp"
+    "upgrade_plan": "Workspace plan",
+    "plane_pro": "Bright-Byte PMP",
+    "business": "Workspace"
   }
 }

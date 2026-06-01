@@ -49,8 +49,7 @@ export const Default: Story = {
         <Accordion.Item value="item-3">
           <Accordion.Trigger>Is it free to use?</Accordion.Trigger>
           <Accordion.Content>
-            Plane offers both free and paid plans. The free plan includes essential features for small teams, while paid
-            plans unlock advanced functionality.
+            Bright-Byte PMP is available for your workspace. Features are configured by this deployment.
           </Accordion.Content>
         </Accordion.Item>
       </Accordion.Root>

@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "Obține Pro pentru a activa Tipurile de Elemente de Lucru.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Modelează elementele de lucru pentru munca ta cu Tipuri de elemente de lucru. Personalizează cu pictograme, fundaluri și proprietăți și configurează-le pentru acest proiect.",
         "primary_button": {
-          "text": "Obține Pro"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "Actualizează pentru a activa Tipurile de Elemente de Lucru.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Modelează elementele de lucru pentru munca ta cu Tipuri de elemente de lucru. Personalizează cu pictograme, fundaluri și proprietăți și configurează-le pentru acest proiect.",
         "primary_button": {
-          "text": "Actualizează"
+          "text": "Unavailable"
         }
       }
     }

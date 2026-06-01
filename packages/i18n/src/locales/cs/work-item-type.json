@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "Získejte Pro pro povolení typů pracovních položek.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Upravte pracovní položky podle svých potřeb s typy pracovních položek. Přizpůsobte je ikonami, pozadím a vlastnostmi a nakonfigurujte je pro tento projekt.",
         "primary_button": {
-          "text": "Získejte Pro"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "Upgradujte pro povolení typů pracovních položek.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Upravte pracovní položky podle svých potřeb s typy pracovních položek. Přizpůsobte je ikonami, pozadím a vlastnostmi a nakonfigurujte je pro tento projekt.",
         "primary_button": {
-          "text": "Upgradovat"
+          "text": "Unavailable"
         }
       }
     }

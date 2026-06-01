@@ -23,12 +23,12 @@
     "intake": "Talep",
     "drafts": "Taslaklar",
     "favorites": "Favoriler",
-    "pro": "Pro",
-    "upgrade": "Yükselt",
+    "pro": "Edition",
+    "upgrade": "Plan",
     "byte": "Byte",
     "epics": "Epiks",
-    "upgrade_plan": "Apgreyd plen",
-    "plane_pro": "Pleyn Pro",
-    "business": "Biznis"
+    "upgrade_plan": "Workspace plan",
+    "plane_pro": "Bright-Byte PMP",
+    "business": "Workspace"
   }
 }

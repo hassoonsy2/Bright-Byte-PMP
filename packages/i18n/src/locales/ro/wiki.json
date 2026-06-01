@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "Actualizează pentru a debloca Wiki",
-      "description": "Deblochează pagini publice, istoric de versiuni, pagini partajate, colaborare în timp real și pagini ale spațiului de lucru pentru wiki-uri, documente la nivel de companie și baze de cunoștințe cu Bright-Byte PMP Pro.",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "Actualizează"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "Află mai multe"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "Paginile imbricate necesită un plan plătit. Actualizează pentru a debloca."
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

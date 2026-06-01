@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "獲取專業版以啟用工作項目類型。",
+        "title": "Work item types are unavailable in this edition.",
         "description": "使用工作項目類型為您的工作塑造工作項目。使用圖標、背景和屬性自定義它們，並為此專案配置它們。",
         "primary_button": {
-          "text": "獲取專業版"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "升級以啟用工作項目類型。",
+        "title": "Work item types are unavailable in this edition.",
         "description": "使用工作項目類型為您的工作塑造工作項目。使用圖標、背景和屬性自定義它們，並為此專案配置它們。",
         "primary_button": {
-          "text": "升級"
+          "text": "Unavailable"
         }
       }
     }

@@ -66,12 +66,12 @@
     "title": "Strona główna",
     "star_us_on_github": "Oceń nas na GitHubie",
     "business_trial_banner": {
-      "title": "Twój 14-dniowy okres próbny planu Business jest aktywny!",
-      "description": "Poznaj wszystkie funkcje Business. Gdy będziesz gotowy, wybierz subskrypcję. Nie zostaniesz automatycznie obciążony.",
+      "title": "Your workspace trial is live!",
+      "description": "Explore the workspace features available in this edition.",
       "trial_ends_today": "Okres próbny kończy się dzisiaj",
       "trial_ends_in_days": "Okres próbny kończy się za {days, plural, one {# dzień} few {# dni} other {# dni}}",
-      "start_subscription": "Rozpocznij subskrypcję",
-      "explore_business_features": "Poznaj funkcje Business"
+      "start_subscription": "Open workspace",
+      "explore_business_features": "Explore workspace features"
     }
   }
 }

@@ -20,7 +20,7 @@
         "delete_btn": "Hapus ruang kerja ini",
         "delete_modal": {
           "title": "Apakah Anda yakin ingin menghapus ruang kerja ini?",
-          "description": "Anda memiliki percobaan aktif untuk salah satu rencana berbayar kami. Silakan batalkan terlebih dahulu untuk melanjutkan.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Tutup",
           "cancel": "Batalkan percobaan",
           "success_title": "Ruang kerja dihapus.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Batalkan uji coba Anda terlebih dahulu.",
-        "description": "Anda memiliki uji coba aktif untuk salah satu paket berbayar kami. Silakan batalkan terlebih dahulu untuk melanjutkan.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Tutup",
         "cancel": "Batalkan uji coba",
         "cancel_success_title": "Uji coba dibatalkan.",

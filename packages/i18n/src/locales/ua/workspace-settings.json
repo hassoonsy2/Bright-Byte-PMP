@@ -20,7 +20,7 @@
         "delete_btn": "Видалити простір",
         "delete_modal": {
           "title": "Справді видалити цей простір?",
-          "description": "У вас активна пробна версія. Спочатку скасуйте її.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Закрити",
           "cancel": "Скасувати пробну версію",
           "success_title": "Простір видалено.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Спочатку скасуйте пробний період.",
-        "description": "У вас активний пробний період одного з наших платних планів. Будь ласка, спочатку скасуйте його, щоб продовжити.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Відхилити",
         "cancel": "Скасувати пробний період",
         "cancel_success_title": "Пробний період скасовано.",

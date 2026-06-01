@@ -23,12 +23,12 @@
     "intake": "インテーク",
     "drafts": "下書き",
     "favorites": "お気に入り",
-    "pro": "プロ",
-    "upgrade": "アップグレード",
+    "pro": "Edition",
+    "upgrade": "Plan",
     "byte": "Byte",
     "epics": "エピック",
-    "upgrade_plan": "プランをアップグレード",
-    "plane_pro": "Bright-Byte PMP Pro",
-    "business": "ビジネス"
+    "upgrade_plan": "Workspace plan",
+    "plane_pro": "Bright-Byte PMP",
+    "business": "Workspace"
   }
 }

@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "アップグレードしてWikiを利用",
-      "description": "Bright-Byte PMP Proで、公開ページ、バージョン履歴、共有ページ、リアルタイム共同編集、Wiki・社内ドキュメント・ナレッジベース向けのワークスペースページを利用できます。",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "アップグレード"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "詳細を見る"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "ネストされたページには有料プランが必要です。アップグレードしてご利用ください。"
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

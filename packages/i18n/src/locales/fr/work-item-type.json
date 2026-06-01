@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "Passez à Pro pour activer les types d'éléments de travail.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Adaptez les éléments de travail à votre travail avec les types d'éléments de travail. Personnalisez avec des icônes, des arrière-plans et des propriétés et configurez-les pour ce projet.",
         "primary_button": {
-          "text": "Obtenir Pro"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "Mettez à niveau pour activer les types d'éléments de travail.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Adaptez les éléments de travail à votre travail avec les types d'éléments de travail. Personnalisez avec des icônes, des arrière-plans et des propriétés et configurez-les pour ce projet.",
         "primary_button": {
-          "text": "Mettre à niveau"
+          "text": "Unavailable"
         }
       }
     }

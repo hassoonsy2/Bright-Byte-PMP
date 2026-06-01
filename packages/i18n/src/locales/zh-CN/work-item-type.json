@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "获取 Pro 版以启用工作项类型。",
+        "title": "Work item types are unavailable in this edition.",
         "description": "使用工作项类型塑造您的工作项。使用图标、背景和属性进行自定义，并为此项目配置它们。",
         "primary_button": {
-          "text": "获取 Pro 版"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "升级以启用工作项类型。",
+        "title": "Work item types are unavailable in this edition.",
         "description": "使用工作项类型塑造您的工作项。使用图标、背景和属性进行自定义，并为此项目配置它们。",
         "primary_button": {
-          "text": "升级"
+          "text": "Unavailable"
         }
       }
     }

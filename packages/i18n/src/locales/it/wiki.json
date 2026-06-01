@@ -87,10 +87,10 @@
   },
   "wiki": {
     "upgrade_flow": {
-      "title": "Aggiorna per sbloccare il Wiki",
-      "description": "Sblocca pagine pubbliche, cronologia delle versioni, pagine condivise, collaborazione in tempo reale e pagine dello spazio di lavoro per wiki, documenti aziendali e basi di conoscenza con Bright-Byte PMP Pro.",
+      "title": "Wiki is unavailable in this edition",
+      "description": "Public pages, version history, shared pages, real-time collaboration, and workspace pages are unavailable in this edition.",
       "upgrade_button": {
-        "text": "Aggiorna"
+        "text": "Unavailable"
       },
       "learn_more_button": {
         "text": "Scopri di più"
@@ -107,7 +107,7 @@
       }
     },
     "nested_pages_download_banner": {
-      "title": "Le pagine annidate richiedono un piano a pagamento. Aggiorna per sbloccare."
+      "title": "Nested pages are unavailable in this edition."
     }
   }
 }

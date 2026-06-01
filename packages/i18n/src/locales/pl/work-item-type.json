@@ -375,17 +375,17 @@
         }
       },
       "get_pro": {
-        "title": "Zdobądź Pro, aby włączyć Typy elementów pracy.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Kształtuj elementy pracy według swojej pracy za pomocą Typów elementów pracy. Dostosuj je za pomocą ikon, teł i właściwości oraz skonfiguruj je dla tego projektu.",
         "primary_button": {
-          "text": "Zdobądź Pro"
+          "text": "Unavailable"
         }
       },
       "upgrade": {
-        "title": "Aktualizuj, aby włączyć Typy elementów pracy.",
+        "title": "Work item types are unavailable in this edition.",
         "description": "Kształtuj elementy pracy według swojej pracy za pomocą Typów elementów pracy. Dostosuj je za pomocą ikon, teł i właściwości oraz skonfiguruj je dla tego projektu.",
         "primary_button": {
-          "text": "Aktualizuj"
+          "text": "Unavailable"
         }
       }
     }

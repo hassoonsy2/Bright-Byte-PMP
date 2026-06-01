@@ -123,7 +123,7 @@
   "active_cycles": "Aktivní cykly",
   "active_cycles_description": "Sledujte cykly napříč projekty, monitorujte vysoce prioritní pracovní položky a zaměřte se na cykly vyžadující pozornost.",
   "on_demand_snapshots_of_all_your_cycles": "Snapshots všech vašich cyklů na vyžádání",
-  "upgrade": "Upgradovat",
+  "upgrade": "Unavailable",
   "10000_feet_view": "Pohled z 10 000 stop na všechny aktivní cykly.",
   "10000_feet_view_description": "Přibližte si všechny běžící cykly napříč všemi projekty najednou, místo přepínání mezi cykly v každém projektu.",
   "get_snapshot_of_each_active_cycle": "Získejte snapshot každého aktivního cyklu.",
@@ -654,7 +654,7 @@
     "from": "od {name}",
     "authenticated": "Ověřeno",
     "select": "Vybrat",
-    "upgrade": "Upgradovat",
+    "upgrade": "Unavailable",
     "add_seats": "Přidat místa",
     "projects": "Projekty",
     "workspace": "Pracovní prostor",
@@ -682,8 +682,8 @@
     "members": "Členové",
     "you": "Vy",
     "upgrade_cta": {
-      "higher_subscription": "Upgradovat na vyšší předplatné",
-      "talk_to_sales": "Promluvte si s prodejem"
+      "higher_subscription": "Feature unavailable",
+      "talk_to_sales": "Contact support"
     },
     "category": "Kategorie",
     "categories": "Kategorie",

@@ -66,12 +66,12 @@
     "title": "Accueil",
     "star_us_on_github": "Donnez-nous une étoile sur GitHub",
     "business_trial_banner": {
-      "title": "Votre essai de 14 jours du plan Business est actif !",
-      "description": "Explorez toutes les fonctionnalités Business. Quand vous êtes prêt, choisissez de vous abonner. Vous ne serez pas facturé automatiquement.",
+      "title": "Your workspace trial is live!",
+      "description": "Explore the workspace features available in this edition.",
       "trial_ends_today": "L'essai se termine aujourd'hui",
       "trial_ends_in_days": "L'essai se termine dans {days, plural, one {# jour} other {# jours}}",
-      "start_subscription": "Démarrer l'abonnement",
-      "explore_business_features": "Explorer les fonctionnalités Business"
+      "start_subscription": "Open workspace",
+      "explore_business_features": "Explore workspace features"
     }
   }
 }

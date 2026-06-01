@@ -23,12 +23,12 @@
     "intake": "접수",
     "drafts": "초안",
     "favorites": "즐겨찾기",
-    "pro": "프로",
-    "upgrade": "업그레이드",
+    "pro": "Edition",
+    "upgrade": "Plan",
     "byte": "Byte",
     "epics": "에픽스",
-    "upgrade_plan": "업그레이드 플랜",
-    "plane_pro": "플레인 프로",
-    "business": "비즈니스"
+    "upgrade_plan": "Workspace plan",
+    "plane_pro": "Bright-Byte PMP",
+    "business": "Workspace"
   }
 }

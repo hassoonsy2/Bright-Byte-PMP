@@ -20,7 +20,7 @@
         "delete_btn": "Bu çalışma alanını sil",
         "delete_modal": {
           "title": "Bu çalışma alanını silmek istediğinizden emin misiniz?",
-          "description": "Ücretli planlarımızdan birine aktif bir deneme sürümünüz var. Devam etmek için önce iptal edin.",
+          "description": "You have an active trial. Please cancel it first to proceed.",
           "dismiss": "Kapat",
           "cancel": "Denemeyi iptal et",
           "success_title": "Çalışma alanı silindi.",
@@ -281,7 +281,7 @@
       },
       "cancel_trial": {
         "title": "Önce deneme sürenizi iptal edin.",
-        "description": "Ücretli planlarımızdan birine ait aktif deneme süreniz var. Lütfen devam etmek için önce bunu iptal edin.",
+        "description": "You have an active trial. Please cancel it first to proceed.",
         "dismiss": "Kapat",
         "cancel": "Denemeyi iptal et",
         "cancel_success_title": "Deneme iptal edildi.",
