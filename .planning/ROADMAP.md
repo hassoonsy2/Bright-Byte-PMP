@@ -33,8 +33,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 3. UI strings (English + all 18 other locales) and every email (invite, magic-link, password-reset, notification, `EMAIL_FROM`) read Bright-Byte, not Plane
 4. The AI assistant presents as "Byte" — labels, generating-response text, and the assistant icon — everywhere a user sees it
 5. A case-insensitive `plane` sweep across manifests, i18n, `EMAIL_FROM`, generated PDFs, and telemetry/user-agent strings comes back clean (excluding verbatim AGPL headers)
-   **Plans**: 6 plans
-   Plans:
+
+**Plans**: 6 plans
+Plans:
 
 - [ ] 01-01-PLAN.md — App metadata + brand constants (web/admin/space titles, OG/meta, @plane/constants); env-driven URL/email (BRAND-01/02/06/07)
 - [ ] 01-02-PLAN.md — PWA manifests + logo/favicon/icon wiring & client-asset drop-in (BRAND-03/04/05)
@@ -42,7 +43,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [ ] 01-04-PLAN.md — AI assistant → "Byte" labels/icon + English i18n incl. pi_chat (AI-01/02, BRAND-08)
 - [ ] 01-05-PLAN.md — All 18 non-English locales brand-mark rebrand + pi_chat=Byte (BRAND-09, AI-01)
 - [ ] 01-06-PLAN.md — Brand-leak sweep + AGPL-integrity verification gate (BRAND-11)
-      **UI hint**: yes
+
+**UI hint**: yes
 
 ### Phase 2: Atomic Package-Scope Rename
 
@@ -56,11 +58,13 @@ Decimal phases appear between their surrounding integers in numeric order.
 3. The `@/plane-web/*` and `@/plane-live/*` edition aliases, the Next.js compat shims, and the Python `plane` package are untouched and still resolve
 4. The lockfile was regenerated via `pnpm install` (never hand-edited) and the workspace catalog, `turbo.json`, tsconfig `extends`, and CSS `@import`s all resolve under the new scope
 5. Internal Pi→Byte identifiers (`PiChatLogo`, `sub-brand.pi-chat` registry key, `pi_chat` key, `GptAssistantPopover`) are renamed without changing the AI backend service contract
-   **Plans**: 1 plan
-   Plans:
+
+**Plans**: 1 plan
+Plans:
 
 - [ ] 02-01-PLAN.md — Atomic package-scope rename: codemod, package graph/config/import rewrite, Byte internal identifiers, lockfile regeneration, and full build/type/lint gate (RENAME-01/02/03, AI-03)
-      **UI hint**: yes
+
+**UI hint**: yes
 
 ### Phase 3: De-monetization + EE Ungating
 
@@ -74,8 +78,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 3. Every previously upsell-gated CE feature is reachable and works; no surface is blank, broken, or dangling after removal
 4. No UI path calls `plane.so` / `app.plane.so`, and plan/pricing data (`plans.tsx`, `payment.ts`, billing constants in `subscription.ts`) is deleted
 5. An inventory/classification record exists for each upsell stub (CE-present → ungated vs EE-only → entry point cleanly removed)
-   **Plans**: TBD
-   **UI hint**: yes
+
+**Plans**: TBD
+**UI hint**: yes
 
 ### Phase 4: Render Topology + Infra
 
@@ -89,8 +94,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 3. The Celery broker decision is resolved and implemented (CloudAMQP vs self-run RabbitMQ vs the ~3-line Redis-broker change with `noeviction`) and workers process jobs
 4. Proxy/origin topology is decided and applied — correct baked `VITE_*_BASE_URL`/`*_BASE_PATH` build args, OAuth redirect URIs, and auth cookies work across services
 5. On the live instance a client signs in, creates a project, uploads an attachment, and receives an email (invite/magic-link)
-   **Plans**: TBD
-   **UI hint**: yes
+
+**Plans**: TBD
+**UI hint**: yes
 
 ### Phase 5: Security Hardening + AGPL Gate
 
@@ -103,7 +109,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 2. The live-server secret comparison is timing-safe (constant-time compare, not `!==`)
 3. No `print()` remains in backend data/error paths and no telemetry/user-agent data is sent to Plane endpoints (repointed or disabled)
 4. The deployed app exposes a working AGPL §13 source-availability offer, and attribution is recorded in a top-level `NOTICE`/`CHANGES` file (copyright headers and `LICENSE.txt` unchanged)
-   **Plans**: TBD
+
+**Plans**: TBD
 
 ## Progress
 
@@ -113,7 +120,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase                             | Plans Complete | Status      | Completed |
 | --------------------------------- | -------------- | ----------- | --------- |
 | 1. User-Facing Rebrand            | 0/TBD          | Not started | -         |
-| 2. Atomic Package-Scope Rename    | 0/TBD          | Not started | -         |
+| 2. Atomic Package-Scope Rename    | 0/1            | Planned     | -         |
 | 3. De-monetization + EE Ungating  | 0/TBD          | Not started | -         |
 | 4. Render Topology + Infra        | 0/TBD          | Not started | -         |
 | 5. Security Hardening + AGPL Gate | 0/TBD          | Not started | -         |
