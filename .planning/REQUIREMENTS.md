@@ -25,7 +25,7 @@
 
 - [x] **AI-01**: AI assistant user-visible labels read "Byte" — `apps/web/core/constants/ai.ts` ("Byte is generating response"), `pi_chat` locale key across all 19 locales, and `gpt-assistant-popover.tsx` placeholders
 - [x] **AI-02**: AI logo/icon shows the Byte mark wherever `PiChatLogo` is used (e.g. `apps/web/core/components/workspace/sidebar/user-menu.tsx`)
-- [ ] **AI-03**: Internal code identifiers renamed Pi→Byte — `PiChatLogo` component, `sub-brand.pi-chat` icon registry key, `pi_chat` key, `GptAssistantPopover` naming (folded into the rename phase; AI backend service contract untouched)
+- [x] **AI-03**: Internal code identifiers renamed Pi→Byte — `PiChatLogo` component, `sub-brand.pi-chat` icon registry key, `pi_chat` key, `GptAssistantPopover` naming (folded into the rename phase; AI backend service contract untouched)
 
 ### De-monetization (Billing)
 
@@ -38,9 +38,9 @@
 
 ### Package-Scope Rename (atomic)
 
-- [ ] **RENAME-01**: `@plane/*` renamed to `@bright-byte/*` across all 15 package names, 19 `package.json` dependency sets, ~5,003 import sites, tsconfig `extends`, and CSS `@import`s — implemented via a new `packages/codemods` jscodeshift transform with Vitest fixtures; lockfile regenerated via `pnpm install` (never hand-edited)
-- [ ] **RENAME-02**: Edition aliases preserved — `@/plane-web/*` and `@/plane-live/*` are NOT renamed (they are `@/`-prefixed, not `@plane/`); Next.js compat shims and the Python `plane` package left untouched
-- [ ] **RENAME-03**: Rename verification gate passes — `pnpm build && pnpm check:types && pnpm check:lint` all green and `git grep -c "@plane/"` returns 0 in source (single atomic commit; build is the safety net since there is no CI test step)
+- [x] **RENAME-01**: `@plane/*` renamed to `@bright-byte/*` across all 15 package names, 19 `package.json` dependency sets, ~5,003 import sites, tsconfig `extends`, and CSS `@import`s — implemented via a new `packages/codemods` jscodeshift transform with Vitest fixtures; lockfile regenerated via `pnpm install` (never hand-edited)
+- [x] **RENAME-02**: Edition aliases preserved — `@/plane-web/*` and `@/plane-live/*` are NOT renamed (they are `@/`-prefixed, not `@plane/`); Next.js compat shims and the Python `plane` package left untouched
+- [x] **RENAME-03**: Rename verification gate passes — `pnpm build && pnpm check:types && pnpm check:lint` all green and `git grep -c "@plane/"` returns 0 in source (single atomic commit; build is the safety net since there is no CI test step)
 
 ### Render Deployment (single shared instance)
 
@@ -108,10 +108,10 @@ Each v1 requirement maps to exactly one phase (see `.planning/ROADMAP.md`).
 | BRAND-11    | Phase 1 — User-Facing Rebrand            | Pending  |
 | AI-01       | Phase 1 — User-Facing Rebrand            | Complete |
 | AI-02       | Phase 1 — User-Facing Rebrand            | Complete |
-| AI-03       | Phase 2 — Atomic Package-Scope Rename    | Pending  |
-| RENAME-01   | Phase 2 — Atomic Package-Scope Rename    | Pending  |
-| RENAME-02   | Phase 2 — Atomic Package-Scope Rename    | Pending  |
-| RENAME-03   | Phase 2 — Atomic Package-Scope Rename    | Pending  |
+| AI-03       | Phase 2 — Atomic Package-Scope Rename    | Complete |
+| RENAME-01   | Phase 2 — Atomic Package-Scope Rename    | Complete |
+| RENAME-02   | Phase 2 — Atomic Package-Scope Rename    | Complete |
+| RENAME-03   | Phase 2 — Atomic Package-Scope Rename    | Complete |
 | BILL-01     | Phase 3 — De-monetization + EE Ungating  | Pending  |
 | BILL-02     | Phase 3 — De-monetization + EE Ungating  | Pending  |
 | BILL-03     | Phase 3 — De-monetization + EE Ungating  | Pending  |
