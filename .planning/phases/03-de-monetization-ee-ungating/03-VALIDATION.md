@@ -31,15 +31,61 @@ Per-phase validation contract for de-monetization and EE-stub cleanup.
 
 ## Per-Task Verification Map
 
-| Task ID  | Plan | Wave | Requirement      | Threat Ref | Secure Behavior                                                                 | Test Type     | Automated Command                                             | File Exists                                                                                                            | Status              |
-| -------- | ---- | ---- | ---------------- | ---------- | ------------------------------------------------------------------------------- | ------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ------------------- | -------------------------------------------------------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------- | --- | ------ |
-| 03-01-01 | 01   | 1    | BILL-01          | T-03-01    | Billing route/nav/command entry points are absent                               | source/search | `git grep -n "billing-and-plans\\                             | settings/billing\\                                                                                                     | BillingRoot\\       | BillingActionsButton" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build'` | yes                             | passed                                                                                            |
-| 03-01-02 | 01   | 1    | BILL-02, BILL-03 | T-03-02    | Edition badge cannot open a paid-plan modal and modal cluster has no consumers  | source/search | `git grep -n "PaidPlanUpgradeModal\\                          | components/license\\                                                                                                   | license/modal\\     | TALK_TO_SALES_URL\\                                                                          | SUBSCRIPTION_REDIRECTION_URLS\\ | SUBSCRIPTION_WEBPAGE_URLS" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build'` | yes | passed |
-| 03-01-03 | 01   | 1    | BILL-04, BILL-06 | T-03-03    | Upsell stubs are classified and either removed or left as real CE functionality | source/search | `git grep -n "MARKETING_PRICING_PAGE_LINK\\                   | MARKETING_PLANE_ONE_PAGE_LINK\\                                                                                        | Upgrade to\\        | Plane Pro\\                                                                                  | Plane One\\                     | UpgradeBadge" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build'`              | yes | passed |
-| 03-01-04 | 01   | 1    | BILL-05          | T-03-04    | Plan/pricing and payment subscription data are removed with no dangling imports | source/search | `git grep -n "EProductSubscriptionEnum\\                      | IPaymentProduct\\                                                                                                      | TBillingFrequency\\ | PLANE_COMMUNITY_PRODUCTS\\                                                                   | PLANS_COMPARISON_LIST\\         | PLANE_PLANS" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build'`               | yes | passed |
-| 03-01-05 | 01   | 1    | BILL-04, BILL-06 | T-03-05    | Phase 3 UI paths do not call Plane cloud hosts                                  | source/search | `git grep -n "plane\\.so\\                                    | app\\.plane\\.so" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build' ':!packages/i18n/src/locales'` | yes                 | passed                                                                                       |
-| 03-01-06 | 01   | 1    | BILL-01..BILL-06 | T-03-06    | Monorepo still builds, type-checks, and lints after de-monetization             | integration   | `pnpm build && pnpm check:types && pnpm check:lint`           | yes                                                                                                                    | passed              |
-| 03-01-07 | 01   | 1    | BILL-06          | T-03-07    | AGPL headers and upstream license files remain untouched                        | compliance    | `git diff -- LICENSE.txt COPYRIGHT.txt` plus header diff grep | yes                                                                                                                    | passed              |
+| Task ID  | Plan | Wave | Requirement      | Threat Ref | Secure Behavior                                                                 | Test Type     | Gate                        | File Exists | Status |
+| -------- | ---- | ---- | ---------------- | ---------- | ------------------------------------------------------------------------------- | ------------- | --------------------------- | ----------- | ------ |
+| 03-01-01 | 01   | 1    | BILL-01          | T-03-01    | Billing route/nav/command entry points are absent                               | source/search | billing-route-residual-grep | yes         | passed |
+| 03-01-02 | 01   | 1    | BILL-02, BILL-03 | T-03-02    | Edition badge cannot open a paid-plan modal and modal cluster has no consumers  | source/search | license-modal-residual-grep | yes         | passed |
+| 03-01-03 | 01   | 1    | BILL-04, BILL-06 | T-03-03    | Upsell stubs are classified and either removed or left as real CE functionality | source/search | upgrade-stub-residual-grep  | yes         | passed |
+| 03-01-04 | 01   | 1    | BILL-05          | T-03-04    | Plan/pricing and payment subscription data are removed with no dangling imports | source/search | plan-pricing-residual-grep  | yes         | passed |
+| 03-01-05 | 01   | 1    | BILL-04, BILL-06 | T-03-05    | Phase 3 UI paths do not call Plane cloud hosts                                  | source/search | cloud-upgrade-url-grep      | yes         | passed |
+| 03-01-06 | 01   | 1    | BILL-01..BILL-06 | T-03-06    | Monorepo still builds, type-checks, and lints after de-monetization             | integration   | build-type-lint             | yes         | passed |
+| 03-01-07 | 01   | 1    | BILL-06          | T-03-07    | AGPL headers and upstream license files remain untouched                        | compliance    | license-copyright-diff      | yes         | passed |
+
+## Automated Gate Commands
+
+### billing-route-residual-grep
+
+```bash
+git grep -n "billing-and-plans\\|settings/billing\\|BillingRoot\\|BillingActionsButton" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build'
+```
+
+### license-modal-residual-grep
+
+```bash
+git grep -n "PaidPlanUpgradeModal\\|components/license\\|license/modal\\|TALK_TO_SALES_URL\\|SUBSCRIPTION_REDIRECTION_URLS\\|SUBSCRIPTION_WEBPAGE_URLS" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build'
+```
+
+### upgrade-stub-residual-grep
+
+```bash
+git grep -n "MARKETING_PRICING_PAGE_LINK\\|MARKETING_PLANE_ONE_PAGE_LINK\\|Upgrade to\\|Plane Pro\\|Plane One\\|UpgradeBadge" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build'
+```
+
+### plan-pricing-residual-grep
+
+```bash
+git grep -n "EProductSubscriptionEnum\\|IPaymentProduct\\|TBillingFrequency\\|PLANE_COMMUNITY_PRODUCTS\\|PLANS_COMPARISON_LIST\\|PLANE_PLANS" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build'
+```
+
+### cloud-upgrade-url-grep
+
+```bash
+git grep -n "plane\\.so\\|app\\.plane\\.so" -- apps/web packages -- ':!apps/web/.react-router' ':!apps/web/build' ':!packages/i18n/src/locales'
+```
+
+### build-type-lint
+
+```bash
+pnpm build
+pnpm check:types
+pnpm check:lint
+```
+
+### license-copyright-diff
+
+```bash
+git diff -- LICENSE.txt COPYRIGHT.txt
+```
 
 ## Wave 0 Requirements
 
