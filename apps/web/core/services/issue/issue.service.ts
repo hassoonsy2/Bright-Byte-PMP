@@ -337,11 +337,10 @@ export class IssueService extends APIService {
   }
 
   async bulkOperations(workspaceSlug: string, projectId: string, data: TBulkOperationsPayload): Promise<any> {
-    return this.post(`/api/workspaces/${workspaceSlug}/projects/${projectId}/bulk-operation-issues/`, data)
-      .then(async (response) => response?.data)
-      .catch((error) => {
-        throw error?.response?.data;
-      });
+    void workspaceSlug;
+    void projectId;
+    void data;
+    throw new Error("Bulk operations are not available in this edition.");
   }
 
   async bulkDeleteIssues(
