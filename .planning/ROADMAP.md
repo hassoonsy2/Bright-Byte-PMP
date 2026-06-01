@@ -79,7 +79,11 @@ Plans:
 4. No UI path calls `plane.so` / `app.plane.so`, and plan/pricing data (`plans.tsx`, `payment.ts`, billing constants in `subscription.ts`) is deleted
 5. An inventory/classification record exists for each upsell stub (CE-present → ungated vs EE-only → entry point cleanly removed)
 
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+
+- [ ] 03-01-de-monetization-ee-ungating-PLAN.md - Inventory-first billing/license removal, version-only edition badge, absent EE-stub entry point cleanup, plan/pricing data deletion, and residual source/build verification (BILL-01/02/03/04/05/06)
+
 **UI hint**: yes
 
 ### Phase 4: Render Topology + Infra
