@@ -44,8 +44,8 @@
 
 ### Render Deployment (single shared instance)
 
-- [ ] **DEPLOY-01**: A `render.yaml` Blueprint defines the full topology reusing existing Dockerfiles — `api` (Web), `worker` + `beat` (Background Workers, exactly one beat), `live` (Web, WebSocket), `space` (Web, SSR), `web` + `admin` (Static Sites), `migrator` (preDeploy)
-- [ ] **DEPLOY-02**: Render managed Postgres + Render Key Value (Redis/Valkey) provisioned and wired (paid tiers — never free; free PG expires in 30 days)
+- [x] **DEPLOY-01**: A `render.yaml` Blueprint defines the full topology reusing existing Dockerfiles — `api` (Web), `worker` + `beat` (Background Workers, exactly one beat), `live` (Web, WebSocket), `space` (Web, SSR), `web` + `admin` (Static Sites), `migrator` (preDeploy)
+- [x] **DEPLOY-02**: Render managed Postgres + Render Key Value (Redis/Valkey) provisioned and wired (paid tiers — never free; free PG expires in 30 days)
 - [ ] **DEPLOY-03**: External S3-compatible object storage (Cloudflare R2) provisioned for attachments and verified for presigned PUT/GET
 - [ ] **DEPLOY-04**: SMTP provider configured so invites/magic-link/notifications send successfully
 - [ ] **DEPLOY-05**: Celery broker decision resolved and implemented (CloudAMQP vs self-run RabbitMQ vs ~3-line Redis-broker change reusing Render Key Value with `noeviction`)
@@ -118,8 +118,8 @@ Each v1 requirement maps to exactly one phase (see `.planning/ROADMAP.md`).
 | BILL-04     | Phase 3 — De-monetization + EE Ungating  | Complete |
 | BILL-05     | Phase 3 — De-monetization + EE Ungating  | Complete |
 | BILL-06     | Phase 3 — De-monetization + EE Ungating  | Complete |
-| DEPLOY-01   | Phase 4 — Render Topology + Infra        | Pending  |
-| DEPLOY-02   | Phase 4 — Render Topology + Infra        | Pending  |
+| DEPLOY-01   | Phase 4 — Render Topology + Infra        | Complete |
+| DEPLOY-02   | Phase 4 — Render Topology + Infra        | Complete |
 | DEPLOY-03   | Phase 4 — Render Topology + Infra        | Pending  |
 | DEPLOY-04   | Phase 4 — Render Topology + Infra        | Pending  |
 | DEPLOY-05   | Phase 4 — Render Topology + Infra        | Pending  |

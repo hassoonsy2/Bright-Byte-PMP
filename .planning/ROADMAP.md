@@ -104,7 +104,7 @@ Plans:
 
 **Wave 1**
 
-- [ ] 04-01-render-blueprint-topology-PLAN.md — Render blueprint topology, managed Postgres/Key Value, static-site publish paths, and offline blueprint verifier (DEPLOY-01/02)
+- [x] 04-01-render-blueprint-topology-PLAN.md — Render blueprint topology, managed Postgres/Key Value, static-site publish paths, and offline blueprint verifier (DEPLOY-01/02)
 - [ ] 04-02-celery-redis-broker-PLAN.md — `CELERY_BROKER_URL` Redis broker support with AMQP/local RabbitMQ fallback and unit coverage (DEPLOY-05)
 
 **Wave 2** _(blocked on Wave 1 completion)_
@@ -141,5 +141,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. User-Facing Rebrand            | 6/6            | Complete    | 2026-06-02 |
 | 2. Atomic Package-Scope Rename    | 1/1            | Complete    | 2026-06-01 |
 | 3. De-monetization + EE Ungating  | 1/1            | Complete    | 2026-06-01 |
-| 4. Render Topology + Infra        | 0/4            | Planned     | -          |
+| 4. Render Topology + Infra        | 1/4            | In Progress | -          |
 | 5. Security Hardening + AGPL Gate | 0/TBD          | Not started | -          |
