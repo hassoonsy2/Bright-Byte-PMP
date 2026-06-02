@@ -99,7 +99,22 @@ Plans:
 4. Proxy/origin topology is decided and applied — correct baked `VITE_*_BASE_URL`/`*_BASE_PATH` build args, OAuth redirect URIs, and auth cookies work across services
 5. On the live instance a client signs in, creates a project, uploads an attachment, and receives an email (invite/magic-link)
 
-**Plans**: TBD
+**Plans**: 4 plans
+Plans:
+
+**Wave 1**
+
+- [ ] 04-01-render-blueprint-topology-PLAN.md — Render blueprint topology, managed Postgres/Key Value, static-site publish paths, and offline blueprint verifier (DEPLOY-01/02)
+- [ ] 04-02-celery-redis-broker-PLAN.md — `CELERY_BROKER_URL` Redis broker support with AMQP/local RabbitMQ fallback and unit coverage (DEPLOY-05)
+
+**Wave 2** _(blocked on Wave 1 completion)_
+
+- [ ] 04-03-r2-smtp-origin-contract-PLAN.md — R2, SMTP, origin/cookie/OAuth, live CORS, and Vite build-time env contract (DEPLOY-03/04/06)
+
+**Wave 3** _(blocked on Wave 2 completion)_
+
+- [ ] 04-04-render-deploy-onboarding-uat-PLAN.md — Render dashboard sync, live service verification, and client onboarding UAT evidence (DEPLOY-01/02/03/04/05/06/07)
+
 **UI hint**: yes
 
 ### Phase 5: Security Hardening + AGPL Gate
@@ -126,5 +141,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. User-Facing Rebrand            | 5/6            | In Progress |            |
 | 2. Atomic Package-Scope Rename    | 1/1            | Complete    | 2026-06-01 |
 | 3. De-monetization + EE Ungating  | 1/1            | Complete    | 2026-06-01 |
-| 4. Render Topology + Infra        | 0/TBD          | Not started | -          |
+| 4. Render Topology + Infra        | 0/4            | Planned     | -          |
 | 5. Security Hardening + AGPL Gate | 0/TBD          | Not started | -          |

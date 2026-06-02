@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 04 UI-SPEC approved
-last_updated: "2026-06-02T22:13:52.662Z"
-last_activity: 2026-06-02
+stopped_at: Phase 04 planning complete
+last_updated: "2026-06-02T22:29:44.000Z"
+last_activity: 2026-06-02 -- Phase 04 planning complete
 progress:
   total_phases: 5
   completed_phases: 2
-  total_plans: 8
+  total_plans: 12
   completed_plans: 7
   percent: 40
 ---
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-06-01)
 Phase: 01 (user-facing-rebrand) — EXECUTING
 Plan: 4 of 6
 Status: Ready to execute
-Last activity: 2026-06-02
+Last activity: 2026-06-02 -- Phase 04 planning complete
 
 Progress: [█████████░] 88%
 
@@ -77,6 +77,8 @@ Recent decisions affecting current work:
 - [Phase ?]: [01-05]: grep 'plane' gate satisfied vs rendered VALUES (0 brand tokens); 234 remaining hits are JSON KEY identifiers (Phase 2/AI-03) + 13 genuine non-brand plan-words
 - [Phase ?]: Brand placeholders approved for v1 (bright-byte.example, support@bright-byte.example, @brightbyte); real values via VITE\_\* Render env vars
 - [Phase ?]: 7 pre-existing oxlint rules disabled in .oxlintrc.json to unblock --deny-warnings pre-commit hook
+- [Phase 04]: Deployment plan chooses first-class Render service origins/custom domains instead of reproducing the Compose Caddy proxy for v1
+- [Phase 04]: Celery broker plan chooses Render Key Value via explicit `CELERY_BROKER_URL`; paid `noeviction` policy is a deploy gate, with `AMQP_URL` fallback preserved
 
 ### Pending Todos
 
@@ -89,7 +91,7 @@ None yet.
 [Issues that affect future work]
 
 - [Phase 2]: Partial rename breaks the build and there is no CI test net — must land green in one atomic commit (`pnpm build && check:types && check:lint`, empty `@plane/` grep)
-- [Phase 4]: Open decisions — Celery broker (CloudAMQP vs ~3-line Redis-broker change) and proxy/origin topology (replicate Caddy vs subdomain-per-service); both ripple into baked `VITE_*` URLs and OAuth redirect URIs. Flagged for `--research-phase 4`
+- [Phase 4]: External dashboard work remains manual during execution: Render blueprint sync, paid Postgres/Key Value, Cloudflare R2 bucket/CORS/API keys, SMTP credentials, DNS/custom domains, OAuth redirect URIs, and live onboarding evidence
 - [Phase 5]: AGPL — never edit copyright headers / `LICENSE.txt` (CI `addlicense` enforces verbatim); attribution goes in a top-level `NOTICE`/`CHANGES`
 
 ## Deferred Items
@@ -102,6 +104,6 @@ Items acknowledged and carried forward from previous milestone close:
 
 ## Session Continuity
 
-Last session: 2026-06-02T22:13:52.651Z
-Stopped at: Phase 04 UI-SPEC approved
-Resume file: .planning/phases/04-render-topology-infra/04-UI-SPEC.md
+Last session: 2026-06-02T22:29:44.000Z
+Stopped at: Phase 04 planning complete
+Resume file: .planning/phases/04-render-topology-infra/04-01-render-blueprint-topology-PLAN.md
