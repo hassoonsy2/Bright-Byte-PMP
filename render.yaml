@@ -46,10 +46,38 @@ services:
         value: "2"
       - key: USE_MINIO
         value: "0"
+      - key: AWS_REGION
+        value: auto
+      - key: AWS_S3_BUCKET_NAME
+        sync: false
+      - key: AWS_S3_ENDPOINT_URL
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: SIGNED_URL_EXPIRATION
+        value: "3600"
+      - key: EMAIL_HOST
+        sync: false
+      - key: EMAIL_HOST_USER
+        sync: false
+      - key: EMAIL_HOST_PASSWORD
+        sync: false
+      - key: EMAIL_PORT
+        value: "587"
+      - key: EMAIL_USE_TLS
+        value: "1"
+      - key: EMAIL_USE_SSL
+        value: "0"
+      - key: EMAIL_FROM
+        value: "Bright-Byte PMP <noreply@bright-byte.example>"
       - key: WEB_URL
         value: https://bright-byte-api.onrender.com
       - key: APP_BASE_URL
         value: https://bright-byte-web.onrender.com
+      - key: APP_BASE_PATH
+        value: /
       - key: ADMIN_BASE_URL
         value: https://bright-byte-admin.onrender.com
       - key: ADMIN_BASE_PATH
@@ -62,6 +90,10 @@ services:
         value: https://bright-byte-live.onrender.com
       - key: LIVE_BASE_PATH
         value: /live
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://bright-byte-web.onrender.com,https://bright-byte-admin.onrender.com,https://bright-byte-space.onrender.com
+      - key: COOKIE_DOMAIN
+        sync: false
 
   - type: worker
     runtime: docker
@@ -98,6 +130,32 @@ services:
           envVarKey: LIVE_SERVER_SECRET_KEY
       - key: USE_MINIO
         value: "0"
+      - key: AWS_REGION
+        value: auto
+      - key: AWS_S3_BUCKET_NAME
+        sync: false
+      - key: AWS_S3_ENDPOINT_URL
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: SIGNED_URL_EXPIRATION
+        value: "3600"
+      - key: EMAIL_HOST
+        sync: false
+      - key: EMAIL_HOST_USER
+        sync: false
+      - key: EMAIL_HOST_PASSWORD
+        sync: false
+      - key: EMAIL_PORT
+        value: "587"
+      - key: EMAIL_USE_TLS
+        value: "1"
+      - key: EMAIL_USE_SSL
+        value: "0"
+      - key: EMAIL_FROM
+        value: "Bright-Byte PMP <noreply@bright-byte.example>"
 
   - type: worker
     runtime: docker
@@ -135,6 +193,32 @@ services:
           envVarKey: LIVE_SERVER_SECRET_KEY
       - key: USE_MINIO
         value: "0"
+      - key: AWS_REGION
+        value: auto
+      - key: AWS_S3_BUCKET_NAME
+        sync: false
+      - key: AWS_S3_ENDPOINT_URL
+        sync: false
+      - key: AWS_ACCESS_KEY_ID
+        sync: false
+      - key: AWS_SECRET_ACCESS_KEY
+        sync: false
+      - key: SIGNED_URL_EXPIRATION
+        value: "3600"
+      - key: EMAIL_HOST
+        sync: false
+      - key: EMAIL_HOST_USER
+        sync: false
+      - key: EMAIL_HOST_PASSWORD
+        sync: false
+      - key: EMAIL_PORT
+        value: "587"
+      - key: EMAIL_USE_TLS
+        value: "1"
+      - key: EMAIL_USE_SSL
+        value: "0"
+      - key: EMAIL_FROM
+        value: "Bright-Byte PMP <noreply@bright-byte.example>"
 
   - type: web
     runtime: docker

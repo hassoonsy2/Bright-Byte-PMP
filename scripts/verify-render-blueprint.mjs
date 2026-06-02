@@ -333,7 +333,7 @@ for (const serviceName of ["bright-byte-worker", "bright-byte-beat"]) {
 expectEnvFromService("bright-byte-live", "REDIS_URL", "keyvalue", "bright-byte-redis");
 expectEnvFromApi("bright-byte-live", "LIVE_SERVER_SECRET_KEY");
 
-const suspiciousSecretPattern = /(AKIA|aws_secret_access_key|secret-key|access-key|password\s*:)/i;
+const suspiciousSecretPattern = /^\s*value:\s*.*(AKIA|aws_secret_access_key|secret-key|access-key|password\s*:)/im;
 if (suspiciousSecretPattern.test(source)) {
   fail("render.yaml appears to contain a literal credential or secret-like value");
 }
