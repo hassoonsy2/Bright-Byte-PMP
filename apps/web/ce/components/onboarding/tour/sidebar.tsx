@@ -53,7 +53,7 @@ export function TourSidebar({ step, setStep }: Props) {
       <h3 className="text-16 font-medium">
         Let{"'"}s get started!
         <br />
-        Get more out of Plane.
+        Get more out of Bright-Byte PMP.
       </h3>
       <div className="mt-8 space-y-5">
         {sidebarOptions.map((option) => (
@@ -63,7 +63,6 @@ export function TourSidebar({ step, setStep }: Props) {
               step === option.key ? "border-accent-strong text-accent-primary" : "border-transparent text-secondary"
             }`}
             onClick={() => setStep(option.key)}
-            role="button"
           >
             <option.Icon className="h-4 w-4" aria-hidden="true" />
             {option.label}
