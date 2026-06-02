@@ -9,13 +9,13 @@
 
 ### Brand (user-facing rebrand)
 
-- [ ] **BRAND-01**: Web app brand metadata reads "Bright-Byte PMP" — `apps/web/app/root.tsx` `APP_TITLE`, OG/twitter/`application-name` tags (color unchanged for v1)
-- [ ] **BRAND-02**: Brand constants set to Bright-Byte values — `packages/constants/src/metadata.ts` (`SITE_NAME`/`SITE_TITLE`/`SITE_DESCRIPTION`/`SITE_URL`, space-site equivalents) and `endpoints.ts` (`WEBSITE_URL`, `SUPPORT_EMAIL`)
+- [x] **BRAND-01**: Web app brand metadata reads "Bright-Byte PMP" — `apps/web/app/root.tsx` `APP_TITLE`, OG/twitter/`application-name` tags (color unchanged for v1)
+- [x] **BRAND-02**: Brand constants set to Bright-Byte values — `packages/constants/src/metadata.ts` (`SITE_NAME`/`SITE_TITLE`/`SITE_DESCRIPTION`/`SITE_URL`, space-site equivalents) and `endpoints.ts` (`WEBSITE_URL`, `SUPPORT_EMAIL`)
 - [ ] **BRAND-03**: Favicons, app icons, PWA icons, and OG image replaced with client-provided assets — `apps/web/app/assets/{favicon,icons}`, `apps/web/public/{icons,favicon}`, OG image
 - [ ] **BRAND-04**: Logo assets and logo components show the Bright-Byte logo — sidebar, auth screen, spinners, and `packages/propel/src/icons/brand/plane-logo.tsx`
 - [ ] **BRAND-05**: PWA manifests rebranded across web/admin/space (`manifest.json`, `site.webmanifest.json`)
-- [ ] **BRAND-06**: Admin app brand reads "Bright-Byte PMP" — `apps/admin/app/root.tsx`, admin manifest
-- [ ] **BRAND-07**: Space (public Sites) app brand reads Bright-Byte — `apps/space/app/root.tsx`, space metadata constants (external-facing)
+- [x] **BRAND-06**: Admin app brand reads "Bright-Byte PMP" — `apps/admin/app/root.tsx`, admin manifest
+- [x] **BRAND-07**: Space (public Sites) app brand reads Bright-Byte — `apps/space/app/root.tsx`, space metadata constants (external-facing)
 - [x] **BRAND-08**: English i18n strings rebranded — `packages/i18n/src/locales/en/*` (~130 "Plane" occurrences)
 - [x] **BRAND-09**: All 18 non-English locales rebranded — `packages/i18n/src/locales/{cs,de,es,fr,id,it,ja,ko,pl,pt-BR,ro,ru,sk,tr-TR,ua,vi-VN,zh-CN,zh-TW}/*`
 - [ ] **BRAND-10**: Email templates rebranded — `apps/api/templates/base.html` + `apps/api/templates/emails/**` (invites, magic-link, password reset, notifications) and `EMAIL_FROM`
@@ -95,13 +95,13 @@ Each v1 requirement maps to exactly one phase (see `.planning/ROADMAP.md`).
 
 | Requirement | Phase                                    | Status   |
 | ----------- | ---------------------------------------- | -------- |
-| BRAND-01    | Phase 1 — User-Facing Rebrand            | Pending  |
-| BRAND-02    | Phase 1 — User-Facing Rebrand            | Pending  |
+| BRAND-01    | Phase 1 — User-Facing Rebrand            | Complete |
+| BRAND-02    | Phase 1 — User-Facing Rebrand            | Complete |
 | BRAND-03    | Phase 1 — User-Facing Rebrand            | Pending  |
 | BRAND-04    | Phase 1 — User-Facing Rebrand            | Pending  |
 | BRAND-05    | Phase 1 — User-Facing Rebrand            | Pending  |
-| BRAND-06    | Phase 1 — User-Facing Rebrand            | Pending  |
-| BRAND-07    | Phase 1 — User-Facing Rebrand            | Pending  |
+| BRAND-06    | Phase 1 — User-Facing Rebrand            | Complete |
+| BRAND-07    | Phase 1 — User-Facing Rebrand            | Complete |
 | BRAND-08    | Phase 1 — User-Facing Rebrand            | Complete |
 | BRAND-09    | Phase 1 — User-Facing Rebrand            | Complete |
 | BRAND-10    | Phase 1 — User-Facing Rebrand            | Pending  |
