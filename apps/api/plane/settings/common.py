@@ -305,11 +305,26 @@ RABBITMQ_PASSWORD = os.environ.get("RABBITMQ_PASSWORD", "guest")
 RABBITMQ_VHOST = os.environ.get("RABBITMQ_VHOST", "/")
 AMQP_URL = os.environ.get("AMQP_URL")
 
+
+def _resolve_celery_broker_url():
+    celery_broker_url = os.environ.get("CELERY_BROKER_URL")
+    if celery_broker_url:
+        return celery_broker_url
+
+    amqp_url = os.environ.get("AMQP_URL")
+    if amqp_url:
+        return amqp_url
+
+    rabbitmq_host = os.environ.get("RABBITMQ_HOST", "localhost")
+    rabbitmq_port = os.environ.get("RABBITMQ_PORT", "5672")
+    rabbitmq_user = os.environ.get("RABBITMQ_USER", "guest")
+    rabbitmq_password = os.environ.get("RABBITMQ_PASSWORD", "guest")
+    rabbitmq_vhost = os.environ.get("RABBITMQ_VHOST", "/")
+    return f"amqp://{rabbitmq_user}:{rabbitmq_password}@{rabbitmq_host}:{rabbitmq_port}/{rabbitmq_vhost}"
+
+
 # Celery Configuration
-if AMQP_URL:
-    CELERY_BROKER_URL = AMQP_URL
-else:
-    CELERY_BROKER_URL = f"amqp://{RABBITMQ_USER}:{RABBITMQ_PASSWORD}@{RABBITMQ_HOST}:{RABBITMQ_PORT}/{RABBITMQ_VHOST}"
+CELERY_BROKER_URL = _resolve_celery_broker_url()
 
 CELERY_TIMEZONE = TIME_ZONE
 CELERY_TASK_SERIALIZER = "json"
