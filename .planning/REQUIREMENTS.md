@@ -48,7 +48,7 @@
 - [x] **DEPLOY-02**: Render managed Postgres + Render Key Value (Redis/Valkey) provisioned and wired (paid tiers — never free; free PG expires in 30 days)
 - [ ] **DEPLOY-03**: External S3-compatible object storage (Cloudflare R2) provisioned for attachments and verified for presigned PUT/GET
 - [ ] **DEPLOY-04**: SMTP provider configured so invites/magic-link/notifications send successfully
-- [ ] **DEPLOY-05**: Celery broker decision resolved and implemented (CloudAMQP vs self-run RabbitMQ vs ~3-line Redis-broker change reusing Render Key Value with `noeviction`)
+- [x] **DEPLOY-05**: Celery broker decision resolved and implemented (CloudAMQP vs self-run RabbitMQ vs ~3-line Redis-broker change reusing Render Key Value with `noeviction`)
 - [ ] **DEPLOY-06**: Proxy/origin topology decided and applied — correct `VITE_*_BASE_URL`/`*_BASE_PATH` build args (baked at build time) and OAuth redirect URIs; auth cookies work across services
 - [ ] **DEPLOY-07**: Single shared instance is live on Render and a client can be onboarded as a workspace end-to-end (sign in, create project, upload attachment, receive email)
 
@@ -122,7 +122,7 @@ Each v1 requirement maps to exactly one phase (see `.planning/ROADMAP.md`).
 | DEPLOY-02   | Phase 4 — Render Topology + Infra        | Complete |
 | DEPLOY-03   | Phase 4 — Render Topology + Infra        | Pending  |
 | DEPLOY-04   | Phase 4 — Render Topology + Infra        | Pending  |
-| DEPLOY-05   | Phase 4 — Render Topology + Infra        | Pending  |
+| DEPLOY-05   | Phase 4 — Render Topology + Infra        | Complete |
 | DEPLOY-06   | Phase 4 — Render Topology + Infra        | Pending  |
 | DEPLOY-07   | Phase 4 — Render Topology + Infra        | Pending  |
 | SEC-01      | Phase 5 — Security Hardening + AGPL Gate | Pending  |
