@@ -244,8 +244,25 @@ See Section 12 below.
 
 **Command:** `git diff -- LICENSE.txt COPYRIGHT.txt | wc -l` → **0** (no changes)
 
-**Command:** `git diff e5e1c810ae..HEAD | grep -E "^[-+].*(Copyright \(c\) 2023-present Plane Software|SPDX-License-Identifier: AGPL-3.0-only)"` → **1 line found** — investigated: the match is in `.planning/phases/01-user-facing-rebrand/01-02-SUMMARY.md` (a SUMMARY.md documentation file quoting the header text as evidence it was NOT changed). This is a documentation reference, not an actual AGPL header edit.
+**Command:** `git diff e5e1c810ae..HEAD -- "*.ts" "*.tsx" "*.py" | grep -E "^[-+].*(Copyright...SPDX-License-Identifier)"` → **0** source-file header lines added or removed
 
-**Verification:** No AGPL source-file header (`Copyright (c) 2023-present Plane Software, Inc. and contributors` / `SPDX-License-Identifier: AGPL-3.0-only`) was added or removed in any Phase 1 code change. All source files retain their original unmodified AGPL headers. LICENSE.txt and COPYRIGHT.txt are byte-identical to their pre-Phase-1 state.
+**All-files diff (including .md):** 3 lines — all in `.planning/phases/01-user-facing-rebrand/0{1-02,1-06}-SUMMARY.md` documentation files that _quote_ the header text as evidence it was NOT changed. These are documentation references, not actual AGPL header edits.
+
+**Verification:** No AGPL source-file header (`Copyright (c) 2023-present Plane Software, Inc. and contributors` / `SPDX-License-Identifier: AGPL-3.0-only`) was added or removed in any Phase 1 code change. All `.ts`, `.tsx`, and `.py` source files retain their original unmodified AGPL headers. LICENSE.txt and COPYRIGHT.txt are byte-identical to their pre-Phase-1 state.
 
 **Result: PASS — AGPL integrity confirmed intact.**
+
+---
+
+## Post-Fix Verification Summary (after Task 2 FIXED edits)
+
+- **Source manifests brand hits:** 2 (both are `/plane-logos/plane-mobile-pwa.png` asset paths in `site.webmanifest.json` — classified KEEP per Plan 01-02 constraint)
+- **i18n rendered-value brand hits:** 0 (verified by JSON parsed-values-only node scan across all 19 locales)
+- **EMAIL_FROM plane hits:** 0 (clean)
+- **Component literal remaining unresolved hits:** 11 — all classified KEEP or OUT-OF-PHASE:
+  - `intake@plane.so` email detection condition (KEEP — code logic, not display)
+  - `plane-theme-${Date.now()}.json` filename (KEEP — functional, not brand display)
+  - 4× code comments mentioning plane-web (KEEP — never rendered)
+  - 2× email-config-form placeholders `projectplane.so` (KEEP — admin input hints, not brand)
+  - `alt="Plane Work items"` on changelog image (OUT-OF-PHASE — Phase 5)
+  - `"mailto:support@plane.so"` in product-updates panel (OUT-OF-PHASE — Phase 5)
