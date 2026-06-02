@@ -13,7 +13,7 @@ Bright-Byte PMP transforms the open-source Plane (Community Edition) monorepo in
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: User-Facing Rebrand** - Every "Plane" surface (metadata, manifests, logos, i18n, emails) reads "Bright-Byte PMP" and the AI assistant shows as "Byte"
+- [x] **Phase 1: User-Facing Rebrand** - Every "Plane" surface (metadata, manifests, logos, i18n, emails) reads "Bright-Byte PMP" and the AI assistant shows as "Byte" (completed 2026-06-02)
 - [x] **Phase 2: Atomic Package-Scope Rename** - `@plane/*` → `@bright-byte/*` across the whole monorepo in one build-green commit (Pi→Byte internal identifiers folded in) (completed 2026-06-01)
 - [x] **Phase 3: De-monetization + EE Ungating** - All billing/upsell chrome removed inventory-first; every CE feature stands free with no blank or broken surfaces (completed 2026-06-01)
 - [ ] **Phase 4: Render Topology + Infra** - `render.yaml` blueprint + external R2/SMTP/broker provisioned; a client can be onboarded end-to-end on a live shared instance
@@ -42,7 +42,7 @@ Plans:
 - [x] 01-03-PLAN.md — Email templates + EMAIL_FROM rebrand, remote-logo replacement (BRAND-10)
 - [x] 01-04-PLAN.md — AI assistant → "Byte" labels/icon + English i18n incl. pi_chat (AI-01/02, BRAND-08)
 - [x] 01-05-PLAN.md — All 18 non-English locales brand-mark rebrand + pi_chat=Byte (BRAND-09, AI-01)
-- [ ] 01-06-PLAN.md — Brand-leak sweep + AGPL-integrity verification gate (BRAND-11)
+- [x] 01-06-PLAN.md — Brand-leak sweep + AGPL-integrity verification gate (BRAND-11)
 
 **UI hint**: yes
 
@@ -138,7 +138,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase                             | Plans Complete | Status      | Completed  |
 | --------------------------------- | -------------- | ----------- | ---------- |
-| 1. User-Facing Rebrand            | 5/6            | In Progress |            |
+| 1. User-Facing Rebrand            | 6/6            | Complete    | 2026-06-02 |
 | 2. Atomic Package-Scope Rename    | 1/1            | Complete    | 2026-06-01 |
 | 3. De-monetization + EE Ungating  | 1/1            | Complete    | 2026-06-01 |
 | 4. Render Topology + Infra        | 0/4            | Planned     | -          |
