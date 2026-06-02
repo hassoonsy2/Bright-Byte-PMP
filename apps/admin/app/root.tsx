@@ -16,9 +16,12 @@ import globalStyles from "@/styles/globals.css?url";
 import { AppProviders } from "@/providers";
 import type { Route } from "./+types/root";
 // fonts
+// eslint-disable-next-line import/no-unassigned-import -- side-effect import: loads Inter variable font CSS
 import "@fontsource-variable/inter";
 import interVariableWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
+// eslint-disable-next-line import/no-unassigned-import -- side-effect import: loads Material Symbols icon font CSS
 import "@fontsource/material-symbols-rounded";
+// eslint-disable-next-line import/no-unassigned-import -- side-effect import: loads IBM Plex Mono font CSS
 import "@fontsource/ibm-plex-mono";
 
 const APP_TITLE = "Bright-Byte PMP";

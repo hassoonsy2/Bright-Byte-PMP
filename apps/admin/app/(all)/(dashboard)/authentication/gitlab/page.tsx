@@ -57,6 +57,7 @@ const InstanceGitlabAuthenticationPage = observer(function InstanceGitlabAuthent
     await updateConfigPromise
       .then(() => {
         setIsSubmitting(false);
+        return;
       })
       .catch((err) => {
         console.error(err);

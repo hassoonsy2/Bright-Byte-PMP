@@ -63,6 +63,7 @@ const InstanceGithubAuthenticationPage = observer(function InstanceGithubAuthent
     await updateConfigPromise
       .then(() => {
         setIsSubmitting(false);
+        return;
       })
       .catch((err) => {
         console.error(err);

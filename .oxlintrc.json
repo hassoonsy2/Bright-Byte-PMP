@@ -39,14 +39,6 @@
     "unicorn/filename-case": "off",
     "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": "off",
-    "import/no-unassigned-import": "off",
-    "promise/always-return": "off",
-    "no-shadow": "off",
-    "no-unneeded-ternary": "off",
-    "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-autofocus": "off",
-    "jsx-a11y/no-static-element-interactions": "off",
-    "unicorn/consistent-function-scoping": "off",
     "no-unused-vars": [
       "warn",
       {

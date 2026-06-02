@@ -10,14 +10,14 @@ import { Button } from "@bright-byte/propel/button";
 import InstanceFailureDarkImage from "@/app/assets/instance/instance-failure-dark.svg?url";
 import InstanceFailureImage from "@/app/assets/instance/instance-failure.svg?url";
 
+const handleRetry = () => {
+  window.location.reload();
+};
+
 export function InstanceFailureView() {
   const { resolvedTheme } = useTheme();
 
   const instanceImage = resolvedTheme === "dark" ? InstanceFailureDarkImage : InstanceFailureImage;
-
-  const handleRetry = () => {
-    window.location.reload();
-  };
 
   return (
     <div className="relative container mx-auto flex h-screen items-center justify-center overflow-x-hidden overflow-y-auto px-5">
