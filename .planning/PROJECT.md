@@ -28,15 +28,16 @@ Our clients get a fully branded, fully unlocked project-management tool with no 
 - ✓ Issue (notification) subscriptions — existing; **distinct from billing**, retained as-is
 - ✓ Billing, license, paid-plan, pricing, and sales-upgrade UI removed — validated in Phase 3
 - ✓ CE-present project-management features preserved while absent EE upsell stubs were removed — validated in Phase 3
+- ✓ All user-facing surfaces rebranded to "Bright-Byte PMP" (app titles, manifests, page metadata, emails, UI strings across 19 locales, hardcoded component literals) with zero user-facing "Plane" leaks (AGPL headers excepted) — validated in Phase 1
+- ✓ AI assistant renamed to **Byte** everywhere it surfaces (labels, generating-response text, popover, icon) — validated in Phase 1
+- ✓ Internal package scope `@plane/*` → `@bright-byte/*` rename across the monorepo — validated in Phase 2
+- ◐ Brand logo/favicon/app-icon code wiring + placeholder Bright-Byte SVG marks shipped — validated in Phase 1; **binary client brand assets (favicon.ico, icon PNGs, OG image, spinner GIFs, email logo) remain a deferred drop-in**
 
 ### Active
 
 <!-- This milestone's scope. Hypotheses until shipped and validated. -->
 
-- [ ] Rebrand all user-facing surfaces to "Bright-Byte PMP" (app titles, manifest, page metadata, emails, UI strings)
-- [ ] Replace logos / favicons / app icons with client-provided Bright-Byte PMP brand assets
-- [ ] Deep rename of internal package scope `@plane/*` → `@bright-byte/*` across all packages, imports, build config, and tsconfig path aliases
-- [ ] Rename the AI assistant to **Byte** everywhere it surfaces (labels, prompts, tooltips, component naming)
+- [ ] Drop in client-provided Bright-Byte binary brand assets (favicon.ico, app/PWA icon PNGs, OG image, spinner GIFs, email logo) — code wiring + placeholder SVG marks already shipped in Phase 1
 - [ ] Deploy as a single shared instance on Render via a `render.yaml` blueprint (web, api, live, admin, worker/beat)
 - [ ] Use Render managed Postgres + Render Key Value (Redis) as the data services
 - [ ] Provision required external infra: S3-compatible object storage (attachments) and an SMTP provider (invites/notifications)
@@ -101,4 +102,4 @@ This document evolves at phase transitions and milestone boundaries.
 
 ---
 
-_Last updated: 2026-06-01 after Phase 3 completion (billing/license UI removed; absent EE upsell stubs pruned while CE features were preserved)_
+_Last updated: 2026-06-03 after Phase 1 completion (all user-facing surfaces rebranded to Bright-Byte PMP / "Byte" with zero user-facing Plane leaks; binary brand assets deferred to a client drop-in). Phases 1–3 complete; next is Phase 4 (Render topology + infra)._
