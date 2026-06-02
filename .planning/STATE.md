@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: ready_to_execute
-stopped_at: Phase 01 complete (6/6). Phases 01–03 all complete — next incomplete phase is 04 (planned, 0/4 executed)
-last_updated: 2026-06-03
-last_activity: 2026-06-03 -- Phase 01 execution complete
+status: executing
+stopped_at: Phase 04 planning complete
+last_updated: "2026-06-02T23:00:52.041Z"
+last_activity: 2026-06-03
 progress:
   total_phases: 5
   completed_phases: 3
   total_plans: 12
   completed_plans: 8
-  percent: 67
+  percent: 60
 ---
 
 # Project State
@@ -77,7 +77,7 @@ Recent decisions affecting current work:
 - [Phase ?]: [01-05]: All 18 non-English locales rebranded to Bright-Byte PMP / Byte (values only); pi_chat='Byte' in every locale; i18n key parity preserved 18/18 at 100%
 - [Phase ?]: [01-05]: grep 'plane' gate satisfied vs rendered VALUES (0 brand tokens); 234 remaining hits are JSON KEY identifiers (Phase 2/AI-03) + 13 genuine non-brand plan-words
 - [Phase ?]: Brand placeholders approved for v1 (bright-byte.example, support@bright-byte.example, @brightbyte); real values via VITE\_\* Render env vars
-- [Phase ?]: 7 pre-existing oxlint rules disabled in .oxlintrc.json to unblock --deny-warnings pre-commit hook
+- [Phase 01]: 8 oxlint rules briefly disabled during 01-01 to unblock the --deny-warnings hook were RESTORED and the underlying pre-existing warnings fixed properly (commit fix(01)…); per user: never disable rules / --no-verify to work around the hook — fix the warnings
 - [Phase 04]: Deployment plan chooses first-class Render service origins/custom domains instead of reproducing the Compose Caddy proxy for v1
 - [Phase 04]: Celery broker plan chooses Render Key Value via explicit `CELERY_BROKER_URL`; paid `noeviction` policy is a deploy gate, with `AMQP_URL` fallback preserved
 
