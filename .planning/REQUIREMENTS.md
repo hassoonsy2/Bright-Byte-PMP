@@ -18,7 +18,7 @@
 - [x] **BRAND-07**: Space (public Sites) app brand reads Bright-Byte — `apps/space/app/root.tsx`, space metadata constants (external-facing)
 - [x] **BRAND-08**: English i18n strings rebranded — `packages/i18n/src/locales/en/*` (~130 "Plane" occurrences)
 - [x] **BRAND-09**: All 18 non-English locales rebranded — `packages/i18n/src/locales/{cs,de,es,fr,id,it,ja,ko,pl,pt-BR,ro,ru,sk,tr-TR,ua,vi-VN,zh-CN,zh-TW}/*`
-- [ ] **BRAND-10**: Email templates rebranded — `apps/api/templates/base.html` + `apps/api/templates/emails/**` (invites, magic-link, password reset, notifications) and `EMAIL_FROM`
+- [x] **BRAND-10**: Email templates rebranded — `apps/api/templates/base.html` + `apps/api/templates/emails/**` (invites, magic-link, password reset, notifications) and `EMAIL_FROM`
 - [ ] **BRAND-11**: No "Plane" leaks remain — case-insensitive sweep across manifests, i18n, email `EMAIL_FROM`, generated PDFs, and telemetry/user-agent strings passes clean (excludes AGPL copyright headers, which stay verbatim)
 
 ### AI Assistant (Byte)
@@ -104,7 +104,7 @@ Each v1 requirement maps to exactly one phase (see `.planning/ROADMAP.md`).
 | BRAND-07    | Phase 1 — User-Facing Rebrand            | Complete |
 | BRAND-08    | Phase 1 — User-Facing Rebrand            | Complete |
 | BRAND-09    | Phase 1 — User-Facing Rebrand            | Complete |
-| BRAND-10    | Phase 1 — User-Facing Rebrand            | Pending  |
+| BRAND-10    | Phase 1 — User-Facing Rebrand            | Complete |
 | BRAND-11    | Phase 1 — User-Facing Rebrand            | Pending  |
 | AI-01       | Phase 1 — User-Facing Rebrand            | Complete |
 | AI-02       | Phase 1 — User-Facing Rebrand            | Complete |

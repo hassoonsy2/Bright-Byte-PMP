@@ -39,7 +39,7 @@ Plans:
 
 - [x] 01-01-PLAN.md — App metadata + brand constants (web/admin/space titles, OG/meta, @plane/constants); env-driven URL/email (BRAND-01/02/06/07)
 - [x] 01-02-PLAN.md — PWA manifests + logo/favicon/icon wiring & client-asset drop-in (BRAND-03/04/05)
-- [ ] 01-03-PLAN.md — Email templates + EMAIL_FROM rebrand, remote-logo replacement (BRAND-10)
+- [x] 01-03-PLAN.md — Email templates + EMAIL_FROM rebrand, remote-logo replacement (BRAND-10)
 - [x] 01-04-PLAN.md — AI assistant → "Byte" labels/icon + English i18n incl. pi_chat (AI-01/02, BRAND-08)
 - [x] 01-05-PLAN.md — All 18 non-English locales brand-mark rebrand + pi_chat=Byte (BRAND-09, AI-01)
 - [ ] 01-06-PLAN.md — Brand-leak sweep + AGPL-integrity verification gate (BRAND-11)
@@ -123,7 +123,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase                             | Plans Complete | Status      | Completed  |
 | --------------------------------- | -------------- | ----------- | ---------- |
-| 1. User-Facing Rebrand            | 4/6            | In Progress |            |
+| 1. User-Facing Rebrand            | 5/6            | In Progress |            |
 | 2. Atomic Package-Scope Rename    | 1/1            | Complete    | 2026-06-01 |
 | 3. De-monetization + EE Ungating  | 1/1            | Complete    | 2026-06-01 |
 | 4. Render Topology + Infra        | 0/TBD          | Not started | -          |
