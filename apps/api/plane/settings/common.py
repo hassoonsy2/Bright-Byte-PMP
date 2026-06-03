@@ -550,3 +550,73 @@ if ENABLE_DRF_SPECTACULAR:
     REST_FRAMEWORK["DEFAULT_SCHEMA_CLASS"] = "drf_spectacular.openapi.AutoSchema"
     INSTALLED_APPS.append("drf_spectacular")
     from .openapi import SPECTACULAR_SETTINGS  # noqa: F401
+
+
+# ---------------------------------------------------------------------------
+# Boot-time security guard
+# ---------------------------------------------------------------------------
+# Checks three insecure-by-default settings and raises ImproperlyConfigured
+# before the process accepts any connection.  The guard is completely silent
+# when DEBUG=True so local development is unaffected.
+# ---------------------------------------------------------------------------
+
+
+def check_boot_security(
+    environ: dict,
+    debug: bool,
+    allowed_hosts: list,
+    cors_allow_all_origins: bool,
+    cors_allow_credentials: bool,
+) -> list:
+    """Return a list of human-readable error strings for each insecure setting.
+
+    A non-empty return value means the configuration is unsafe for production.
+    The caller is responsible for raising ImproperlyConfigured when appropriate.
+    """
+    errors = []
+
+    # Condition A — SECRET_KEY must come from the environment.
+    # Without it, Django falls back to get_random_secret_key(), which generates
+    # a fresh key on every process restart, invalidating all sessions and CSRF tokens.
+    if not environ.get("SECRET_KEY"):
+        errors.append(
+            "SECRET_KEY env var is required in production. Without it, a random key is"
+            " generated per process restart, invalidating all sessions and CSRF tokens."
+        )
+
+    # Condition B — ALLOWED_HOSTS wildcard is not safe in production.
+    # Only checked when not in debug mode because the wildcard is intentional
+    # in local development.
+    if not debug and "*" in allowed_hosts:
+        errors.append(
+            "ALLOWED_HOSTS='*' is not permitted in production. Set ALLOWED_HOSTS to"
+            " comma-separated exact hostnames (e.g. bright-byte-api.onrender.com)."
+        )
+
+    # Condition C — CORS_ALLOW_ALL_ORIGINS=True combined with
+    # CORS_ALLOW_CREDENTIALS=True allows any cross-origin request to include
+    # session cookies, effectively leaking credentials to any origin.
+    if cors_allow_all_origins and cors_allow_credentials:
+        errors.append(
+            "CORS_ALLOW_ALL_ORIGINS=True with CORS_ALLOW_CREDENTIALS=True is insecure."
+            " Set CORS_ALLOWED_ORIGINS to an explicit https:// origin list."
+        )
+
+    return errors
+
+
+_boot_errors = check_boot_security(
+    environ=os.environ,
+    debug=bool(DEBUG),
+    allowed_hosts=ALLOWED_HOSTS,
+    cors_allow_all_origins=bool(globals().get("CORS_ALLOW_ALL_ORIGINS", False)),
+    cors_allow_credentials=bool(CORS_ALLOW_CREDENTIALS),
+)
+
+if _boot_errors and not DEBUG:
+    from django.core.exceptions import ImproperlyConfigured
+
+    raise ImproperlyConfigured(
+        "Insecure configuration — fix before running in production:\n"
+        + "\n".join(f"  - {e}" for e in _boot_errors)
+    )
