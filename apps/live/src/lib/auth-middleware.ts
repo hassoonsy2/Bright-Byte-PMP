@@ -4,6 +4,7 @@
  * See the LICENSE file for details.
  */
 
+import { timingSafeEqual } from "node:crypto";
 import type { Request, Response, NextFunction } from "express";
 import { logger } from "@bright-byte/logger";
 import { env } from "@/env";
@@ -31,11 +32,20 @@ import { env } from "@/env";
  * }
  * ```
  */
-// TODO - Move to hmac
 export const requireSecretKey = (req: Request, res: Response, next: NextFunction): void => {
-  const secretKey = req.headers["live-server-secret-key"];
+  const provided = req.headers["live-server-secret-key"];
+  const expected = env.LIVE_SERVER_SECRET_KEY;
 
-  if (!secretKey || secretKey !== env.LIVE_SERVER_SECRET_KEY) {
+  let isValid = false;
+  if (typeof provided === "string" && provided.length === expected.length) {
+    try {
+      isValid = timingSafeEqual(Buffer.from(provided, "utf8"), Buffer.from(expected, "utf8"));
+    } catch {
+      isValid = false;
+    }
+  }
+
+  if (!isValid) {
     logger.warn(`
   ⚠️  [AUTH] Unauthorized access attempt
      Endpoint: ${req.path}

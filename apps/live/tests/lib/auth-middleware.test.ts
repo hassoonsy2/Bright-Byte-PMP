@@ -4,20 +4,22 @@
  * See the LICENSE file for details.
  */
 
+import type { NextFunction } from "express";
 import { describe, it, expect, vi, beforeEach } from "vitest";
 
 // Fixed 32-character test secret matching production token format
-// NOTE: This literal is duplicated in vi.mock factories below because vi.mock is hoisted
 const TEST_SECRET = "test-secret-key-fixed-length-32c";
 
-// Track timingSafeEqual calls for the RED→GREEN spy test
-const mockTimingSafeEqual = vi.fn((a: Buffer, b: Buffer): boolean => {
-  // Delegate to real comparison semantics so other tests still work
-  if (a.length !== b.length) throw new RangeError("Input buffers must have the same byte length");
-  return a.equals(b);
+// vi.hoisted runs before vi.mock factories, making mockTimingSafeEqual safe to reference
+const { mockTimingSafeEqual } = vi.hoisted(() => {
+  const fn = vi.fn((a: Buffer, b: Buffer): boolean => {
+    if (a.length !== b.length) throw new RangeError("Input buffers must have the same byte length");
+    return a.equals(b);
+  });
+  return { mockTimingSafeEqual: fn };
 });
 
-// Mock node:crypto so we can spy on timingSafeEqual
+// Mock node:crypto so we can assert timingSafeEqual is called (RED→GREEN gate)
 vi.mock("node:crypto", () => ({
   timingSafeEqual: mockTimingSafeEqual,
 }));
@@ -61,10 +63,10 @@ function makeRes(): Parameters<typeof requireSecretKey>[1] {
 }
 
 describe("auth-middleware — requireSecretKey", () => {
-  let next: ReturnType<typeof vi.fn>;
+  let next: NextFunction;
 
   beforeEach(() => {
-    next = vi.fn();
+    next = vi.fn() as unknown as NextFunction;
     vi.clearAllMocks();
     // Restore mock implementation after clearAllMocks resets it
     mockTimingSafeEqual.mockImplementation((a: Buffer, b: Buffer): boolean => {
@@ -79,7 +81,7 @@ describe("auth-middleware — requireSecretKey", () => {
 
     requireSecretKey(req, res, next);
 
-    expect(next).toHaveBeenCalledOnce();
+    expect(vi.mocked(next)).toHaveBeenCalledOnce();
     expect(res.status).not.toHaveBeenCalled();
     expect(res.json).not.toHaveBeenCalled();
   });
@@ -94,7 +96,7 @@ describe("auth-middleware — requireSecretKey", () => {
 
     requireSecretKey(req, res, next);
 
-    expect(next).not.toHaveBeenCalled();
+    expect(vi.mocked(next)).not.toHaveBeenCalled();
     expect(res.status).toHaveBeenCalledWith(401);
     expect(res.json).toHaveBeenCalledWith({ error: "Unauthorized", status: 401 });
   });
@@ -108,7 +110,7 @@ describe("auth-middleware — requireSecretKey", () => {
 
     // Must NOT throw — the length pre-check must prevent RangeError from timingSafeEqual
     expect(() => requireSecretKey(req, res, next)).not.toThrow();
-    expect(next).not.toHaveBeenCalled();
+    expect(vi.mocked(next)).not.toHaveBeenCalled();
     expect(res.status).toHaveBeenCalledWith(401);
     expect(res.json).toHaveBeenCalledWith({ error: "Unauthorized", status: 401 });
   });
@@ -119,7 +121,7 @@ describe("auth-middleware — requireSecretKey", () => {
 
     requireSecretKey(req, res, next);
 
-    expect(next).not.toHaveBeenCalled();
+    expect(vi.mocked(next)).not.toHaveBeenCalled();
     expect(res.status).toHaveBeenCalledWith(401);
     expect(res.json).toHaveBeenCalledWith({ error: "Unauthorized", status: 401 });
   });
