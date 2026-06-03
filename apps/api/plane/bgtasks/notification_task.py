@@ -3,6 +3,7 @@
 # See the LICENSE file for details.
 
 # Python imports
+import logging
 import json
 import uuid
 from uuid import UUID
@@ -29,6 +30,9 @@ from django.db.models import Subquery
 # Third Party imports
 from celery import shared_task
 from bs4 import BeautifulSoup
+
+
+logger = logging.getLogger("plane.worker")
 
 
 # =========== Issue Description Html Parsing and notification Functions ======================
@@ -670,5 +674,5 @@ def notifications(
             EmailNotificationLog.objects.bulk_create(bulk_email_logs, batch_size=100, ignore_conflicts=True)
         return
     except Exception as e:
-        print(e)
+        logger.exception("Notification bulk create failed: %s", e)
         return

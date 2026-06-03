@@ -3,15 +3,20 @@
 # See the LICENSE file for details.
 
 # Django imports
-from django.utils import timezone
+import logging
+
 from django.apps import apps
 from django.conf import settings
 from django.db import models
 from django.db.models.fields.related import OneToOneRel
+from django.utils import timezone
 
 
 # Third party imports
 from celery import shared_task
+
+
+logger = logging.getLogger("plane.worker")
 
 
 @shared_task
@@ -96,7 +101,7 @@ def soft_delete_related_objects(app_label, model_name, instance_pk, using=None):
                                 )
             except Exception as e:
                 # Log the error or handle as needed
-                print(f"Error handling relation {related_name}: {str(e)}")
+                logger.error("Error handling relation %s: %s", related_name, e)
                 continue
 
     # Finally, soft delete the instance itself if it hasn't been deleted yet

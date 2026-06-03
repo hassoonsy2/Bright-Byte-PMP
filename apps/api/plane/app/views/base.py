@@ -3,7 +3,7 @@
 # See the LICENSE file for details.
 
 # Python imports
-import traceback
+import logging
 
 import zoneinfo
 from django.conf import settings
@@ -29,6 +29,9 @@ from plane.authentication.session import BaseSessionAuthentication
 from plane.utils.exception_logger import log_exception
 from plane.utils.paginator import BasePaginator
 from plane.utils.core.mixins import ReadReplicaControlMixin
+
+
+logger = logging.getLogger("plane.api")
 
 
 class TimezoneMixin:
@@ -76,7 +79,7 @@ class BaseViewSet(TimezoneMixin, ReadReplicaControlMixin, ModelViewSet, BasePagi
             response = super().handle_exception(exc)
             return response
         except Exception as e:
-            (print(e, traceback.format_exc()) if settings.DEBUG else print("Server Error"))
+            log_exception(e)
             if isinstance(e, IntegrityError):
                 return Response(
                     {"error": "The payload is not valid"},
@@ -115,7 +118,12 @@ class BaseViewSet(TimezoneMixin, ReadReplicaControlMixin, ModelViewSet, BasePagi
             if settings.DEBUG:
                 from django.db import connection
 
-                print(f"{request.method} - {request.get_full_path()} of Queries: {len(connection.queries)}")
+                logger.debug(
+                    "%s - %s Queries: %d",
+                    request.method,
+                    request.get_full_path(),
+                    len(connection.queries),
+                )
 
             return response
         except Exception as exc:
@@ -210,7 +218,12 @@ class BaseAPIView(TimezoneMixin, ReadReplicaControlMixin, APIView, BasePaginator
             if settings.DEBUG:
                 from django.db import connection
 
-                print(f"{request.method} - {request.get_full_path()} of Queries: {len(connection.queries)}")
+                logger.debug(
+                    "%s - %s Queries: %d",
+                    request.method,
+                    request.get_full_path(),
+                    len(connection.queries),
+                )
             return response
 
         except Exception as exc:
