@@ -72,7 +72,7 @@ Variables (set as **secrets** in the Render dashboard — they are `sync: false`
 | `USE_MINIO`             | `0`                                             | already set in `render.yaml`        |
 | `AWS_REGION`            | `auto`                                          | already set in `render.yaml`        |
 | `AWS_S3_ENDPOINT_URL`   | `https://<account_id>.r2.cloudflarestorage.com` | Cloudflare → R2 → account endpoint  |
-| `AWS_S3_BUCKET_NAME`    | bucket name                                     | Cloudflare → R2 → bucket            |
+| `AWS_S3_BUCKET_NAME`    | `pmp1`                                          | Cloudflare → R2 → bucket            |
 | `AWS_ACCESS_KEY_ID`     | R2 access key id                                | Cloudflare → R2 → Manage API tokens |
 | `AWS_SECRET_ACCESS_KEY` | R2 secret access key                            | Cloudflare → R2 → Manage API tokens |
 | `SIGNED_URL_EXPIRATION` | `3600`                                          | already set in `render.yaml`        |
