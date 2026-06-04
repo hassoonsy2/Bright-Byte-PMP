@@ -303,7 +303,7 @@ services:
   - type: web
     runtime: static
     name: bright-byte-web
-    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm turbo run build --filter=web
+    buildCommand: pnpm install --frozen-lockfile && pnpm turbo run build --filter=web
     staticPublishPath: ./apps/web/build/client
     routes:
       - type: rewrite
@@ -334,7 +334,7 @@ services:
   - type: web
     runtime: static
     name: bright-byte-admin
-    buildCommand: corepack enable && pnpm install --frozen-lockfile && pnpm turbo run build --filter=admin && rm -rf render-static/admin && mkdir -p render-static/admin/god-mode && cp -R apps/admin/build/client/. render-static/admin/god-mode/
+    buildCommand: pnpm install --frozen-lockfile && pnpm turbo run build --filter=admin && rm -rf render-static/admin && mkdir -p render-static/admin/god-mode && cp -R apps/admin/build/client/. render-static/admin/god-mode/
     staticPublishPath: ./render-static/admin
     routes:
       - type: redirect
