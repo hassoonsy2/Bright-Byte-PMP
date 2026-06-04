@@ -134,6 +134,13 @@ services:
           type: web
           name: bright-byte-api
           envVarKey: LIVE_SERVER_SECRET_KEY
+      # Satisfy the Phase 5 boot-time security guard (settings/common.py), which runs
+      # at settings import on EVERY process. Workers/beat serve no HTTP, but the guard
+      # still rejects ALLOWED_HOSTS='*' and CORS allow-all when DEBUG=0, so set both.
+      - key: ALLOWED_HOSTS
+        value: api.pmp.bright-byte.co,bright-byte-api.onrender.com
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://pmp.bright-byte.co,https://admin.pmp.bright-byte.co,https://spaces.pmp.bright-byte.co
       - key: USE_MINIO
         value: "0"
       - key: AWS_REGION
@@ -197,6 +204,13 @@ services:
           type: web
           name: bright-byte-api
           envVarKey: LIVE_SERVER_SECRET_KEY
+      # Satisfy the Phase 5 boot-time security guard (settings/common.py), which runs
+      # at settings import on EVERY process. Workers/beat serve no HTTP, but the guard
+      # still rejects ALLOWED_HOSTS='*' and CORS allow-all when DEBUG=0, so set both.
+      - key: ALLOWED_HOSTS
+        value: api.pmp.bright-byte.co,bright-byte-api.onrender.com
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://pmp.bright-byte.co,https://admin.pmp.bright-byte.co,https://spaces.pmp.bright-byte.co
       - key: USE_MINIO
         value: "0"
       - key: AWS_REGION
