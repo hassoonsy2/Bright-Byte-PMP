@@ -100,6 +100,11 @@ services:
         value: https://github.com/makeplane/plane
       - key: COOKIE_DOMAIN
         value: .pmp.bright-byte.co
+      # Invite-only: self sign-up is disabled. Only emails with a pending
+      # workspace invite can register (enforced in authentication/adapter/base.py),
+      # and the auth screen hides the "Sign up" link when this is "0".
+      - key: ENABLE_SIGNUP
+        value: "0"
 
   - type: worker
     runtime: docker
