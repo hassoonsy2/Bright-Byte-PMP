@@ -3,9 +3,9 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 04 Plan 03 (R2/SMTP/origin contract) complete; only 04-04 (live deploy + onboarding UAT) remains in Phase 04, blocked on external DNS/dashboard/R2/SMTP setup. Phase 05 at 3/5 (05-04 AGPL §13 next).
+stopped_at: 04-03 complete. 04-04 Tasks 1-2 done (deployment checklist created, local gates green); Tasks 3-5 (Render sync, live browser UAT, evidence) BLOCKED on external DNS/dashboard/R2/SMTP — fill .planning/phases/04-render-topology-infra/04-DEPLOYMENT-CHECKLIST.md. Phase 05 at 3/5 (05-04 AGPL §13 next, awaiting public Bright-Byte source repo URL).
 last_updated: 2026-06-04
-last_activity: 2026-06-04 -- Phase 04 Plan 03 R2/SMTP/origin contract finalized on pmp.bright-byte.co subdomains
+last_activity: 2026-06-04 -- Phase 04 Plan 04 prep: deployment/UAT checklist + green local pre-deploy gates
 progress:
   total_phases: 5
   completed_phases: 3
