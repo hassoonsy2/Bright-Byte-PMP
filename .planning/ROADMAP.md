@@ -132,9 +132,9 @@ Plans:
 **Plans**: 5 plans (planned 2026-06-03; plan-checker PASSED)
 Plans:
 
-- [ ] 05-01-PLAN.md — Django boot-time security guard: SECRET_KEY/ALLOWED_HOSTS/CORS, gated on `not DEBUG` (SEC-01)
-- [ ] 05-02-PLAN.md — Live-server constant-time secret compare via `crypto.timingSafeEqual` (SEC-02)
-- [ ] 05-03-PLAN.md — Backend `print()`→logger cleanup + telemetry disable (no phone-home to Plane) (SEC-03)
+- [x] 05-01-PLAN.md — Django boot-time security guard: SECRET_KEY/ALLOWED_HOSTS/CORS, gated on `not DEBUG` (SEC-01)
+- [x] 05-02-PLAN.md — Live-server constant-time secret compare via `crypto.timingSafeEqual` (SEC-02)
+- [x] 05-03-PLAN.md — Backend `print()`→logger cleanup + telemetry disable (no phone-home to Plane) (SEC-03)
 - [ ] 05-04-PLAN.md — AGPL §13: top-level `NOTICE` + `GET /source` offer endpoint + contract tests (SEC-04)
 - [ ] 05-05-PLAN.md — Sweep 16 deferred `plane.so` frontend URLs + wire AGPL `/source` footer link (SEC-03/04)
 
@@ -151,4 +151,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Atomic Package-Scope Rename    | 1/1            | Complete    | 2026-06-01 |
 | 3. De-monetization + EE Ungating  | 1/1            | Complete    | 2026-06-01 |
 | 4. Render Topology + Infra        | 2/4            | In Progress | -          |
-| 5. Security Hardening + AGPL Gate | 0/5            | Planned     | -          |
+| 5. Security Hardening + AGPL Gate | 3/5            | In Progress | -          |
