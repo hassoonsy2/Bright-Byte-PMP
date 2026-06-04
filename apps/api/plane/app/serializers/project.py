@@ -40,9 +40,10 @@ class ProjectSerializer(BaseSerializer):
         project_id = self.instance.id if self.instance else None
         workspace_id = self.context["workspace_id"]
 
-        if re.match(Project.FORBIDDEN_IDENTIFIER_CHARS_PATTERN, name):
-            raise serializers.ValidationError(detail="PROJECT_NAME_CANNOT_CONTAIN_SPECIAL_CHARACTERS")
-
+        # Project NAMES are display labels and may contain punctuation (hyphens,
+        # periods, parentheses, etc.). The special-character restriction applies only
+        # to the project IDENTIFIER (see validate_identifier), which is used for issue
+        # prefixes. Names render as escaped React text, so punctuation is safe here.
         project = Project.objects.filter(name=name, workspace_id=workspace_id)
 
         if project_id:
