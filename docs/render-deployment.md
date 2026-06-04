@@ -109,20 +109,20 @@ browser network tab (threat T-04-07).
 Email config is read by `get_email_configuration()` and consumed by Celery email tasks
 and `manage.py test_email`. TLS and SSL are **mutually exclusive** — set exactly one.
 
-| Variable              | Notes                                          | `render.yaml`                   |
-| --------------------- | ---------------------------------------------- | ------------------------------- |
-| `EMAIL_HOST`          | SMTP host                                      | `sync: false` (api/worker/beat) |
-| `EMAIL_HOST_USER`     | SMTP username                                  | `sync: false`                   |
-| `EMAIL_HOST_PASSWORD` | SMTP password                                  | `sync: false`                   |
-| `EMAIL_PORT`          | `587` (STARTTLS) or `465` (SSL)                | `value: "587"`                  |
-| `EMAIL_USE_TLS`       | `1` for port 587, else `0`                     | `value: "1"`                    |
-| `EMAIL_USE_SSL`       | `1` for port 465, else `0`                     | `value: "0"`                    |
-| `EMAIL_FROM`          | `Bright-Byte PMP <noreply@pmp.bright-byte.co>` | already set                     |
+| Variable              | Notes                                   | `render.yaml`                   |
+| --------------------- | --------------------------------------- | ------------------------------- |
+| `EMAIL_HOST`          | SMTP host                               | `sync: false` (api/worker/beat) |
+| `EMAIL_HOST_USER`     | SMTP username                           | `sync: false`                   |
+| `EMAIL_HOST_PASSWORD` | SMTP password                           | `sync: false`                   |
+| `EMAIL_PORT`          | `587` (STARTTLS) or `465` (SSL)         | `value: "587"`                  |
+| `EMAIL_USE_TLS`       | `1` for port 587, else `0`              | `value: "1"`                    |
+| `EMAIL_USE_SSL`       | `1` for port 465, else `0`              | `value: "0"`                    |
+| `EMAIL_FROM`          | `Bright-Byte PMP <info@bright-byte.co>` | already set                     |
 
 If the provider requires implicit TLS on port 465, use `EMAIL_PORT=465`,
 `EMAIL_USE_TLS=0`, `EMAIL_USE_SSL=1`.
 
-**Sender domain:** `EMAIL_FROM` uses `pmp.bright-byte.co`. Configure SPF + DKIM (and
+**Sender domain:** `EMAIL_FROM` uses `bright-byte.co` (root domain). Configure SPF + DKIM (and
 DMARC) for that domain at your DNS/SMTP provider or invites and magic links will land in
 spam or bounce (threat T-04-08).
 

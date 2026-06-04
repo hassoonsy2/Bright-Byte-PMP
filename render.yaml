@@ -73,7 +73,7 @@ services:
       - key: EMAIL_USE_SSL
         value: "0"
       - key: EMAIL_FROM
-        value: "Bright-Byte PMP <noreply@pmp.bright-byte.co>"
+        value: "Bright-Byte PMP <info@bright-byte.co>"
       - key: WEB_URL
         value: https://api.pmp.bright-byte.co
       - key: APP_BASE_URL
@@ -168,7 +168,7 @@ services:
       - key: EMAIL_USE_SSL
         value: "0"
       - key: EMAIL_FROM
-        value: "Bright-Byte PMP <noreply@pmp.bright-byte.co>"
+        value: "Bright-Byte PMP <info@bright-byte.co>"
 
   - type: worker
     runtime: docker
@@ -238,7 +238,7 @@ services:
       - key: EMAIL_USE_SSL
         value: "0"
       - key: EMAIL_FROM
-        value: "Bright-Byte PMP <noreply@pmp.bright-byte.co>"
+        value: "Bright-Byte PMP <info@bright-byte.co>"
 
   - type: web
     runtime: docker
