@@ -109,7 +109,7 @@ Plans:
 
 **Wave 2** _(blocked on Wave 1 completion)_
 
-- [ ] 04-03-r2-smtp-origin-contract-PLAN.md — R2, SMTP, origin/cookie/OAuth, live CORS, and Vite build-time env contract (DEPLOY-03/04/06)
+- [x] 04-03-r2-smtp-origin-contract-PLAN.md — R2, SMTP, origin/cookie/OAuth, live CORS, and Vite build-time env contract (DEPLOY-03/04/06)
 
 **Wave 3** _(blocked on Wave 2 completion)_
 
@@ -150,5 +150,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. User-Facing Rebrand            | 6/6            | Complete    | 2026-06-02 |
 | 2. Atomic Package-Scope Rename    | 1/1            | Complete    | 2026-06-01 |
 | 3. De-monetization + EE Ungating  | 1/1            | Complete    | 2026-06-01 |
-| 4. Render Topology + Infra        | 2/4            | In Progress | -          |
+| 4. Render Topology + Infra        | 3/4            | In Progress | -          |
 | 5. Security Hardening + AGPL Gate | 3/5            | In Progress | -          |

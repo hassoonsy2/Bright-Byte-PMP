@@ -3,15 +3,15 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Phase 05 Plan 03 complete; Plan 05-04 (AGPL §13 /source) is next. NOTE Phase 04 Wave 2/3 (04-03, 04-04) still open — work jumped to Phase 05 out of order.
+stopped_at: Phase 04 Plan 03 (R2/SMTP/origin contract) complete; only 04-04 (live deploy + onboarding UAT) remains in Phase 04, blocked on external DNS/dashboard/R2/SMTP setup. Phase 05 at 3/5 (05-04 AGPL §13 next).
 last_updated: 2026-06-04
-last_activity: 2026-06-04 -- Phase 05 Plan 03 print cleanup + telemetry disable complete
+last_activity: 2026-06-04 -- Phase 04 Plan 03 R2/SMTP/origin contract finalized on pmp.bright-byte.co subdomains
 progress:
   total_phases: 5
   completed_phases: 3
   total_plans: 17
-  completed_plans: 13
-  percent: 76
+  completed_plans: 14
+  percent: 82
 ---
 
 # Project State
@@ -21,22 +21,22 @@ progress:
 See: .planning/PROJECT.md (updated 2026-06-01)
 
 **Core value:** Our clients get a fully branded, fully unlocked project-management tool with no payment or licensing friction — every capability available, hosted and operated by us.
-**Current focus:** Phase 05 — security hardening + AGPL gate (05-01/02/03 done; 05-04 next). Phase 04 Wave 2/3 (04-03 R2/SMTP, 04-04 deploy UAT) remain open and were skipped ahead of Phase 05.
+**Current focus:** Closing Phase 04. 04-03 (R2/SMTP/origin contract) done on pmp.bright-byte.co subdomains; only 04-04 (live deploy + onboarding UAT) remains, blocked on external DNS/Render-dashboard/R2/SMTP provisioning. Phase 05 at 3/5 (05-04 AGPL §13 next, awaiting the public Bright-Byte source repo URL).
 
 ## Current Position
 
-Phase: 05
-Plan: 05-04 next (3/5 executed). Out-of-order: Phase 04 04-03/04-04 still pending.
+Phase: 04 (closing) → 05
+Plan: 04-04 next but externally blocked (live deploy/UAT). Code-side, 05-04 is the next executable plan once the source-repo URL is provided.
 Status: Executing
 Last activity: 2026-06-04
 
-Progress: [███████▌░░] 76%
+Progress: [████████▏░] 82%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 13
+- Total plans completed: 14
 - Average duration: — min
 - Total execution time: 0.0 hours
 
@@ -47,7 +47,7 @@ Progress: [███████▌░░] 76%
 | 2     | 1     | -     | -        |
 | 03    | 1     | -     | -        |
 | 01    | 6     | -     | -        |
-| 04    | 2     | -     | -        |
+| 04    | 3     | -     | -        |
 | 05    | 3     | -     | -        |
 
 **Recent Trend:**
