@@ -41,7 +41,7 @@ services:
       - key: SECRET_KEY
         generateValue: true
       - key: ALLOWED_HOSTS
-        value: bright-byte-api.onrender.com
+        value: api.pmp.bright-byte.co,bright-byte-api.onrender.com
       - key: LIVE_SERVER_SECRET_KEY
         generateValue: true
       - key: GUNICORN_WORKERS
@@ -73,33 +73,33 @@ services:
       - key: EMAIL_USE_SSL
         value: "0"
       - key: EMAIL_FROM
-        value: "Bright-Byte PMP <noreply@bright-byte.example>"
+        value: "Bright-Byte PMP <noreply@pmp.bright-byte.co>"
       - key: WEB_URL
-        value: https://bright-byte-api.onrender.com
+        value: https://api.pmp.bright-byte.co
       - key: APP_BASE_URL
-        value: https://bright-byte-web.onrender.com
+        value: https://pmp.bright-byte.co
       - key: APP_BASE_PATH
         value: /
       - key: ADMIN_BASE_URL
-        value: https://bright-byte-admin.onrender.com
+        value: https://admin.pmp.bright-byte.co
       - key: ADMIN_BASE_PATH
         value: /god-mode
       - key: SPACE_BASE_URL
-        value: https://bright-byte-space.onrender.com
+        value: https://spaces.pmp.bright-byte.co
       - key: SPACE_BASE_PATH
         value: /spaces
       - key: LIVE_BASE_URL
-        value: https://bright-byte-live.onrender.com
+        value: https://live.pmp.bright-byte.co
       - key: LIVE_BASE_PATH
         value: /live
       - key: CORS_ALLOWED_ORIGINS
-        value: https://bright-byte-web.onrender.com,https://bright-byte-admin.onrender.com,https://bright-byte-space.onrender.com
+        value: https://pmp.bright-byte.co,https://admin.pmp.bright-byte.co,https://spaces.pmp.bright-byte.co
       - key: OTLP_ENDPOINT
         value: ""
       - key: SOURCE_AVAILABILITY_URL
         value: https://github.com/makeplane/plane
       - key: COOKIE_DOMAIN
-        sync: false
+        value: .pmp.bright-byte.co
 
   - type: worker
     runtime: docker
@@ -161,7 +161,7 @@ services:
       - key: EMAIL_USE_SSL
         value: "0"
       - key: EMAIL_FROM
-        value: "Bright-Byte PMP <noreply@bright-byte.example>"
+        value: "Bright-Byte PMP <noreply@pmp.bright-byte.co>"
 
   - type: worker
     runtime: docker
@@ -224,7 +224,7 @@ services:
       - key: EMAIL_USE_SSL
         value: "0"
       - key: EMAIL_FROM
-        value: "Bright-Byte PMP <noreply@bright-byte.example>"
+        value: "Bright-Byte PMP <noreply@pmp.bright-byte.co>"
 
   - type: web
     runtime: docker
@@ -236,15 +236,15 @@ services:
     healthCheckPath: /live/health
     envVars:
       - key: API_BASE_URL
-        value: https://bright-byte-api.onrender.com
+        value: https://api.pmp.bright-byte.co
       - key: WEB_BASE_URL
-        value: https://bright-byte-web.onrender.com
+        value: https://pmp.bright-byte.co
       - key: LIVE_BASE_URL
-        value: https://bright-byte-live.onrender.com
+        value: https://live.pmp.bright-byte.co
       - key: LIVE_BASE_PATH
         value: /live
       - key: CORS_ALLOWED_ORIGINS
-        value: https://bright-byte-web.onrender.com,https://bright-byte-admin.onrender.com,https://bright-byte-space.onrender.com
+        value: https://pmp.bright-byte.co,https://admin.pmp.bright-byte.co,https://spaces.pmp.bright-byte.co
       - key: REDIS_URL
         fromService:
           type: keyvalue
@@ -266,23 +266,23 @@ services:
     healthCheckPath: /spaces/
     envVars:
       - key: VITE_API_BASE_URL
-        value: https://bright-byte-api.onrender.com
+        value: https://api.pmp.bright-byte.co
       - key: VITE_API_BASE_PATH
         value: /api
       - key: VITE_WEB_BASE_URL
-        value: https://bright-byte-web.onrender.com
+        value: https://pmp.bright-byte.co
       - key: VITE_WEB_BASE_PATH
         value: /
       - key: VITE_ADMIN_BASE_URL
-        value: https://bright-byte-admin.onrender.com
+        value: https://admin.pmp.bright-byte.co
       - key: VITE_ADMIN_BASE_PATH
         value: /god-mode
       - key: VITE_SPACE_BASE_URL
-        value: https://bright-byte-space.onrender.com
+        value: https://spaces.pmp.bright-byte.co
       - key: VITE_SPACE_BASE_PATH
         value: /spaces
       - key: VITE_LIVE_BASE_URL
-        value: https://bright-byte-live.onrender.com
+        value: https://live.pmp.bright-byte.co
       - key: VITE_LIVE_BASE_PATH
         value: /live
 
@@ -297,23 +297,23 @@ services:
         destination: /index.html
     envVars:
       - key: VITE_API_BASE_URL
-        value: https://bright-byte-api.onrender.com
+        value: https://api.pmp.bright-byte.co
       - key: VITE_API_BASE_PATH
         value: /api
       - key: VITE_WEB_BASE_URL
-        value: https://bright-byte-web.onrender.com
+        value: https://pmp.bright-byte.co
       - key: VITE_WEB_BASE_PATH
         value: /
       - key: VITE_ADMIN_BASE_URL
-        value: https://bright-byte-admin.onrender.com
+        value: https://admin.pmp.bright-byte.co
       - key: VITE_ADMIN_BASE_PATH
         value: /god-mode
       - key: VITE_SPACE_BASE_URL
-        value: https://bright-byte-space.onrender.com
+        value: https://spaces.pmp.bright-byte.co
       - key: VITE_SPACE_BASE_PATH
         value: /spaces
       - key: VITE_LIVE_BASE_URL
-        value: https://bright-byte-live.onrender.com
+        value: https://live.pmp.bright-byte.co
       - key: VITE_LIVE_BASE_PATH
         value: /live
 
@@ -331,22 +331,22 @@ services:
         destination: /god-mode/index.html
     envVars:
       - key: VITE_API_BASE_URL
-        value: https://bright-byte-api.onrender.com
+        value: https://api.pmp.bright-byte.co
       - key: VITE_API_BASE_PATH
         value: /api
       - key: VITE_WEB_BASE_URL
-        value: https://bright-byte-web.onrender.com
+        value: https://pmp.bright-byte.co
       - key: VITE_WEB_BASE_PATH
         value: /
       - key: VITE_ADMIN_BASE_URL
-        value: https://bright-byte-admin.onrender.com
+        value: https://admin.pmp.bright-byte.co
       - key: VITE_ADMIN_BASE_PATH
         value: /god-mode
       - key: VITE_SPACE_BASE_URL
-        value: https://bright-byte-space.onrender.com
+        value: https://spaces.pmp.bright-byte.co
       - key: VITE_SPACE_BASE_PATH
         value: /spaces
       - key: VITE_LIVE_BASE_URL
-        value: https://bright-byte-live.onrender.com
+        value: https://live.pmp.bright-byte.co
       - key: VITE_LIVE_BASE_PATH
         value: /live
