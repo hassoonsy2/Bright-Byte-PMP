@@ -4,6 +4,7 @@
  * See the LICENSE file for details.
  */
 
+import { Timer } from "lucide-react";
 import { observer } from "mobx-react";
 // i18n
 import { useTranslation } from "@bright-byte/i18n";
@@ -21,7 +22,13 @@ import {
   EstimatePropertyIcon,
   ParentPropertyIcon,
 } from "@bright-byte/propel/icons";
-import { cn, getDate, renderFormattedPayloadDate, shouldHighlightIssueDueDate } from "@bright-byte/utils";
+import {
+  cn,
+  convertMinutesToHoursMinutesString,
+  getDate,
+  renderFormattedPayloadDate,
+  shouldHighlightIssueDueDate,
+} from "@bright-byte/utils";
 // components
 import { DateDropdown } from "@/components/dropdowns/date";
 import { EstimateDropdown } from "@/components/dropdowns/estimate";
@@ -185,6 +192,37 @@ export const IssueDetailsSidebar = observer(function IssueDetailsSidebar(props: 
                   clearIconClassName="h-3 w-3 hidden group-hover:inline text-primary"
                 />
                 {issue.target_date && <DateAlert date={issue.target_date} workItem={issue} projectId={projectId} />}
+              </div>
+            </SidebarPropertyListItem>
+
+            <SidebarPropertyListItem icon={Timer} label={t("common.duration")}>
+              <div className="flex w-full items-center gap-2">
+                <input
+                  key={`duration-${issue.duration ?? ""}`}
+                  type="number"
+                  min={0}
+                  step={1}
+                  defaultValue={issue.duration ?? ""}
+                  placeholder="e.g. 90"
+                  disabled={!isEditable}
+                  className="focus:bg-component-surface-2 h-7.5 w-full grow rounded border-none bg-transparent px-2 text-body-xs-regular outline-none placeholder:text-placeholder disabled:cursor-not-allowed"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") e.currentTarget.blur();
+                  }}
+                  onBlur={(e) => {
+                    const raw = e.target.value.trim();
+                    const parsed = raw === "" ? null : Math.max(0, Math.round(Number(raw)));
+                    const nextValue = parsed === null || Number.isNaN(parsed) ? null : parsed;
+                    if (nextValue !== (issue.duration ?? null)) {
+                      void issueOperations.update(workspaceSlug, projectId, issueId, { duration: nextValue });
+                    }
+                  }}
+                />
+                {issue.duration != null && issue.duration > 0 && (
+                  <span className="shrink-0 text-body-xs-regular text-tertiary">
+                    {convertMinutesToHoursMinutesString(issue.duration)}
+                  </span>
+                )}
               </div>
             </SidebarPropertyListItem>
 

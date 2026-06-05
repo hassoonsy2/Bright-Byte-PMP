@@ -5,12 +5,12 @@
  */
 
 import type { AxiosRequestConfig } from "axios";
-import axios, { CancelToken, isCancel } from "axios";
+import axios, { isCancel } from "axios";
 // services
 import { APIService } from "@/services/api.service";
 
 export class FileUploadService extends APIService {
-  private cancelSource: any;
+  private abortController: AbortController | null = null;
 
   constructor() {
     super("");
@@ -23,13 +23,13 @@ export class FileUploadService extends APIService {
   ): Promise<void> {
     // R2 does not support S3 POST Object, so uploads use a presigned PUT of the
     // raw file (works on R2, AWS S3, and MinIO).
-    this.cancelSource = CancelToken.source();
+    this.abortController = new AbortController();
     return axios
       .put(url, data, {
         headers: {
           "Content-Type": data.type || "application/octet-stream",
         },
-        cancelToken: this.cancelSource.token,
+        signal: this.abortController.signal,
         withCredentials: false,
         onUploadProgress: uploadProgressHandler,
       })
@@ -44,6 +44,6 @@ export class FileUploadService extends APIService {
   }
 
   cancelUpload() {
-    this.cancelSource.cancel("Upload canceled");
+    this.abortController?.abort();
   }
 }
