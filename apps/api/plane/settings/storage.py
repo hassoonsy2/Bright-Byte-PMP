@@ -63,40 +63,40 @@ class S3Storage(S3Boto3Storage):
             )
 
     def generate_presigned_post(self, object_name, file_type, file_size, expiration=None):
-        """Generate a presigned URL to upload an S3 object"""
+        """Generate a presigned upload target for an S3 object.
+
+        Returns a presigned PUT (put_object) rather than an S3 POST Object form
+        upload. Cloudflare R2 does NOT implement the POST Object operation and
+        responds 501 Not Implemented, which surfaces in the browser as a CORS
+        failure; presigned PUT is supported by R2, AWS S3, and MinIO alike.
+
+        Content-Type is intentionally left out of the signed params so the browser
+        may send it as an (unsigned) header without risking a SignatureDoesNotMatch
+        — R2/S3 still persist it on the stored object. ``file_size`` is no longer
+        enforced at the storage layer via a POST content-length-range condition;
+        the views validate the declared size before issuing the URL.
+        """
         if expiration is None:
             expiration = self.signed_url_expiration
-        fields = {"Content-Type": file_type}
 
-        conditions = [
-            {"bucket": self.aws_storage_bucket_name},
-            ["content-length-range", 1, file_size],
-            {"Content-Type": file_type},
-        ]
-
-        # Add condition for the object name (key)
-        if object_name.startswith("${filename}"):
-            conditions.append(["starts-with", "$key", object_name[: -len("${filename}")]])
-        else:
-            fields["key"] = object_name
-            conditions.append({"key": object_name})
-
-        # Generate the presigned POST URL
         try:
-            # Generate a presigned URL for the S3 object
-            response = self.s3_client.generate_presigned_post(
-                Bucket=self.aws_storage_bucket_name,
-                Key=object_name,
-                Fields=fields,
-                Conditions=conditions,
+            url = self.s3_client.generate_presigned_url(
+                "put_object",
+                Params={
+                    "Bucket": self.aws_storage_bucket_name,
+                    "Key": object_name,
+                },
                 ExpiresIn=expiration,
+                HttpMethod="PUT",
             )
-        # Handle errors
         except ClientError as e:
             log_exception(e)
             return None
 
-        return response
+        # Shape kept backwards-compatible with the previous POST response
+        # (consumers read ``upload_data.url``). ``fields`` is retained (empty) for
+        # the TFileSignedURLResponse contract; the browser now PUTs the raw file.
+        return {"url": url, "method": "PUT", "fields": {}}
 
     def _get_content_disposition(self, disposition, filename=None):
         """Helper method to generate Content-Disposition header value"""

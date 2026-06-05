@@ -4,7 +4,7 @@
  * See the LICENSE file for details.
  */
 
-import axios from "axios";
+import axios, { CancelToken, isCancel } from "axios";
 // api service
 import { APIService } from "../api.service";
 
@@ -21,24 +21,27 @@ export class FileUploadService extends APIService {
   }
 
   /**
-   * Uploads a file to the specified signed URL
-   * @param {string} url - The URL to upload the file to
-   * @param {FormData} data - The form data to upload
+   * Uploads a file to the specified presigned URL via PUT.
+   * R2 does not support S3 POST Object, so uploads use a presigned PUT of the
+   * raw file (works on R2, AWS S3, and MinIO).
+   * @param {string} url - The presigned PUT URL to upload the file to
+   * @param {File} data - The file to upload
    * @returns {Promise<void>} Promise resolving to void
    * @throws {Error} If the request fails
    */
-  async uploadFile(url: string, data: FormData): Promise<void> {
-    this.cancelSource = axios.CancelToken.source();
-    return this.post(url, data, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-      cancelToken: this.cancelSource.token,
-      withCredentials: false,
-    })
+  async uploadFile(url: string, data: File): Promise<void> {
+    this.cancelSource = CancelToken.source();
+    return axios
+      .put(url, data, {
+        headers: {
+          "Content-Type": data.type || "application/octet-stream",
+        },
+        cancelToken: this.cancelSource.token,
+        withCredentials: false,
+      })
       .then((response) => response?.data)
       .catch((error) => {
-        if (axios.isCancel(error)) {
+        if (isCancel(error)) {
           console.log(error.message);
         } else {
           throw error?.response?.data;

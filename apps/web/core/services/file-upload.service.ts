@@ -5,7 +5,7 @@
  */
 
 import type { AxiosRequestConfig } from "axios";
-import axios from "axios";
+import axios, { CancelToken, isCancel } from "axios";
 // services
 import { APIService } from "@/services/api.service";
 
@@ -18,21 +18,24 @@ export class FileUploadService extends APIService {
 
   async uploadFile(
     url: string,
-    data: FormData,
+    data: File,
     uploadProgressHandler?: AxiosRequestConfig["onUploadProgress"]
   ): Promise<void> {
-    this.cancelSource = axios.CancelToken.source();
-    return this.post(url, data, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-      cancelToken: this.cancelSource.token,
-      withCredentials: false,
-      onUploadProgress: uploadProgressHandler,
-    })
+    // R2 does not support S3 POST Object, so uploads use a presigned PUT of the
+    // raw file (works on R2, AWS S3, and MinIO).
+    this.cancelSource = CancelToken.source();
+    return axios
+      .put(url, data, {
+        headers: {
+          "Content-Type": data.type || "application/octet-stream",
+        },
+        cancelToken: this.cancelSource.token,
+        withCredentials: false,
+        onUploadProgress: uploadProgressHandler,
+      })
       .then((response) => response?.data)
       .catch((error) => {
-        if (axios.isCancel(error)) {
+        if (isCancel(error)) {
           console.log(error.message);
         } else {
           throw error?.response?.data;

@@ -50,17 +50,14 @@ const validateFilename = (filename: string): string | null => {
 };
 
 /**
- * @description from the provided signed URL response, generate a payload to be used to upload the file
- * @param {TFileSignedURLResponse} signedURLResponse
+ * @description Build the upload body for the presigned upload target.
+ * Uploads use a presigned PUT (R2 does not support S3 POST Object), so the body
+ * is the raw file — PUT to `upload_data.url` with the file's Content-Type.
+ * @param {TFileSignedURLResponse} _signedURLResponse (unused; PUT carries no form fields)
  * @param {File} file
- * @returns {FormData} file upload request payload
+ * @returns {File} the file to PUT
  */
-export const generateFileUploadPayload = (signedURLResponse: TFileSignedURLResponse, file: File): FormData => {
-  const formData = new FormData();
-  Object.entries(signedURLResponse.upload_data.fields).forEach(([key, value]) => formData.append(key, value));
-  formData.append("file", file);
-  return formData;
-};
+export const generateFileUploadPayload = (_signedURLResponse: TFileSignedURLResponse, file: File): File => file;
 
 /**
  * @description Detect MIME type from file signature using file-type library
