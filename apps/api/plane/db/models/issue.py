@@ -147,6 +147,7 @@ class Issue(ChangeTrackerMixin, ProjectBaseModel):
     start_date = models.DateField(null=True, blank=True)
     target_date = models.DateField(null=True, blank=True)
     duration = models.PositiveIntegerField(blank=True, null=True)
+    estimate_time = models.PositiveIntegerField(blank=True, null=True)
     assignees = models.ManyToManyField(
         settings.AUTH_USER_MODEL,
         blank=True,

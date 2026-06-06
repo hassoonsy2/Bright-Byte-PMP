@@ -308,6 +308,7 @@
   "target_date": "Target date",
   "estimate": "Estimate",
   "duration": "Duration",
+  "estimate_time": "Estimate Time",
   "change_parent_issue": "Change parent work item",
   "remove_parent_issue": "Remove parent work item",
   "add_parent": "Add parent",

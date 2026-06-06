@@ -4,7 +4,7 @@
  * See the LICENSE file for details.
  */
 
-import { Timer } from "lucide-react";
+import { Hourglass, Timer } from "lucide-react";
 import { observer } from "mobx-react";
 // i18n
 import { useTranslation } from "@bright-byte/i18n";
@@ -221,6 +221,37 @@ export const IssueDetailsSidebar = observer(function IssueDetailsSidebar(props: 
                 {issue.duration != null && issue.duration > 0 && (
                   <span className="shrink-0 text-body-xs-regular text-tertiary">
                     {convertMinutesToHoursMinutesString(issue.duration)}
+                  </span>
+                )}
+              </div>
+            </SidebarPropertyListItem>
+
+            <SidebarPropertyListItem icon={Hourglass} label={t("common.estimate_time")}>
+              <div className="flex w-full items-center gap-2">
+                <input
+                  key={`estimate-time-${issue.estimate_time ?? ""}`}
+                  type="number"
+                  min={0}
+                  step={1}
+                  defaultValue={issue.estimate_time ?? ""}
+                  placeholder="e.g. 120"
+                  disabled={!isEditable}
+                  className="focus:bg-component-surface-2 h-7.5 w-full grow rounded border-none bg-transparent px-2 text-body-xs-regular outline-none placeholder:text-placeholder disabled:cursor-not-allowed"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") e.currentTarget.blur();
+                  }}
+                  onBlur={(e) => {
+                    const raw = e.target.value.trim();
+                    const parsed = raw === "" ? null : Math.max(0, Math.round(Number(raw)));
+                    const nextValue = parsed === null || Number.isNaN(parsed) ? null : parsed;
+                    if (nextValue !== (issue.estimate_time ?? null)) {
+                      void issueOperations.update(workspaceSlug, projectId, issueId, { estimate_time: nextValue });
+                    }
+                  }}
+                />
+                {issue.estimate_time != null && issue.estimate_time > 0 && (
+                  <span className="shrink-0 text-body-xs-regular text-tertiary">
+                    {convertMinutesToHoursMinutesString(issue.estimate_time)}
                   </span>
                 )}
               </div>
