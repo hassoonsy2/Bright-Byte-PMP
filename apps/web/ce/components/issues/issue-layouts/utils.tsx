@@ -5,7 +5,7 @@
  */
 
 import type { FC } from "react";
-import { CalendarDays, LayersIcon, Paperclip } from "lucide-react";
+import { CalendarDays, Hourglass, LayersIcon, Paperclip, Timer } from "lucide-react";
 // types
 import { ISSUE_GROUP_BY_OPTIONS } from "@bright-byte/constants";
 import type { ISvgIcons } from "@bright-byte/propel/icons";
@@ -34,7 +34,9 @@ import {
   SpreadsheetAttachmentColumn,
   SpreadsheetCreatedOnColumn,
   SpreadsheetDueDateColumn,
+  SpreadsheetDurationColumn,
   SpreadsheetEstimateColumn,
+  SpreadsheetEstimateTimeColumn,
   SpreadsheetLabelColumn,
   SpreadsheetModuleColumn,
   SpreadsheetCycleColumn,
@@ -92,13 +94,17 @@ export const SpreadSheetPropertyIconMap: Record<string, FC<ISvgIcons>> = {
   Link2: LinkIcon,
   Paperclip: Paperclip,
   LayersIcon: LayersIcon,
+  Timer: Timer,
+  Hourglass: Hourglass,
 };
 
 export const SPREADSHEET_COLUMNS: { [key in keyof IIssueDisplayProperties]: TSpreadsheetColumn } = {
   assignee: SpreadsheetAssigneeColumn,
   created_on: SpreadsheetCreatedOnColumn,
   due_date: SpreadsheetDueDateColumn,
+  duration: SpreadsheetDurationColumn,
   estimate: SpreadsheetEstimateColumn,
+  estimate_time: SpreadsheetEstimateTimeColumn,
   labels: SpreadsheetLabelColumn,
   modules: SpreadsheetModuleColumn,
   cycle: SpreadsheetCycleColumn,

@@ -304,6 +304,8 @@ export const getComputedDisplayProperties = (
   attachment_count: displayProperties?.attachment_count ?? true,
   link: displayProperties?.link ?? true,
   estimate: displayProperties?.estimate ?? true,
+  duration: displayProperties?.duration ?? true,
+  estimate_time: displayProperties?.estimate_time ?? true,
   key: displayProperties?.key ?? true,
   created_on: displayProperties?.created_on ?? true,
   updated_on: displayProperties?.updated_on ?? true,

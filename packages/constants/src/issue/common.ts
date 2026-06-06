@@ -24,20 +24,23 @@ export type TIssueFilterPriorityObject = {
   icon: string;
 };
 
-export enum EIssueGroupByToServerOptions {
-  "state" = "state_id",
-  "priority" = "priority",
-  "labels" = "labels__id",
-  "state_detail.group" = "state__group",
-  "assignees" = "assignees__id",
-  "cycle" = "cycle_id",
-  "module" = "issue_module__module_id",
-  "target_date" = "target_date",
-  "project" = "project_id",
-  "created_by" = "created_by",
-  // eslint-disable-next-line @typescript-eslint/no-duplicate-enum-values
-  "team_project" = "project_id",
-}
+// Const object instead of an enum: `project` and `team_project` intentionally
+// share the value "project_id", which a string enum disallows (no-duplicate-enum-values).
+export const EIssueGroupByToServerOptions = {
+  state: "state_id",
+  priority: "priority",
+  labels: "labels__id",
+  "state_detail.group": "state__group",
+  assignees: "assignees__id",
+  cycle: "cycle_id",
+  module: "issue_module__module_id",
+  target_date: "target_date",
+  project: "project_id",
+  created_by: "created_by",
+  team_project: "project_id",
+} as const;
+export type EIssueGroupByToServerOptions =
+  (typeof EIssueGroupByToServerOptions)[keyof typeof EIssueGroupByToServerOptions];
 
 export enum EIssueGroupBYServerToProperty {
   "state_id" = "state_id",
@@ -151,6 +154,8 @@ export const ISSUE_DISPLAY_PROPERTIES_KEYS: (keyof IIssueDisplayProperties)[] = 
   "link",
   "attachment_count",
   "estimate",
+  "duration",
+  "estimate_time",
   "created_on",
   "updated_on",
   "modules",
@@ -206,6 +211,8 @@ export const ISSUE_DISPLAY_PROPERTIES: {
     key: "estimate",
     titleTranslationKey: "common.estimate",
   },
+  { key: "duration", titleTranslationKey: "common.duration" },
+  { key: "estimate_time", titleTranslationKey: "common.estimate_time" },
   { key: "modules", titleTranslationKey: "common.module" },
   { key: "cycle", titleTranslationKey: "common.cycle" },
 ];
@@ -220,6 +227,8 @@ export const SPREADSHEET_PROPERTY_LIST: (keyof IIssueDisplayProperties)[] = [
   "start_date",
   "due_date",
   "estimate",
+  "duration",
+  "estimate_time",
   "created_on",
   "updated_on",
   "link",
@@ -230,10 +239,11 @@ export const SPREADSHEET_PROPERTY_LIST: (keyof IIssueDisplayProperties)[] = [
 export const SPREADSHEET_PROPERTY_DETAILS: {
   [key in keyof IIssueDisplayProperties]: {
     i18n_title: string;
-    ascendingOrderKey: TIssueOrderByOptions;
-    ascendingOrderTitle: string;
-    descendingOrderKey: TIssueOrderByOptions;
-    descendingOrderTitle: string;
+    // Order keys are omitted for non-sortable columns (e.g. duration, estimate_time)
+    ascendingOrderKey?: TIssueOrderByOptions;
+    ascendingOrderTitle?: string;
+    descendingOrderKey?: TIssueOrderByOptions;
+    descendingOrderTitle?: string;
     icon: string;
   };
 } = {
@@ -268,6 +278,14 @@ export const SPREADSHEET_PROPERTY_DETAILS: {
     descendingOrderKey: "-estimate_point__key",
     descendingOrderTitle: "High",
     icon: "EstimatePropertyIcon",
+  },
+  duration: {
+    i18n_title: "common.duration",
+    icon: "Timer",
+  },
+  estimate_time: {
+    i18n_title: "common.estimate_time",
+    icon: "Hourglass",
   },
   labels: {
     i18n_title: "common.labels",
