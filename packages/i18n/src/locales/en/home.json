@@ -52,6 +52,10 @@
         "issues": "Work items"
       }
     },
+    "duration_per_project": {
+      "title": "Duration per project",
+      "empty": "Track time on work items to see total duration per project here."
+    },
     "new_at_plane": {
       "title": "New at Bright-Byte PMP"
     },

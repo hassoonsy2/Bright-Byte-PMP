@@ -22,7 +22,7 @@ import { useProject } from "@/hooks/store/use-project";
 import { HomePageHeader } from "@/plane-web/components/home/header";
 // local imports
 import { StickiesWidget } from "../stickies/widget";
-import { HomeLoader, NoProjectsEmptyState, RecentActivityWidget } from "./widgets";
+import { DurationPerProjectWidget, HomeLoader, NoProjectsEmptyState, RecentActivityWidget } from "./widgets";
 import { DashboardQuickLinks } from "./widgets/links";
 import { ManageWidgetsModal } from "./widgets/manage";
 
@@ -47,6 +47,11 @@ export const HOME_WIDGETS_LIST: {
     component: StickiesWidget,
     fullWidth: false,
     title: "stickies.title",
+  },
+  duration_per_project: {
+    component: DurationPerProjectWidget,
+    fullWidth: false,
+    title: "home.duration_per_project.title",
   },
   new_at_plane: {
     component: null,

@@ -382,6 +382,7 @@ class WorkspaceHomePreference(BaseModel):
         QUICK_LINKS = "quick_links", "Quick Links"
         RECENTS = "recents", "Recents"
         MY_STICKIES = "my_stickies", "My Stickies"
+        DURATION_PER_PROJECT = "duration_per_project", "Duration Per Project"
         NEW_AT_PLANE = "new_at_plane", "New at Plane"
         QUICK_TUTORIAL = "quick_tutorial", "Quick Tutorial"
 

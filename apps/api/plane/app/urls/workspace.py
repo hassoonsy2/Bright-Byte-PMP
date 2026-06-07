@@ -34,6 +34,7 @@ from plane.app.views import (
     QuickLinkViewSet,
     UserRecentVisitViewSet,
     WorkspaceHomePreferenceViewSet,
+    WorkspaceDurationPerProjectEndpoint,
     WorkspaceStickyViewSet,
     WorkspaceUserPreferenceViewSet,
 )
@@ -240,6 +241,11 @@ urlpatterns = [
         "workspaces/<str:slug>/recent-visits/",
         UserRecentVisitViewSet.as_view({"get": "list"}),
         name="workspace-recent-visits",
+    ),
+    path(
+        "workspaces/<str:slug>/duration-per-project/",
+        WorkspaceDurationPerProjectEndpoint.as_view(),
+        name="workspace-duration-per-project",
     ),
     path(
         "workspaces/<str:slug>/stickies/",

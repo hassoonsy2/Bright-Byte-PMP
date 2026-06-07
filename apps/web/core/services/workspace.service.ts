@@ -23,6 +23,7 @@ import type {
   TSearchEntityRequestPayload,
   TWidgetEntityData,
   TActivityEntityData,
+  TDurationPerProjectData,
   IWorkspaceSidebarNavigationItem,
   IWorkspaceSidebarNavigation,
   IWorkspaceUserPropertiesResponse,
@@ -347,6 +348,15 @@ export class WorkspaceService extends APIService {
         entity_name,
       },
     })
+      .then((response) => response?.data)
+      .catch((error) => {
+        throw error?.response;
+      });
+  }
+
+  // duration per project (home widget)
+  async fetchWorkspaceDurationPerProject(workspaceSlug: string): Promise<TDurationPerProjectData[]> {
+    return this.get(`/api/workspaces/${workspaceSlug}/duration-per-project/`)
       .then((response) => response?.data)
       .catch((error) => {
         throw error?.response;

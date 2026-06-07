@@ -6,10 +6,11 @@
 from ..base import BaseAPIView
 from plane.db.models.workspace import WorkspaceHomePreference
 from plane.app.permissions import allow_permission, ROLE
-from plane.db.models import Workspace
+from plane.db.models import Workspace, Issue, Project
 from plane.app.serializers.workspace import WorkspaceHomePreferenceSerializer
 
 # Third party imports
+from django.db.models import Sum
 from rest_framework.response import Response
 from rest_framework import status
 
@@ -77,3 +78,37 @@ class WorkspaceHomePreferenceViewSet(BaseAPIView):
             return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
         return Response({"detail": "Preference not found"}, status=status.HTTP_400_BAD_REQUEST)
+
+
+class WorkspaceDurationPerProjectEndpoint(BaseAPIView):
+    """Aggregate the total work-item duration (in seconds) per project for the home widget."""
+
+    @allow_permission([ROLE.ADMIN, ROLE.MEMBER, ROLE.GUEST], level="WORKSPACE")
+    def get(self, request, slug):
+        # Restrict to projects the requesting user is an active member of
+        project_ids = Project.objects.filter(
+            workspace__slug=slug,
+            project_projectmember__member=request.user,
+            project_projectmember__is_active=True,
+            archived_at__isnull=True,
+        ).values_list("id", flat=True)
+
+        project_aggregations = (
+            Issue.issue_objects.filter(workspace__slug=slug, project_id__in=project_ids)
+            .values("project_id", "project__name", "project__identifier")
+            .annotate(total_duration=Sum("duration"))
+            .filter(total_duration__gt=0)
+            .order_by("-total_duration")
+        )
+
+        data = [
+            {
+                "project_id": str(item["project_id"]),
+                "project_name": item["project__name"],
+                "project_identifier": item["project__identifier"],
+                "total_duration": item["total_duration"],
+            }
+            for item in project_aggregations
+        ]
+
+        return Response(data, status=status.HTTP_200_OK)
