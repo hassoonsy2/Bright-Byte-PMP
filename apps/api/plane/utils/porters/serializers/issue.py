@@ -17,10 +17,10 @@ class IssueExportSerializer(IssueSerializer):
     """
 
     identifier = serializers.SerializerMethodField()
-    project_name = serializers.CharField(source='project.name', read_only=True, default="")
-    project_identifier = serializers.CharField(source='project.identifier', read_only=True, default="")
-    state_name = serializers.CharField(source='state.name', read_only=True, default="")
-    created_by_name = serializers.CharField(source='created_by.full_name', read_only=True, default="")
+    project_name = serializers.CharField(source="project.name", read_only=True, default="")
+    project_identifier = serializers.CharField(source="project.identifier", read_only=True, default="")
+    state_name = serializers.CharField(source="state.name", read_only=True, default="")
+    created_by_name = serializers.CharField(source="created_by.full_name", read_only=True, default="")
 
     assignees = serializers.SerializerMethodField()
     parent = serializers.SerializerMethodField()
@@ -32,6 +32,8 @@ class IssueExportSerializer(IssueSerializer):
     links = serializers.SerializerMethodField()
     relations = serializers.SerializerMethodField()
     subscribers = serializers.SerializerMethodField()
+    duration = serializers.SerializerMethodField()
+    estimate_time = serializers.SerializerMethodField()
 
     class Meta(IssueSerializer.Meta):
         fields = [
@@ -53,6 +55,8 @@ class IssueExportSerializer(IssueSerializer):
             "updated_at",
             "archived_at",
             "estimate",
+            "duration",
+            "estimate_time",
             "labels",
             "cycles",
             "modules",
@@ -68,6 +72,29 @@ class IssueExportSerializer(IssueSerializer):
     def get_identifier(self, obj):
         return f"{obj.project.identifier}-{obj.sequence_id}"
 
+    @staticmethod
+    def _format_seconds(total_seconds):
+        """Render integer seconds as a human-readable duration (e.g. "1h 30m")."""
+        if not total_seconds:
+            return ""
+        total_seconds = int(total_seconds)
+        hours, remainder = divmod(total_seconds, 3600)
+        minutes, seconds = divmod(remainder, 60)
+        parts = []
+        if hours:
+            parts.append(f"{hours}h")
+        if minutes:
+            parts.append(f"{minutes}m")
+        if seconds:
+            parts.append(f"{seconds}s")
+        return " ".join(parts) if parts else "0s"
+
+    def get_duration(self, obj):
+        return self._format_seconds(obj.duration)
+
+    def get_estimate_time(self, obj):
+        return self._format_seconds(obj.estimate_time)
+
     def get_assignees(self, obj):
         return [u.full_name for u in obj.assignees.all() if u.is_active]
 
@@ -81,11 +108,7 @@ class IssueExportSerializer(IssueSerializer):
         return f"{obj.parent.project.identifier}-{obj.parent.sequence_id}"
 
     def get_labels(self, obj):
-        return [
-            il.label.name
-            for il in obj.label_issue.all()
-            if il.deleted_at is None
-        ]
+        return [il.label.name for il in obj.label_issue.all() if il.deleted_at is None]
 
     def get_cycles(self, obj):
         return [ic.cycle.name for ic in obj.issue_cycle.all()]
@@ -96,7 +119,7 @@ class IssueExportSerializer(IssueSerializer):
     def get_estimate(self, obj):
         """Return estimate point value."""
         if obj.estimate_point:
-            return obj.estimate_point.value if hasattr(obj.estimate_point, 'value') else str(obj.estimate_point)
+            return obj.estimate_point.value if hasattr(obj.estimate_point, "value") else str(obj.estimate_point)
         return ""
 
     def get_links(self, obj):
@@ -116,20 +139,24 @@ class IssueExportSerializer(IssueSerializer):
         # Outgoing relations (this issue relates to others)
         for rel in obj.issue_relation.all():
             if rel.related_issue:
-                relations.append({
-                    "type": rel.relation_type if hasattr(rel, 'relation_type') else "related",
-                    "issue": f"{rel.related_issue.project.identifier}-{rel.related_issue.sequence_id}",
-                    "direction": "outgoing"
-                })
+                relations.append(
+                    {
+                        "type": rel.relation_type if hasattr(rel, "relation_type") else "related",
+                        "issue": f"{rel.related_issue.project.identifier}-{rel.related_issue.sequence_id}",
+                        "direction": "outgoing",
+                    }
+                )
 
         # Incoming relations (other issues relate to this one)
         for rel in obj.issue_related.all():
             if rel.issue:
-                relations.append({
-                    "type": rel.relation_type if hasattr(rel, 'relation_type') else "related",
-                    "issue": f"{rel.issue.project.identifier}-{rel.issue.sequence_id}",
-                    "direction": "incoming"
-                })
+                relations.append(
+                    {
+                        "type": rel.relation_type if hasattr(rel, "relation_type") else "related",
+                        "issue": f"{rel.issue.project.identifier}-{rel.issue.sequence_id}",
+                        "direction": "incoming",
+                    }
+                )
 
         return relations
 
@@ -137,7 +164,7 @@ class IssueExportSerializer(IssueSerializer):
         """Return list of comments with author and timestamp."""
         return [
             {
-                "comment": comment.comment_stripped if hasattr(comment, 'comment_stripped') else comment.comment_html,
+                "comment": comment.comment_stripped if hasattr(comment, "comment_stripped") else comment.comment_html,
                 "created_by": comment.actor.full_name if comment.actor else "",
                 "created_at": comment.created_at.strftime("%Y-%m-%d %H:%M:%S") if comment.created_at else "",
             }

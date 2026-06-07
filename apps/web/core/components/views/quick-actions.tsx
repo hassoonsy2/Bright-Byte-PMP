@@ -6,7 +6,7 @@
 
 import { useState } from "react";
 import { observer } from "mobx-react";
-import { MoreHorizontal } from "lucide-react";
+import { Download, MoreHorizontal } from "lucide-react";
 // types
 import { EUserPermissions, EUserPermissionsLevel } from "@bright-byte/constants";
 import { IconButton } from "@bright-byte/propel/icon-button";
@@ -20,7 +20,11 @@ import { copyUrlToClipboard, cn } from "@bright-byte/utils";
 import { useViewMenuItems } from "@/components/common/quick-actions-helper";
 // hooks
 import { useUser, useUserPermissions } from "@/hooks/store/user";
+// services
+import { ProjectExportService } from "@/services/project/project-export.service";
 import { PublishViewModal, useViewPublish } from "@/plane-web/components/views/publish";
+
+const projectExportService = new ProjectExportService();
 // local imports
 import { DeleteProjectViewModal } from "./delete-view-modal";
 import { CreateUpdateProjectViewModal } from "./modal";
@@ -38,12 +42,44 @@ export const ViewQuickActions = observer(function ViewQuickActions(props: Props)
   // states
   const [createUpdateViewModal, setCreateUpdateViewModal] = useState(false);
   const [deleteViewModal, setDeleteViewModal] = useState(false);
+  const [isExporting, setIsExporting] = useState(false);
   // store hooks
   const { data } = useUser();
   const { allowPermissions } = useUserPermissions();
   // auth
   const isOwner = view?.owned_by === data?.id;
   const isAdmin = allowPermissions([EUserPermissions.ADMIN], EUserPermissionsLevel.PROJECT, workspaceSlug, projectId);
+  // only workspace admins/members can trigger exports (mirrors the backend export permission)
+  const canExport = allowPermissions(
+    [EUserPermissions.ADMIN, EUserPermissions.MEMBER],
+    EUserPermissionsLevel.WORKSPACE
+  );
+
+  const handleExportToExcel = async () => {
+    if (isExporting) return;
+    setIsExporting(true);
+    try {
+      await projectExportService.csvExport(workspaceSlug, {
+        provider: "xlsx",
+        project: [projectId],
+        multiple: false,
+      });
+      setToast({
+        type: TOAST_TYPE.SUCCESS,
+        title: "Export started",
+        message:
+          "Your Excel export is being prepared. You can download it from Workspace Settings → Exports once it's ready.",
+      });
+    } catch (_error) {
+      setToast({
+        type: TOAST_TYPE.ERROR,
+        title: "Export failed",
+        message: "Could not start the export. Please try again.",
+      });
+    } finally {
+      setIsExporting(false);
+    }
+  };
 
   const { isPublishModalOpen, setPublishModalOpen, publishContextMenu } = useViewPublish(
     !!view.anchor,
@@ -51,14 +87,14 @@ export const ViewQuickActions = observer(function ViewQuickActions(props: Props)
   );
 
   const viewLink = `${workspaceSlug}/projects/${projectId}/views/${view.id}`;
-  const handleCopyText = () =>
-    copyUrlToClipboard(viewLink).then(() => {
-      setToast({
-        type: TOAST_TYPE.SUCCESS,
-        title: "Link Copied!",
-        message: "View link copied to clipboard.",
-      });
+  const handleCopyText = async () => {
+    await copyUrlToClipboard(viewLink);
+    setToast({
+      type: TOAST_TYPE.SUCCESS,
+      title: "Link Copied!",
+      message: "View link copied to clipboard.",
     });
+  };
   const handleOpenInNewTab = () => window.open(`/${viewLink}`, "_blank");
 
   const menuResult = useViewMenuItems({
@@ -78,6 +114,18 @@ export const ViewQuickActions = observer(function ViewQuickActions(props: Props)
   const additionalModals = Array.isArray(menuResult) ? null : menuResult.modals;
 
   if (publishContextMenu) MENU_ITEMS.splice(2, 0, publishContextMenu);
+
+  const exportMenuItem: TContextMenuItem = {
+    key: "export-to-excel",
+    title: isExporting ? "Exporting…" : "Export to Excel",
+    icon: Download,
+    action: () => {
+      void handleExportToExcel();
+    },
+    disabled: isExporting,
+    shouldRender: canExport,
+  };
+  MENU_ITEMS.push(exportMenuItem);
 
   const CONTEXT_MENU_ITEMS = MENU_ITEMS.map(function CONTEXT_MENU_ITEMS(item) {
     return {
