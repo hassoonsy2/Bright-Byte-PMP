@@ -24,8 +24,9 @@ import {
 } from "@bright-byte/propel/icons";
 import {
   cn,
-  convertMinutesToHoursMinutesString,
+  formatSecondsToDuration,
   getDate,
+  parseDurationToSeconds,
   renderFormattedPayloadDate,
   shouldHighlightIssueDueDate,
 } from "@bright-byte/utils";
@@ -197,65 +198,43 @@ export const PeekOverviewProperties = observer(function PeekOverviewProperties(p
         </SidebarPropertyListItem>
 
         <SidebarPropertyListItem icon={Timer} label={t("common.duration")}>
-          <div className="flex w-full items-center gap-2">
-            <input
-              key={`duration-${issue.duration ?? ""}`}
-              type="number"
-              min={0}
-              step={1}
-              defaultValue={issue.duration ?? ""}
-              placeholder="e.g. 90"
-              disabled={disabled}
-              className="focus:bg-component-surface-2 h-7.5 w-full grow rounded border-none bg-transparent px-2 text-body-xs-regular outline-none placeholder:text-placeholder disabled:cursor-not-allowed"
-              onKeyDown={(e) => {
-                if (e.key === "Enter") e.currentTarget.blur();
-              }}
-              onBlur={(e) => {
-                const raw = e.target.value.trim();
-                const parsed = raw === "" ? null : Math.max(0, Math.round(Number(raw)));
-                const nextValue = parsed === null || Number.isNaN(parsed) ? null : parsed;
-                if (nextValue !== (issue.duration ?? null)) {
-                  void issueOperations.update(workspaceSlug, projectId, issueId, { duration: nextValue });
-                }
-              }}
-            />
-            {issue.duration != null && issue.duration > 0 && (
-              <span className="shrink-0 text-body-xs-regular text-tertiary">
-                {convertMinutesToHoursMinutesString(issue.duration)}
-              </span>
-            )}
-          </div>
+          <input
+            key={`duration-${issue.duration ?? ""}`}
+            type="text"
+            defaultValue={formatSecondsToDuration(issue.duration)}
+            placeholder="e.g. 1h 30m"
+            disabled={disabled}
+            className="focus:bg-component-surface-2 h-7.5 w-full grow rounded border-none bg-transparent px-2 text-body-xs-regular outline-none placeholder:text-placeholder disabled:cursor-not-allowed"
+            onKeyDown={(e) => {
+              if (e.key === "Enter") e.currentTarget.blur();
+            }}
+            onBlur={(e) => {
+              const nextValue = parseDurationToSeconds(e.target.value);
+              if (nextValue !== (issue.duration ?? null)) {
+                void issueOperations.update(workspaceSlug, projectId, issueId, { duration: nextValue });
+              }
+            }}
+          />
         </SidebarPropertyListItem>
 
         <SidebarPropertyListItem icon={Hourglass} label={t("common.estimate_time")}>
-          <div className="flex w-full items-center gap-2">
-            <input
-              key={`estimate-time-${issue.estimate_time ?? ""}`}
-              type="number"
-              min={0}
-              step={1}
-              defaultValue={issue.estimate_time ?? ""}
-              placeholder="e.g. 120"
-              disabled={disabled}
-              className="focus:bg-component-surface-2 h-7.5 w-full grow rounded border-none bg-transparent px-2 text-body-xs-regular outline-none placeholder:text-placeholder disabled:cursor-not-allowed"
-              onKeyDown={(e) => {
-                if (e.key === "Enter") e.currentTarget.blur();
-              }}
-              onBlur={(e) => {
-                const raw = e.target.value.trim();
-                const parsed = raw === "" ? null : Math.max(0, Math.round(Number(raw)));
-                const nextValue = parsed === null || Number.isNaN(parsed) ? null : parsed;
-                if (nextValue !== (issue.estimate_time ?? null)) {
-                  void issueOperations.update(workspaceSlug, projectId, issueId, { estimate_time: nextValue });
-                }
-              }}
-            />
-            {issue.estimate_time != null && issue.estimate_time > 0 && (
-              <span className="shrink-0 text-body-xs-regular text-tertiary">
-                {convertMinutesToHoursMinutesString(issue.estimate_time)}
-              </span>
-            )}
-          </div>
+          <input
+            key={`estimate-time-${issue.estimate_time ?? ""}`}
+            type="text"
+            defaultValue={formatSecondsToDuration(issue.estimate_time)}
+            placeholder="e.g. 1h 30m"
+            disabled={disabled}
+            className="focus:bg-component-surface-2 h-7.5 w-full grow rounded border-none bg-transparent px-2 text-body-xs-regular outline-none placeholder:text-placeholder disabled:cursor-not-allowed"
+            onKeyDown={(e) => {
+              if (e.key === "Enter") e.currentTarget.blur();
+            }}
+            onBlur={(e) => {
+              const nextValue = parseDurationToSeconds(e.target.value);
+              if (nextValue !== (issue.estimate_time ?? null)) {
+                void issueOperations.update(workspaceSlug, projectId, issueId, { estimate_time: nextValue });
+              }
+            }}
+          />
         </SidebarPropertyListItem>
 
         {isEstimateEnabled && (

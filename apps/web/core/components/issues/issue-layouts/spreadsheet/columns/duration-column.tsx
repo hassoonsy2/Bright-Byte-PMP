@@ -7,6 +7,7 @@
 import { observer } from "mobx-react";
 // types
 import type { TIssue } from "@bright-byte/types";
+import { formatSecondsToDuration, parseDurationToSeconds } from "@bright-byte/utils";
 
 type Props = {
   issue: TIssue;
@@ -22,10 +23,8 @@ export const SpreadsheetDurationColumn = observer(function SpreadsheetDurationCo
     <div className="flex h-11 w-full items-center border-b-[0.5px] border-subtle">
       <input
         key={`duration-${issue.duration ?? ""}`}
-        type="number"
-        min={0}
-        step={1}
-        defaultValue={issue.duration ?? ""}
+        type="text"
+        defaultValue={formatSecondsToDuration(issue.duration)}
         placeholder="—"
         disabled={disabled}
         className="h-full w-full border-none bg-transparent px-page-x text-13 text-secondary outline-none group-[.selected-issue-row]:bg-accent-primary/5 placeholder:text-placeholder hover:bg-layer-1 group-[.selected-issue-row]:hover:bg-accent-primary/10 focus:bg-layer-1 disabled:cursor-not-allowed"
@@ -33,9 +32,7 @@ export const SpreadsheetDurationColumn = observer(function SpreadsheetDurationCo
           if (e.key === "Enter") e.currentTarget.blur();
         }}
         onBlur={(e) => {
-          const raw = e.target.value.trim();
-          const parsed = raw === "" ? null : Math.max(0, Math.round(Number(raw)));
-          const nextValue = parsed === null || Number.isNaN(parsed) ? null : parsed;
+          const nextValue = parseDurationToSeconds(e.target.value);
           if (nextValue !== (issue.duration ?? null)) {
             onChange(issue, { duration: nextValue }, { changed_property: "duration", change_details: nextValue });
           }
