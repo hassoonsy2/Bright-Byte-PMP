@@ -16,6 +16,17 @@ import { CustomMenu, Row } from "@bright-byte/ui";
 import useLocalStorage from "@/hooks/use-local-storage";
 import { SpreadSheetPropertyIcon } from "../../utils";
 
+// Humanize an i18n key into a readable fallback label (e.g. "common.estimate_time" -> "Estimate Time").
+// Used as a defaultValue so column headers stay readable even if a freshly-added translation key
+// hasn't reached a cached locale file yet.
+const humanizeI18nKey = (key: string): string => {
+  const last = key.split(".").pop() ?? key;
+  return last
+    .split("_")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+};
+
 interface Props {
   property: keyof IIssueDisplayProperties;
   displayFilters: IIssueDisplayFilterOptions;
@@ -55,7 +66,9 @@ export function HeaderColumn(props: Props) {
     return (
       <Row className="flex w-full items-center gap-1.5 py-2 text-13 text-secondary">
         <SpreadSheetPropertyIcon iconKey={propertyDetails.icon} className="h-4 w-4 text-placeholder" />
-        {property === "sub_issue_count" && isEpic ? t("issue.label", { count: 2 }) : t(propertyDetails.i18n_title)}
+        {property === "sub_issue_count" && isEpic
+          ? t("issue.label", { count: 2 })
+          : t(propertyDetails.i18n_title, { defaultValue: humanizeI18nKey(propertyDetails.i18n_title) })}
       </Row>
     );
   }
@@ -69,7 +82,9 @@ export function HeaderColumn(props: Props) {
         <Row className="flex w-full cursor-pointer items-center justify-between gap-1.5 py-2 text-13 text-secondary hover:text-primary">
           <div className="flex items-center gap-1.5">
             {<SpreadSheetPropertyIcon iconKey={propertyDetails.icon} className="h-4 w-4 text-placeholder" />}
-            {property === "sub_issue_count" && isEpic ? t("issue.label", { count: 2 }) : t(propertyDetails.i18n_title)}
+            {property === "sub_issue_count" && isEpic
+              ? t("issue.label", { count: 2 })
+              : t(propertyDetails.i18n_title, { defaultValue: humanizeI18nKey(propertyDetails.i18n_title) })}
           </div>
           <div className="ml-3 flex">
             {activeSortingProperty === property && (

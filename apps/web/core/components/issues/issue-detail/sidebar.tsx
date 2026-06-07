@@ -196,7 +196,7 @@ export const IssueDetailsSidebar = observer(function IssueDetailsSidebar(props: 
               </div>
             </SidebarPropertyListItem>
 
-            <SidebarPropertyListItem icon={Timer} label={t("common.duration")}>
+            <SidebarPropertyListItem icon={Timer} label={t("common.duration", { defaultValue: "Duration" })}>
               <input
                 key={`duration-${issue.duration ?? ""}`}
                 type="text"
@@ -216,7 +216,10 @@ export const IssueDetailsSidebar = observer(function IssueDetailsSidebar(props: 
               />
             </SidebarPropertyListItem>
 
-            <SidebarPropertyListItem icon={Hourglass} label={t("common.estimate_time")}>
+            <SidebarPropertyListItem
+              icon={Hourglass}
+              label={t("common.estimate_time", { defaultValue: "Estimate Time" })}
+            >
               <input
                 key={`estimate-time-${issue.estimate_time ?? ""}`}
                 type="text"
