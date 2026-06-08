@@ -29,4 +29,23 @@ export class ProjectExportService extends APIService {
         throw error?.response?.data;
       });
   }
+
+  async importWorkItems(
+    workspaceSlug: string,
+    projectId: string,
+    file: File
+  ): Promise<{
+    created: number;
+    failed: number;
+    total: number;
+    errors: { row: number; name: string; error: string }[];
+  }> {
+    const formData = new FormData();
+    formData.append("file", file);
+    return this.post(`/api/workspaces/${workspaceSlug}/projects/${projectId}/import-work-items/`, formData)
+      .then((response) => response?.data)
+      .catch((error) => {
+        throw error?.response?.data;
+      });
+  }
 }
