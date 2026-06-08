@@ -314,6 +314,17 @@ services:
       - type: rewrite
         source: /*
         destination: /index.html
+    headers:
+      # SPA shell (index.html) must always revalidate so a new deploy's asset
+      # hashes are picked up immediately instead of serving a stale bundle.
+      - path: /*
+        name: Cache-Control
+        value: no-cache
+      # Vite emits content-hashed asset filenames, so these are safe to cache
+      # forever (a new build produces new filenames). More-specific path wins.
+      - path: /assets/*
+        name: Cache-Control
+        value: public, max-age=31536000, immutable
     envVars:
       - key: VITE_API_BASE_URL
         value: https://api.pmp.bright-byte.co
