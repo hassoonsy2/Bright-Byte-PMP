@@ -148,6 +148,8 @@ class SubIssuesEndpoint(BaseAPIView):
                 "priority",
                 "start_date",
                 "target_date",
+                "duration",
+                "estimate_time",
                 "sequence_id",
                 "project_id",
                 "parent_id",
