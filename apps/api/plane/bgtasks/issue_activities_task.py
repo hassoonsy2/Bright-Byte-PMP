@@ -10,6 +10,7 @@ import json
 from celery import shared_task
 
 # Django imports
+from django.conf import settings
 from django.core.serializers.json import DjangoJSONEncoder
 from django.utils import timezone
 
@@ -17,6 +18,7 @@ from django.utils import timezone
 # Module imports
 from plane.app.serializers import IssueActivitySerializer
 from plane.bgtasks.notification_task import notifications
+from plane.bgtasks.slack_notification_task import send_slack_notification
 from plane.db.models import (
     CommentReaction,
     Cycle,
@@ -28,6 +30,7 @@ from plane.db.models import (
     Label,
     Module,
     Project,
+    ProjectSlackNotification,
     State,
     User,
     EstimatePoint,
@@ -35,6 +38,7 @@ from plane.db.models import (
 from plane.settings.redis import redis_instance
 from plane.utils.exception_logger import log_exception
 from plane.utils.issue_relation_mapper import get_inverse_relation
+from plane.utils.slack_notification import SLACK_NOTIFICATION_EVENT_TYPES, is_workspace_allowlisted
 from plane.utils.uuid import is_valid_uuid
 
 
@@ -1499,6 +1503,27 @@ def create_intake_activity(
         )
 
 
+def _enqueue_slack_notification(type, project, issue_id, actor_id, issue_activities_created):
+    # Cheapest checks first: no queries at all while the feature is off
+    if type not in SLACK_NOTIFICATION_EVENT_TYPES or not settings.SLACK_NOTIFICATION_WORKSPACES:
+        return
+    activity_ids = [str(activity.id) for activity in issue_activities_created]
+    # The "created" activity is saved outside the bulk list, so created events may have no IDs
+    if not activity_ids and type != "issue.activity.created":
+        return
+    if not is_workspace_allowlisted(project.workspace.slug):
+        return
+    if not ProjectSlackNotification.objects.filter(project_id=project.id, is_active=True).exists():
+        return
+    send_slack_notification.delay(
+        event_type=type,
+        project_id=str(project.id),
+        issue_id=str(issue_id) if issue_id else None,
+        actor_id=str(actor_id) if actor_id else None,
+        activity_ids=activity_ids,
+    )
+
+
 # Receive message from room group
 @shared_task
 def issue_activity(
@@ -1582,6 +1607,11 @@ def issue_activity(
 
         # Save all the values to database
         issue_activities_created = IssueActivity.objects.bulk_create(issue_activities)
+
+        try:
+            _enqueue_slack_notification(type, project, issue_id, actor_id, issue_activities_created)
+        except Exception as e:
+            log_exception(e)
 
         if notification:
             notifications.delay(
