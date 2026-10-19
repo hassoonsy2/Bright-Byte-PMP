@@ -105,6 +105,9 @@ services:
       # and the auth screen hides the "Sign up" link when this is "0".
       - key: ENABLE_SIGNUP
         value: "0"
+      # Comma-separated workspace slugs with per-project Slack notifications enabled.
+      - key: SLACK_NOTIFICATION_WORKSPACES
+        value: ambis
 
   - type: worker
     runtime: docker
@@ -174,6 +177,12 @@ services:
         value: "0"
       - key: EMAIL_FROM
         value: "Bright-Byte PMP <info@bright-byte.co>"
+      # Comma-separated workspace slugs with per-project Slack notifications enabled.
+      - key: SLACK_NOTIFICATION_WORKSPACES
+        value: ambis
+      # Web app origin, used to build work-item links in Slack messages.
+      - key: APP_BASE_URL
+        value: https://pmp.bright-byte.co
 
   - type: worker
     runtime: docker

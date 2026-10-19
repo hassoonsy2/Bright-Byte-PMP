@@ -24,6 +24,11 @@ from .project.member import (
     ProjectMemberPreferenceEndpoint,
 )
 
+from .project.slack_notification import (
+    ProjectSlackNotificationEndpoint,
+    ProjectSlackNotificationTestEndpoint,
+)
+
 from .user.base import (
     UserEndpoint,
     UpdateUserOnBoardedEndpoint,

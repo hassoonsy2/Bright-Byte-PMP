@@ -18,6 +18,8 @@ from plane.app.views import (
     UserProjectRolesEndpoint,
     ProjectArchiveUnarchiveEndpoint,
     ProjectMemberPreferenceEndpoint,
+    ProjectSlackNotificationEndpoint,
+    ProjectSlackNotificationTestEndpoint,
 )
 
 
@@ -128,5 +130,15 @@ urlpatterns = [
         "workspaces/<str:slug>/projects/<uuid:project_id>/preferences/member/<uuid:member_id>/",
         ProjectMemberPreferenceEndpoint.as_view(),
         name="project-member-preference",
+    ),
+    path(
+        "workspaces/<str:slug>/projects/<uuid:project_id>/slack-notification/",
+        ProjectSlackNotificationEndpoint.as_view(),
+        name="project-slack-notification",
+    ),
+    path(
+        "workspaces/<str:slug>/projects/<uuid:project_id>/slack-notification/test/",
+        ProjectSlackNotificationTestEndpoint.as_view(),
+        name="project-slack-notification-test",
     ),
 ]

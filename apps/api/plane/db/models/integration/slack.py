@@ -33,3 +33,33 @@ class SlackProjectSync(ProjectBaseModel):
         verbose_name_plural = "Slack Project Syncs"
         db_table = "slack_project_syncs"
         ordering = ("-created_at",)
+
+
+class ProjectSlackNotification(ProjectBaseModel):
+    # Fernet ciphertext of the Slack incoming-webhook URL (the URL itself is a secret)
+    webhook_url = models.TextField()
+    is_active = models.BooleanField(default=True)
+    notify_issue_created = models.BooleanField(default=True)
+    notify_state_changed = models.BooleanField(default=True)
+    notify_assignee_changed = models.BooleanField(default=True)
+    notify_priority_changed = models.BooleanField(default=True)
+    notify_comment_created = models.BooleanField(default=True)
+    notify_issue_deleted = models.BooleanField(default=True)
+    last_delivered_at = models.DateTimeField(null=True, blank=True)
+    last_error = models.TextField(blank=True, default="")
+
+    def __str__(self):
+        return f"{self.project.name}"
+
+    class Meta:
+        verbose_name = "Project Slack Notification"
+        verbose_name_plural = "Project Slack Notifications"
+        db_table = "project_slack_notifications"
+        ordering = ("-created_at",)
+        constraints = [
+            models.UniqueConstraint(
+                fields=["project"],
+                condition=models.Q(deleted_at__isnull=True),
+                name="project_slack_notification_unique_project_when_deleted_at_null",
+            )
+        ]

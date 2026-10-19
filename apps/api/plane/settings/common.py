@@ -72,6 +72,21 @@ WEBHOOK_DISALLOWED_DOMAINS = [
     if _d.strip()
 ]
 
+
+def _parse_slug_allowlist(raw):
+    """Split a comma-separated list of workspace slugs into a lowercased, de-duplicated list."""
+    slugs = []
+    for _slug in (raw or "").split(","):
+        _slug = _slug.strip().lower()
+        if _slug and _slug not in slugs:
+            slugs.append(_slug)
+    return slugs
+
+
+# Per-project Slack notifications — comma-separated workspace slugs where the
+# feature is available. Empty by default, which turns it OFF in every workspace.
+SLACK_NOTIFICATION_WORKSPACES = _parse_slug_allowlist(os.environ.get("SLACK_NOTIFICATION_WORKSPACES", ""))
+
 # Allowed Hosts
 ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS", "*").split(",")
 
