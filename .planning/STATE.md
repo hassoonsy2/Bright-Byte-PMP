@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-06-01)
 Phase: 04 (closing) → 05
 Plan: 04-04 next but externally blocked (live deploy/UAT). Code-side, 05-04 is the next executable plan once the source-repo URL is provided.
 Status: Executing
-Last activity: 2026-06-04
+Last activity: 2026-10-20 - Completed quick task 261020-12y: Per-project Slack notifications for the Ambis workspace
 
 Progress: [████████▏░] 82%
 
@@ -98,6 +98,12 @@ None yet.
 - [Phase 2]: Partial rename breaks the build and there is no CI test net — must land green in one atomic commit (`pnpm build && check:types && check:lint`, empty `@plane/` grep)
 - [Phase 4]: External dashboard work remains manual during execution: Render blueprint sync, paid Postgres/Key Value, Cloudflare R2 bucket/CORS/API keys, SMTP credentials, DNS/custom domains, OAuth redirect URIs, and live onboarding evidence
 - [Phase 5]: AGPL — never edit copyright headers / `LICENSE.txt` (CI `addlicense` enforces verbatim); attribution goes in a top-level `NOTICE`/`CHANGES`
+
+### Quick Tasks Completed
+
+| #          | Description                                                                                                          | Date       | Commit     | Directory                                                                                                           |
+| ---------- | -------------------------------------------------------------------------------------------------------------------- | ---------- | ---------- | ------------------------------------------------------------------------------------------------------------------- |
+| 261020-12y | Per-project Slack notifications, enabled only for the Ambis workspace (needs manual migration 0124 + Slack webhooks) | 2026-10-20 | b4c7f13ce2 | [261020-12y-slack-notifications-per-project-for-ambi](./quick/261020-12y-slack-notifications-per-project-for-ambi/) |
 
 ## Deferred Items
 
