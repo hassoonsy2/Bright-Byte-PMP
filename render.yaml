@@ -183,6 +183,12 @@ services:
       # Web app origin, used to build work-item links in Slack messages.
       - key: APP_BASE_URL
         value: https://pmp.bright-byte.co
+      # Starter has 512 MB. Without a cap Celery starts one process per host CPU (8)
+      # and the instance is OOM-killed, so keep it to 2 and recycle bloated children.
+      - key: CELERY_WORKER_CONCURRENCY
+        value: "2"
+      - key: CELERY_WORKER_MAX_MEMORY_PER_CHILD
+        value: "200000"
 
   - type: worker
     runtime: docker

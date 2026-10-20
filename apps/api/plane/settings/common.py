@@ -346,6 +346,14 @@ CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_ACCEPT_CONTENT = ["application/json"]
 
+# Worker sizing. Unset keeps Celery's defaults (one process per host CPU, no memory cap),
+# which is too many for small instances such as Render's 512 MB starter plan.
+if os.environ.get("CELERY_WORKER_CONCURRENCY"):
+    CELERY_WORKER_CONCURRENCY = int(os.environ["CELERY_WORKER_CONCURRENCY"])
+if os.environ.get("CELERY_WORKER_MAX_MEMORY_PER_CHILD"):
+    # Kilobytes; a child process is replaced after its current task once it exceeds this
+    CELERY_WORKER_MAX_MEMORY_PER_CHILD = int(os.environ["CELERY_WORKER_MAX_MEMORY_PER_CHILD"])
+
 
 CELERY_IMPORTS = (
     # scheduled tasks
